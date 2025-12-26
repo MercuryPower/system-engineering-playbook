@@ -1,0 +1,38 @@
+.advantages {
+
+}
+
+.advantage {
+    display: flex;
+    justify-content: space-between;
+    //align-items: flex-end;
+    margin-bottom: 10px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &__name {
+        //max-width: 300px;
+        max-width: 50%;
+    }
+
+    &-line {
+        flex-grow: 1;
+        height: 1px;
+        margin: 14px 18px 0;
+        //margin: 0 18px 7px;
+        background: var(--grey);
+        min-width: 10%;
+
+        @media screen and (max-width: $to-small) {
+            margin: 12px 8px 0;
+        }
+    }
+
+    &__info {
+        //max-width: calc(30%);
+        max-width: 200px;
+        text-align: right;
+    }
+}

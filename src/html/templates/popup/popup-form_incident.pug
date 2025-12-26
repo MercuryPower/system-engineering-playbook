@@ -1,0 +1,61 @@
+popup-component(data-id="popup-incident")
+    .popup__inner
+        .popup__wrapper
+            .popup__overflow
+                button.popup__button.popup__close(is="popup-close")
+                .popup__form
+                    .popup-content
+                        .h2.popup__title Горячая линия
+                        .popup__subtitle Просим Вас описать характер происшествия
+                        p.popup__text сообщение также может быть направлено по электронной почте на адрес: <a class="link_green" href="mailto:HotLine@agroinvest.com">HotLine@agroinvest.com</a> или передано по бесплатному тел. <a class="link_green" href="tel:88005504699">8 (800) 550-46-99</a>
+                        .form-wrapper.margin-top_60
+                            form-response.response(data-id="form-incident")
+                                .response-inner
+                            form.form(action="./response.json" data-id="form-incident" method="post" is="form-component")
+                                .form__group
+                                    .form__line_half
+                                        .form__line
+                                            label.input-wrapper(is="input-wrapper")
+                                                span.placeholder ФИО
+                                                input.input.input_lightGreen(name="userName" type="name")
+                                        .form__line
+                                            label.input-wrapper(is="input-wrapper")
+                                                span.placeholder Организация
+                                                input.input.input_lightGreen(name="userOrganization" type="text")
+                                        .form__line
+                                            label.input-wrapper(is="input-wrapper")
+                                                span.placeholder Электронная почта
+                                                input.input.input_lightGreen(name="userEmail" type="email")
+                                        .form__line
+                                            label.input-wrapper(is="input-wrapper")
+                                                span.placeholder Телефон
+                                                input.input.input_lightGreen(name="userTel" type="tel")
+                                        .form__line
+                                            label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                                span.placeholder Опишите событие
+                                                textarea.input.input_lightGreen(name="userMessage")
+                                    .form__line_half.form__line_half-right
+                                        .form__line
+                                            +inputFile(false)
+                                        .form__line
+                                            fieldset.form__groupMini
+                                                .form-groupMini__title Характер происшествия
+                                                label.input-wrapper.input-wrapper_checkbox(is="input-wrapper")
+                                                    input.input(name="userEmail" data-required-group="incident" type="checkbox")
+                                                    span.placeholder.placeholder_checkbox Конфликт интересов
+                                                label.input-wrapper.input-wrapper_checkbox(is="input-wrapper")
+                                                    input.input(name="userEmail" data-required-group="incident" type="checkbox")
+                                                    span.placeholder.placeholder_checkbox Коррупционное нарушение
+                                                label.input-wrapper.input-wrapper_checkbox(is="input-wrapper")
+                                                    input.input(name="userEmail" data-required-group="incident" type="checkbox")
+                                                    span.placeholder.placeholder_checkbox Хищение/растрата
+                                                label.input-wrapper.input-wrapper_checkbox(is="input-wrapper")
+                                                    input.input(name="userEmail" data-required-group="incident" type="checkbox")
+                                                    span.placeholder.placeholder_checkbox Иное
+                                        .form__line.form__line-last
+                                            .agree
+                                                label.input-wrapper.input-wrapper_checkbox(is="input-wrapper")
+                                                    input.input(name="userAccept" type="checkbox" required)
+                                                    span.placeholder.placeholder_checkbox Я согласен с <a class="link_green">политикой</a> обработки данных
+                                            button.button.button_size_default.button_theme-darkGreen.form__button
+                                                .button__text Отправить

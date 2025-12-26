@@ -1,0 +1,71 @@
+popup-component.popup(data-id="popup-id")
+    .overflow
+        .replaceable-popup.popup-content(data-id="popup-content")
+            .popup-inner.nr.def
+                button.button-close.ico-close(is="popup-close")
+                .wrapper
+                    .vacancy
+                        .mb_60
+                            h2 Диспетчер
+                            .location
+                                svg.ico(width="33" height="33" viewBox="0 0 33 33" fill="none")
+                                    path(d="M24.9365 13.3151C24.9365 16.8659 20.3388 23.865 17.7273 27.5539C16.858 28.782 15.0785 28.782 14.2092 27.5539C11.5978 23.865 7 16.8659 7 13.3151C7 8.35606 11.0152 4.33594 15.9683 4.33594C20.9213 4.33594 24.9365 8.35606 24.9365 13.3151Z" stroke="#4E8925")
+                                    circle(cx="15.9672" cy="13.3031" r="4.19766" stroke="#4E8925")
+
+                                p Липецкая область, Усманский район, село Девица
+
+                        .mb_60
+                            .interlinear Филиал
+                            p ООО «Сосновка-АГРО-Инвест»
+
+                        .mb_60
+                            p Возможность написать описательный текст перед списком между филиалом и обязанностями (отключаемый) или после условий. Чтобы можно было добавить описание, как нам важен этот человек.
+
+                        .mb_60
+                            .interlinear Филиал
+                            ul
+                                li Координация каких-либо действий в определённой сфере
+                                li Структурирование и переработка информации
+                                li Передача информации в нужных направлениях
+                                li Координация действий по поддержанию правопорядка
+                                li Обеспечение устойчивой работы энергосистем
+                                li Производство оперативных переключений
+
+                        .mb_40
+                            .interlinear Условия
+                            ul
+                                li Гибкая, индивидуальная система оплаты, оклад плюс процент
+                                li Официальное трудоустройство по ТК РФ
+                                li График работы 5/2 с 9-00 до 18-00 ч. или гибкий
+                                li Достойный уровень заработной платы
+                            p Возможность написать описательный текст перед списком между филиалом и обязанностями (отключаемый) или после условий. Чтобы можно было добавить описание, как нам важен этот человек.
+
+                        a.lk_med(href="") Посмотреть на hh.ru
+
+                    .form-wrapper
+                        form-response.response(data-id="form-make")
+                            .response-inner
+                        form.form.form-reg(action="./response.json" data-id="form-make" method="post" is="form-component")
+                            .col
+                                .ln
+                                    label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                        span.placeholder Ваше имя
+                                        input.input.lightgreen(name="userName" type="text" required)
+                                .ln
+                                    label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                        span.placeholder Электронная почта
+                                        input.input.lightgreen(name="userEmail" type="email" required)
+                                .ln
+                                    label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                        span.placeholder Телефон
+                                        input.input.lightgreen(name="userTel" type="tel" required)
+                            .col
+                                .ln
+                                    +inputFile(false)
+                                .ln.ln-submit
+                                    .agree
+                                        label.input-wrapper.input-wrapper_checkbox(is="input-wrapper")
+                                            input.input(name="userAccept" type="checkbox" required)
+                                            span.placeholder.placeholder_checkbox Я согласен с <a class="link_green">политикой</a> обработки данных
+                                    button.btn.btn_def.darkgreen.form__button
+                                        .btn__text Отправить

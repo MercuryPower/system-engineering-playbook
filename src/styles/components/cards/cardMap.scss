@@ -1,0 +1,222 @@
+.cardMap {
+    border-radius: 8px;
+    border: 1px solid var(--grey);
+    overflow: hidden;
+    margin-bottom: 40px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &__body {
+        padding: 40px 30px;
+
+        @media (max-width: $to-medium) {
+            padding: 30px 24px;
+        }
+
+        @media (max-width: $to-small) {
+            padding: 24px 16px;
+        }
+    }
+
+    &__main {
+
+    }
+
+    &__title {
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+
+    &__subtitle {
+        margin-bottom: 40px;
+
+        @media (max-width: $to-medium) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        border-top: 1px solid var(--grey);
+        padding: 30px 30px 40px;
+
+        @media (max-width: $to-medium) {
+            padding: 20px 20px 30px;
+        }
+
+
+        ul {
+            display: grid;
+            width: 100%;
+            grid-gap: 0 50px;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+
+            @media (max-width: $to-medium) {
+                //grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            @media (max-width: $to-small) {
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+            }
+        }
+    }
+
+
+    &__mapWrapper {
+        position: relative;
+        width: calc(52% - 30px);
+
+        @media (max-width: $to-small) {
+            width: calc(100%);
+        }
+    }
+}
+
+
+.cardMap_contact {
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+
+    .cardMap__main {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .cardMap__desc {
+        width: calc(48% - 60px);
+        margin: rem(40px) 0 0;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        @media (max-width: $to-medium) {
+            margin: rem(30px) 0 0;
+        }
+
+        @media (max-width: $to-small) {
+            width: calc(100%);
+            margin: rem(18px) 0;
+        }
+    }
+
+    .cardMap__personsContacts {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--grey);
+
+
+        @media (max-width: $to-small) {
+            flex-wrap: wrap;
+        }
+
+        .cardMap__desc {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+    }
+
+    .cardMap__contact {
+        width: calc(52%);
+
+        @media (max-width: $to-small) {
+            width: 100%;
+            margin-bottom: 24px;
+        }
+    }
+
+    .cardMap__job {
+        color: var(--lightBlack);
+    }
+}
+
+.cardMap_history {
+    display: block;
+    border: none;
+    background: var(--white);
+    padding: 30px 30px 40px;
+    cursor: pointer;
+
+    transition: transform .3s,box-shadow .3s;
+    transition-timing-function: ease;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0px 8px 24px rgba(78, 137, 37, 0.12);
+    }
+
+    @media (min-width: $from-medium) {
+        min-height: 195px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+
+    .cardMap__dots {
+        display: flex;
+
+        i {
+            display: block;
+            width: 12px;
+            height: 12px;
+            margin-right: 16px;
+            border-radius: 50%;
+            position: relative;
+            background: #73D49C;
+            overflow: hidden;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .cardMap__header {
+        display: flex;
+        margin-bottom: 20px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .cardMap__subtitle {
+        color: var(--greyDark);
+        margin-bottom: 0;
+    }
+
+    .cardMap__body {
+        padding: 0;
+    }
+
+    .cardMap__dropdown {
+
+        .dd-inner {
+            padding: 0 0 rem(60px);
+        }
+
+        .dd-button {
+            justify-content: flex-start;
+            color: var(--green);
+        }
+
+        .dd-button__title {
+            margin-right: 16px;
+        }
+    }
+
+}

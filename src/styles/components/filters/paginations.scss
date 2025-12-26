@@ -1,0 +1,49 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @media (max-width: $to-small) {
+        justify-content: space-between;
+    }
+}
+
+.pagination-counts {
+    margin-right: 100px;
+
+    @media (max-width: $to-small) {
+        margin-right: 50px;
+    }
+
+
+    .item {
+        margin-right: 18px;
+        color: var(--greenLight_2);
+        transform: scale(.7);
+        transform-origin: bottom;
+        display: inline-block;
+        margin-bottom: 0;
+
+        @media (max-width: $to-small) {
+            margin-right: 12px;
+        }
+
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &.active {
+            color: var(--green);
+            transform: scale(1);
+        }
+    }
+}
+
+.pagination-arrows {
+
+}
+
+.pagination-arrow {
+
+}

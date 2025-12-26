@@ -1,0 +1,33 @@
+drop-down.item.drop-down.filter-select.maps__dd
+    .dd-button
+        .dd-button__title.p Выберите регион
+        svg.ico-arr(width="15" height="8" viewBox="0 0 15 8" fill="none")
+            use(href="#dd-array")
+    .dd-wrapper
+        .dd-inner
+            .maps__buttons
+                each value, index in [{name:"Волгоградская область", href: "Volgograd"}, {name:"Воронежская область", href: "Voronezh"}, {name:"Курская область", href: "Kursk"}, {name:"Тамбовская область", href: "Tambov"}, {name:"Липецкая область", href: "Lipetsk"}, {name:"Рязанская область", href: "Ryazan"}, {name:"Самарская область", href: "Samara"}, {name:"Москва", href: "Moscow"}]
+                    a.btn.white(is="filter-link"
+                        data-container="replaceable-maps"
+                        data-map-region= value.href
+                        href="?filter[regions]=" + value.href)= value.name
+                    //a.btn.white(is="inner-link"
+                        data-link-set-store="false"
+                        data-link-set-history="false"
+                        data-link-set-classes="false"
+                        data-link-container="replaceable-maps"
+                        data-map-region= value.href
+                        href=`/maps/${value.href}.html`)= value.name
+.maps__buttons.is-desktop
+    each value, index in [{name:"Волгоградская область", href: "Volgograd"}, {name:"Воронежская область", href: "Voronezh"}, {name:"Курская область", href: "Kursk"}, {name:"Тамбовская область", href: "Tambov"}, {name:"Липецкая область", href: "Lipetsk"}, {name:"Рязанская область", href: "Ryazan"}, {name:"Самарская область", href: "Samara"}, {name:"Москва", href: "Moscow"}]
+        a.btn.white(is="filter-link"
+            data-container="replaceable-maps"
+            data-map-region= value.href
+            href="?filter[regions]=" + value.href)= value.name
+        //a.btn.white(is="inner-link"
+            data-link-set-store="false"
+            data-link-set-history="false"
+            data-link-set-classes="false"
+            data-link-container="replaceable-maps"
+            data-map-region= value.href
+            href=`/maps/${value.href}.html`)= value.name

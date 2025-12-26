@@ -1,0 +1,37 @@
+map-component,
+ya-map {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-bottom: calc(100% / 2.154929);
+    border-radius: 8px;
+    overflow: hidden;
+
+    @media (max-width: $to-medium) {
+        padding-bottom: 0;
+        min-height: 400px;
+    }
+
+    @media (max-width: $to-small) {
+        padding-bottom: 0;
+        min-height: 300px;
+    }
+
+    & > .container {
+        display: block;
+        position: absolute;
+        //padding-bottom: calc(100% / 2.154929);
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        border-radius: 8px;
+        overflow: hidden;
+
+        .ymaps-2-1-77-map {
+            height: 100% !important;
+            width: 100% !important;
+        }
+
+    }
+}

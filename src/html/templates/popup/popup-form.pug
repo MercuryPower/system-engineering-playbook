@@ -1,0 +1,43 @@
+popup-component.popup(data-id="popup-id")
+    .overflow
+        .replaceable-popup.popup-content(data-id="popup-content")
+            .popup-inner.nr
+                button.button-close.ico-close(is="popup-close")
+                .wrapper
+                    .popup__desc
+                        h2 Заявка
+                        p.interlinear Задайте интересующий вопрос, заполнив поля формы
+                    .form-wrapper
+                        form-response.response(data-id="form-make")
+                            .response-inner
+                        form.form(action="./response.json" data-id="form-make" method="post" is="form-component")
+                            .form__group.form__group_fd
+                                .form__line
+                                    label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                        span.placeholder Ваше имя
+                                        input.input.lightgreen(name="userName" type="text" required)
+                                .form__line
+                                    label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                        span.placeholder Организация
+                                        input.input.lightgreen(name="userName" type="text" required)
+                                .form__line
+                                    label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                        span.placeholder Электронная почта
+                                        input.input.lightgreen(name="userEmail" type="email" required)
+                                .form__line
+                                    label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                        span.placeholder Телефон
+                                        input.input.lightgreen(name="userTel" type="tel" required)
+                                .form__line.formRowMargin_50
+                                    label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                        span.placeholder Сообщение
+                                        textarea.input.lightgreen(name="userMessage" required)
+                                .form__line.formRowMargin_50
+                                    +inputFile(false)
+                                .form__line
+                                    .agree
+                                        label.input-wrapper.input-wrapper_checkbox(is="input-wrapper")
+                                            input.input(name="userAccept" type="checkbox" required)
+                                            span.placeholder.placeholder_checkbox Я согласен с <a class="link_green">политикой</a> обработки данных
+                                    button.btn.btn_def.darkgreen.form__button
+                                        .btn__text Отправить

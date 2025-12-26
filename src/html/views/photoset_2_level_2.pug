@@ -1,0 +1,89 @@
+extends ../base
+
+block vars
+    - var page = 'text';
+
+block main-content
+    section.artcl
+        .wrapper.nr
+            a.artcl-back.link.link-back(href="")
+                svg.ico(width="8" height="15" fill="none")
+                    path(d="M7 1L1 7.5 7 14" stroke="#E3E2DC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+                span.p_min.link-back__text Фотографии
+        .wrapper.nr
+            h1.artcl__title.scroll-block.js-scroll-block(data-text="true").full Провели награждение ударников труда!
+            .nfo
+                p 13 марта 2013
+                .dot
+                a.type(is="inner-link" href="") Актуальное
+
+    section.mb_80
+        .wrapper.nr
+            .desc
+                .desc__content.big
+                    p Все тендеры, относящиеся к компетенции Закупочной комиссии и Тендерного комитета, проводятся в Автоматизированной системе тендерных процедур.
+                    p С 21.05.2018 доступ в Систему является платным. Информация о стоимости права использования Системы, лицензионный договор, инструкция пользователя и ответы на часто задаваемые вопросы размещены в разделе «Документы для ознакомления» и в Личном кабинете Автоматизированной системы тендерных процедур.
+
+    section.mb_120
+        .wrapper.nr
+            .replaceable-filter(data-id="catalog")
+                .container.col-3.photos
+                    -for (var i = 1; i <= 9; i++)
+                        button.photo.trigger.trigger-default(is="popup-toggle" data-id="popup-photos" data-slider-to= --i data-trigger-type="scroll")
+                            picture
+                                source(srcset="./static/photos/"+ ++i +".webp" type="image/webp")
+                                img(src="./static/photos/"+ i +".png")
+
+
+                pagination-component.pagination(data-container="replaceable-filter" data-scrollTo="replaceable-filter")
+                    .pagination-counts
+                        a.h3_2.item.active(href="?p=1") 1
+                        a.h3_2.item(href="?p=2") 2
+                        a.h3_2.item(href="?p=3") 3
+                        a.h3_2.item(href="?p=4") 4
+                        a.h3_2.item(href="?p=5") 5
+                        .h3_2.item.dots ...
+                        a.h3_2.item(href="?p=20") 20
+                    .pagination-arrows
+                        a.pagination-arrow.arr.prev(href="?p=")
+                            svg(width="26" height="20" viewBox="0 0 26 20" fill="none")
+                                use(xlink:href="#slider-arr")
+                        a.pagination-arrow.arr.next(href="?p=")
+                            svg(width="26" height="20" viewBox="0 0 26 20" fill="none")
+                                use(xlink:href="#slider-arr")
+
+
+    section.mb_120
+        .wrapper.nr
+            .flex
+                h2.title Статьи на тему мероприятия
+                .information__slider.swiper-container.js-slider(data-slider="information-slider" data-per-view="2")
+                    .swiper-wrapper
+                        -for (var i = 0; i <= 5; i++)
+                            .swiper-slide
+                                article.cardNews
+                                    a.cardNews__link(is="inner-link" href="piece-of-news_2_level.html")
+                                    .cardNews__imageWrapper
+                                    picture
+                                            source(srcset="")
+                                            img(src="./static/career/career-2.png")
+                                    .cardNews__body
+                                        .cardNews__date
+                                            p 12 июня
+                                            .dot
+                                            a Мероприятия
+                                        .cardNews__text
+                                            p Начали проводить занятия для дошкольников по образованию в сфере сельского хозяйства.
+
+                .information__sliderNav
+                    .information__sliderProgress.swiper-pagination.slider-progress.js-slider-progress(data-slider="information-slider")
+                    .information__sliderButton
+                        .slider-button.slider-button-prev.js-slider-control-prev(data-slider="information-slider")
+                            <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 19L1 10M1 10L10 1M1 10H25" stroke="#4E8925" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        .slider-button.slider-button-next.js-slider-control-next(data-slider="information-slider")
+                            <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 19L25 10M25 10L16 1M25 10H1" stroke="#4E8925" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+

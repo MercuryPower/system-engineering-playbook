@@ -1,0 +1,72 @@
+extends ../base
+
+block vars
+    - var page = 'sell';
+
+block main-content
+    section.artcl
+        .wrapper.nr
+            h1.artcl__title.scroll-block.js-scroll-block(data-text="true") Непрофильные активы
+
+    section.mb_80
+        .wrapper.nr
+            .desc
+                .desc__content.reg
+                    p Данный раздел содержит информацию об отчуждаемых активах ООО «Волго-Дон Агро-Инвест».
+                    p Каждый из активов может быть приобретен как физическим, так и юридическим лицом. В случае заинтересованности в приобретении того или иного объекта Вы можете оставить свое предложение в форме обратной связи либо позвонить по телефону +7(495)980-3595 (с 10:00 до 17:00, время московское) или написать по электронной почте <a href="mailto:assets@agroinvest.ru">assets@agroinvest.ru</a>
+
+                include ../templates/support-service
+
+    section.filters-section
+        .wrapper.nr
+            .filters
+                .filters-select.full
+                    accordion-component
+                        drop-down.drop-down.filter-select.item
+                            .dd-button
+                                .dd-button__title.p Выберите тип объекта
+                                svg.ico-arr(width="15" height="8" viewBox="0 0 15 8" fill="none")
+                                    use(xlink:href="#dd-arr")
+                            .dd-wrapper
+                                .dd-inner
+                                    a.p.filter.filter-checkbox(is="filter-link" href="?filter[class]=1") 1
+                                    a.p.filter.filter-checkbox(is="filter-link" href="?filter[class]=2") 2
+                                    a.p.filter.filter-checkbox(is="filter-link" href="?filter[class]=3") 3
+                                    a.p.filter.filter-checkbox(is="filter-link" href="?filter[class]=4") 4
+                        drop-down.drop-down.filter-select.item
+                            .dd-button
+                                .dd-button__title.p Выберите регион
+                                svg.ico-arr(width="15" height="8" viewBox="0 0 15 8" fill="none")
+                                    use(xlink:href="#dd-arr")
+                            .dd-wrapper
+                                .dd-inner
+                                    accordion-component.sub
+                                        drop-down.drop-down.filter-select.filter-select__sub
+                                            .dd-button
+                                                .ico-plus
+                                                .dd-button__title.p Воронежская область
+                                            .dd-wrapper
+                                                .dd-inner
+                                                    a.p.filter.filter-checkbox(is="filter-link" href="?filter[class]=vrn_first") Новохоперский район
+                                                    a.p.filter.filter-checkbox(is="filter-link" href="?filter[class]=vrn_second") Грибановский район
+                                                    a.p.filter.filter-checkbox(is="filter-link" href="?filter[class]=vrn_third") Верхнехавский район
+
+                                        drop-down.drop-down.filter-select.filter-select__sub
+                                            .dd-button
+                                                .ico-plus
+                                                .dd-button__title.p Волгоградская область
+                                            .dd-wrapper
+                                                .dd-inner
+                                                    a.p.filter.filter-checkbox(is="filter-link" href="?filter[class]=vlg_first") Новохоперский район
+                                                    a.p.filter.filter-checkbox(is="filter-link" href="?filter[class]=vlg_second") Грибановский район
+                                                    a.p.filter.filter-checkbox(is="filter-link" href="?filter[class]=vlg_third") Верхнехавский район
+            .filters
+                .filter-tabs
+                    a.filter.filter-tab.caps_2.active(is="filter-link" href="?filter[type]=_") все
+                    a.filter.filter-tab.caps_2(is="filter-link" href="?filter[type]=specials") Спецпредложения
+                    a.filter.filter-tab.caps_2(is="filter-link" href="?filter[type]=urgent-auction") Срочный аукцион
+
+    section.mb_120
+        .wrapper.nr
+            .catalog.replaceable-filter(data-id="catalog")
+                include ../templates/cards/cardInfo

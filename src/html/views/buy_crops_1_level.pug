@@ -1,0 +1,115 @@
+extends ../base
+
+block vars
+    - var page = 'buckwheat';
+
+block main-content
+    section.artcl
+        .wrapper.nr
+            h1.artcl__title.scroll-block.js-scroll-block(data-text="true") Закупка с/х продукции
+
+    section.mb_120
+        .wrapper.nr
+            .desc
+                .desc__content.big
+                    p Все тендеры, относящиеся к компетенции Закупочной комиссии и Тендерного комитета, проводятся в Автоматизированной системе тендерных процедур.
+                    p С 21.05.2018 доступ в Систему является платным. Информация о стоимости права использования Системы, лицензионный договор, инструкция пользователя и ответы на часто задаваемые вопросы размещены в разделе «Документы для ознакомления» и в Личном кабинете Автоматизированной системы тендерных процедур.
+    section.filters-section
+        .wrapper.nr
+            .filters.flex.aic
+
+                drop-down.item.drop-down.filter-select.city
+                    .dd-button
+                        .dd-button__title.p Регион
+                        svg.ico-arr(width="15" height="8" viewBox="0 0 15 8" fill="none")
+                            use(xlink:href="#dd-arr")
+                    .dd-wrapper
+                        .dd-inner
+                            accordion-component.sub
+                                drop-down.drop-down.filter-select.filter-select__sub
+                                    .dd-button
+                                        .ico-plus
+                                        .dd-button__title.p Воронежская область
+                                    .dd-wrapper
+                                        .dd-inner
+                                            a.p.filter.filter-checkbox(is="filter-link" data-mode="include" href="?filter[class]=vrn_first") Новохоперский район
+                                            a.p.filter.filter-checkbox(is="filter-link" data-mode="include" href="?filter[class]=vrn_second") Грибановский район
+                                            a.p.filter.filter-checkbox(is="filter-link" data-mode="include" href="?filter[class]=vrn_third") Верхнехавский район
+
+                                drop-down.drop-down.filter-select.filter-select__sub
+                                    .dd-button
+                                        .ico-plus
+                                        .dd-button__title.p Волгоградская область
+                                    .dd-wrapper
+                                        .dd-inner
+                                            a.p.filter.filter-checkbox(is="filter-link" href="?filter[class]=vlg_first") Новохоперский район
+                                            a.p.filter.filter-checkbox(is="filter-link" href="?filter[class]=vlg_second") Грибановский район
+                                            a.p.filter.filter-checkbox(is="filter-link" href="?filter[class]=vlg_third") Верхнехавский район
+
+
+                .filters-range.item
+                    filter-range.filter-range(data-thumbs="[0, 100]" data-step="1")
+                        .caption.p Количество (т)
+                        .outputs
+                            input.i.min.p(placeholder="от 0")
+                            input.i.max.p(placeholder="до 100")
+                        .input-range
+
+                button.item.filter.filter-reset.link_g(is="filters-reset" data-names=["class"] data-container="replaceable-filter")
+                    .ico-close.s
+                    p Очистить фильтр
+
+    section.mb_120
+        .wrapper.nr
+            .gr-catalog.col-2.catalog.replaceable-filter(data-id="catalog")
+
+                - var n = 1;
+
+                while n < 7
+                    article.cardProduct
+                        a.cardProduct__link(
+                            is="inner-link"
+
+                            data-link-container="replaceable-popup"
+                            data-link-set-store="false"
+                            data-link-set-history="false"
+                            data-link-set-classes="false"
+                            data-link-animation="popup-transition"
+                            href="/popup/popup-buy-products.html")
+                        .cardProduct__body
+                            .cardProduct__main
+                                .h3.cardProduct__title= "Гречиха " + n++ + " сорт"
+                                .cardProduct__text
+                                    p.p_md Богатое витаминами и минералами, зерно гречихи давно стало одним из самых востребованных товаров на рынке, несмотря на постоянно меняющиеся цены
+                            .cardProduct__imageWrapper
+                                picture
+                                    source(srcset="")
+                                    img(src="./static/cooperation/sell/1.png")
+                        .cardProduct__desc.features
+                            .item.featur
+                                .caps_2 Регион
+                                p Воронежская область
+
+                            .item.featur
+                                .caps_2 место хранение
+                                p г. Новохоперск
+
+                            .item.featur
+                                .caps_2 ДО
+                                p ООО «Новохоперск-АГРО-Инвест»
+
+                            .item.featur
+                                .caps_2 количество
+                                p 300 т
+
+                        .cardProduct__btn
+                            a.btn.green.btn_def.btn_flex(
+                                is="inner-link"
+
+                                data-link-container="replaceable-popup"
+                                data-link-set-store="false"
+                                data-link-set-history="false"
+                                data-link-set-classes="false"
+                                data-link-animation="popup-transition"
+                                href="/popup/popup-buy-products.html")
+                                .button__text Подать заявку

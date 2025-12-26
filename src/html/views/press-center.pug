@@ -1,0 +1,193 @@
+extends ../base
+
+block vars
+    - var page = 'press-center';
+
+block main-content
+
+    section.artcl
+        .wrapper.nr
+            h1.artcl__title.scroll-block.js-scroll-block(data-text="true") Пресс-центр
+            .artcl__text
+                .interlinear Мы специализируемся на выращивании злаков, овощей и животных
+
+    section.mb_120
+        .wrapper.nr
+            h2.title Важно
+            slider-component.slider.trigger.trigger-default(
+                data-trigger-type="scroll"
+                data-id="slider-career"
+                data-focusable="true"
+                data-touch="true"
+                data-draggable="true"
+                data-resize="true")
+                - var values = ['Одна из основных отраслей в сельском хозяйстве', 'Одна из основных отраслей в сельском хозяйстве', 'Одна из основных отраслей в сельском хозяйстве'];
+
+                each val in values
+                    .slide
+                        picture
+                            source(srcset="")
+                            img(src="./static/career/slider.png")
+                        .slideInfo
+                            .slideInfo__title.date
+                                p 23 мая
+                                .dot
+                                a Актуальное
+                            p.slideInfo__text.p_md Приобрели активы шведской Black Earth Farming, доведя свой земельный банк до 452 тысяч га.
+                            a.slideInfo__btn.btn.green.btn_def.btn_flex(is="inner-link" href="")
+                                .button__text Подробнее
+
+            .slider-controls
+                .slider-progress
+                    slider-progress(data-id="slider-career")
+                        - for (var i = 0; i < 3; i++)
+                            .item
+
+                .slider-buttons
+                    button.slider__control.arr(is="slider-control" data-id="slider-career" data-to="prev")
+                        svg(width="26" height="20" viewBox="0 0 26 20" fill="none")
+                            use(xlink:href="#slider-arr")
+                    button.slider__control.arr(is="slider-control" data-id="slider-career" data-to="next")
+                        svg(width="26" height="20" viewBox="0 0 26 20" fill="none")
+                            use(xlink:href="#slider-arr")
+
+    section.information.mb_120
+        .wrapper.nr
+            .flex.trigger.trigger-default(data-trigger-type="scroll")
+                a.lk_title(href="news.html" is="inner-link")
+                    .title.h2.scroll-block.js-scroll-block(data-text="true") Новости
+                    .btn.btn_sq
+                        svg.ico(width="8" height="15" fill="none")
+                            use(xlink:href="#arr-s")
+            .information__slider.swiper-container.js-slider.trigger.trigger-default(data-slider="information-slider" data-trigger-type="scroll")
+                .swiper-wrapper
+                    -for (var i = 0; i < 4; i++)
+                        .swiper-slide
+                            article.cardNews
+                                a.cardNews__link(is="inner-link" href="piece-of-news_2_level.html")
+                                .cardNews__imageWrapper
+                                    picture
+                                        source(srcset="")
+                                        img(src="./static/career/career-2.png")
+                                .cardNews__body
+                                    .cardNews__date
+                                        p 12 июня
+                                        .dot
+                                        a Мероприятия
+                                    .cardNews__text
+                                        p Начали проводить занятия для дошкольников по образованию в сфере сельского хозяйства.
+                        .swiper-slide
+                            article.cardNews
+                                a.cardNews__link(is="inner-link" href="piece-of-news_2_level.html")
+                                .cardNews__imageWrapper
+                                    picture
+                                        source(srcset="./static/information/2.webp" type="image/webp")
+                                        img(src="./static/information/2.png")
+                                .cardNews__body
+                                    .cardNews__date
+                                        p 12 июня
+                                        .dot
+                                        a Мероприятия
+                                    .cardNews__text
+                                        p Начали проводить занятия для дошкольников по образованию в сфере сельского хозяйства.
+            .slider-controls
+                .information__sliderProgress.swiper-pagination.slider-progress.js-slider-progress(data-slider="information-slider")
+                .slider-buttons
+                    button.slider__control.arr.js-slider-control-prev(data-slider="information-slider" data-to="prev")
+                        svg(width="26" height="20" viewBox="0 0 26 20" fill="none")
+                            use(xlink:href="#slider-arr")
+                    button.slider__control.arr.js-slider-control-next(data-slider="information-slider" data-to="next")
+                        svg(width="26" height="20" viewBox="0 0 26 20" fill="none")
+                            use(xlink:href="#slider-arr")
+
+    section.mb_120
+        .wrapper.nr
+            .flex.trigger.trigger-default(data-trigger-type="scroll")
+                // in URL need add param ?filter[date]=2019 or now year
+                // for active link
+                a.lk_title(href="photo-gallery_1_level.html?filter[date]=2019" is="inner-link")
+                    h2.title Фотогалерея
+                    .btn.btn_sq
+                        svg.ico(width="8" height="15" fill="none")
+                            use(xlink:href="#arr-s")
+            slider-component.slider.trigger.trigger-default(
+                data-trigger-type="scroll"
+                data-id="slider-career"
+                data-focusable="true"
+                data-touch="true"
+                data-draggable="true"
+                data-resize="true")
+                - var values = ['Одна из основных отраслей в сельском хозяйстве', 'Одна из основных отраслей в сельском хозяйстве', 'Одна из основных отраслей в сельском хозяйстве'];
+
+                each val in values
+                    .slide
+                        picture
+                            source(srcset="")
+                            img(src="./static/career/slider.png")
+                        .slideInfo
+                            .slideInfo__title.date
+                                p 23 мая
+                                .dot
+                                span.p 15 фотографий
+                            p.slideInfo__text.p_md Приобрели активы шведской Black Earth Farming, доведя свой земельный банк до 452 тысяч га.
+                            a.slideInfo__btn.btn.green.btn_def.btn_flex(is="inner-link" href="")
+                                .button__text Смотреть все
+            .slider-controls
+                .slider-progress
+                    slider-progress(data-id="slider-career")
+                        - for (var i = 0; i < 3; i++)
+                            .item
+                .slider-buttons
+                    button.slider__control.arr(is="slider-control" data-id="slider-career" data-to="prev")
+                        svg(width="26" height="20" viewBox="0 0 26 20" fill="none")
+                            use(xlink:href="#slider-arr")
+                    button.slider__control.arr(is="slider-control" data-id="slider-career" data-to="next")
+                        svg(width="26" height="20" viewBox="0 0 26 20" fill="none")
+                            use(xlink:href="#slider-arr")
+
+    section.mb_120
+        .wrapper.nr
+            .container.col-2.leaders
+                article.cardPreview.trigger.trigger-default(data-trigger-type="scroll")
+                    a.cardPreview__link(href="success_1_level.html" is="inner-link")
+                    .cardPreview__imageWrapper
+                        picture.picture
+                            source(srcset="" type="image/webp")
+                            img(src="./static/career/career-1.png" alt="")
+                    .cardPreview__header
+                        h2.cardPreview__name Доска достижений
+                        .cardPreview__button.btn.btn_sq
+                            svg.ico(width="8" height="15" fill="none")
+                                use(xlink:href="#arr-s")
+                    .cardPreview__text
+                        p.text_md Начали проводить занятия для дошкольников по образованию в сфере сельского хозяйства.
+                article.cardPreview.trigger.trigger-default(data-trigger-type="scroll")
+                    a.cardPreview__link(href="about-press-center.html" is="inner-link")
+                    .cardPreview__imageWrapper
+                        picture.picture
+                            source(srcset="" type="image/webp")
+                            img(src="./static/career/career-4.png")
+                    .cardPreview__header
+                        h2.cardPreview__name Пресса о нас
+                        .cardPreview__button.btn.btn_sq
+                            svg.ico(width="8" height="15" fill="none")
+                                use(xlink:href="#arr-s")
+                    .cardPreview__text
+                        p.text_md Слесарь Анатольев Анатолий Эдуардович — лучший рабочник месяца!
+
+    section.bgl.py_60.trigger.trigger-default(data-trigger-type="scroll")
+        .wrapper.nr
+            .h3_2 Контактное лицо
+            .cardContact.cardContact_full
+                .cardContact__header
+                    p.cardContact__name.p_md Владимир Григорьевич Машков-Пашков
+                    p.cardContact__job специалист по внешним коммуникациям и СМИ
+                .cardContact__links.info__links
+                    a.link(href="tel:+74952326772")
+                        svg.ico(width="33" height="31" fill="none")
+                            use(href="#tel")
+                        p.link__text.p_md +7 (495) 232-67-72
+                    a.link(href="mailto:info@agroinvest.com")
+                        svg.ico(width="33" height="33" fill="none")
+                            use(href="#mail")
+                        p.link__text.p_md info@agroinvest.com

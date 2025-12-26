@@ -1,0 +1,179 @@
+extends ../base
+
+block vars
+    - var page = 'sell';
+
+block main-content
+    section.artcl
+        .wrapper.nr
+            h1.artcl__title.scroll-block.js-scroll-block(data-text="true") Закупки
+
+    section.mb_80
+        .wrapper.nr
+            .desc
+                .desc__content.reg
+                    p Все тендеры, относящиеся к компетенции Закупочной комиссии и Тендерного комитета, проводятся в Автоматизированной системе тендерных процедур.
+                    p С 21.05.2018 доступ в Систему является платным. Информация о стоимости права использования Системы, лицензионный договор, инструкция пользователя и ответы на часто задаваемые вопросы размещены в разделе «Документы для ознакомления» и в Личном кабинете Автоматизированной системы тендерных процедур.
+                include ../templates/support-service
+
+    section.mb_80
+        .wrapper.nr
+            accordion-component
+                drop-down.drop-down.faq.reg
+                    button.dd-button
+                        .dd-button__title.h3_2 Документы
+                        .ico-plus
+
+                    .dd-wrapper
+                        .dd-inner
+
+                            a.lk.lk_g
+                                svg.ico(width="16" height="22" fill="none")
+                                    path(d="M13.727 10.5L8 16.2m0 0l-5.727-5.7M8 16.2V1M1 21h14" stroke="#4E8925" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+                                .p Скачать все
+
+                            .tabs
+                                tab-switch(data-id="tab-docs")
+                                    button.active.filter-tab.caps_2 порядок проведения
+                                    button.filter-tab.caps_2 порядок подачи
+                                    button.filter-tab.caps_2 дополнительный раздел
+                                .docs.docs_dd
+                                    tab-wrapper(data-id="tab-docs")
+                                        .tab
+                                            .container.col-2.mb_40
+                                                a.link.link-doc
+                                                    svg.ico(width="28" height="31" viewBox="0 0 28 31" fill="none")
+                                                        path(d="M4.5 5A1.5 1.5 0 016 3.5h11.125L23.5 9.946V27a1.5 1.5 0 01-1.5 1.5H6A1.5 1.5 0 014.5 27V5z" stroke="#4E8925" stroke-linecap="round" stroke-linejoin="round")
+                                                    .link__text
+                                                        .p Порядок сертификации систем менеджмента
+                                                        .p_s.inffile (PDF, 17,4 Mb)
+                                                a.link.link-doc
+                                                    svg.ico(width="28" height="31" viewBox="0 0 28 31" fill="none")
+                                                        path(d="M4.5 5A1.5 1.5 0 016 3.5h11.125L23.5 9.946V27a1.5 1.5 0 01-1.5 1.5H6A1.5 1.5 0 014.5 27V5z" stroke="#4E8925" stroke-linecap="round" stroke-linejoin="round")
+                                                    .link__text
+                                                        .p Порядок сертификации систем менеджмента
+                                                        .p_s.inffile (PDF, 17,4 Mb)
+                                                a.link.link-doc
+                                                    svg.ico(width="28" height="31" viewBox="0 0 28 31" fill="none")
+                                                        path(d="M4.5 5A1.5 1.5 0 016 3.5h11.125L23.5 9.946V27a1.5 1.5 0 01-1.5 1.5H6A1.5 1.5 0 014.5 27V5z" stroke="#4E8925" stroke-linecap="round" stroke-linejoin="round")
+                                                    .link__text
+                                                        .p Порядок сертификации систем менеджмента
+                                                        .p_s.inffile (PDF, 17,4 Mb)
+                                                a.link.link-doc
+                                                    svg.ico(width="28" height="31" viewBox="0 0 28 31" fill="none")
+                                                        path(d="M4.5 5A1.5 1.5 0 016 3.5h11.125L23.5 9.946V27a1.5 1.5 0 01-1.5 1.5H6A1.5 1.5 0 014.5 27V5z" stroke="#4E8925" stroke-linecap="round" stroke-linejoin="round")
+                                                    .link__text
+                                                        .p Порядок сертификации систем менеджмента
+                                                        .p_s.inffile (PDF, 17,4 Mb)
+                                                a.link.link-doc
+                                                    svg.ico(width="28" height="31" viewBox="0 0 28 31" fill="none")
+                                                        path(d="M4.5 5A1.5 1.5 0 016 3.5h11.125L23.5 9.946V27a1.5 1.5 0 01-1.5 1.5H6A1.5 1.5 0 014.5 27V5z" stroke="#4E8925" stroke-linecap="round" stroke-linejoin="round")
+                                                    .link__text
+                                                        .p Порядок сертификации систем менеджмента
+                                                        .p_s.inffile (PDF, 17,4 Mb)
+
+                                            a.lk.lk_g
+                                                svg.ico(width="28" height="31" viewBox="0 0 28 31" fill="none")
+                                                    path(d="M13.727 10.5L8 16.2m0 0l-5.727-5.7M8 16.2V1M1 21h14" stroke="#4E8925" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+                                                .p Скачать все
+                                        .tab
+                                            .container.col-2.mb_40
+                                                a.link.link-doc
+                                                    svg.ico(width="28" height="31" viewBox="0 0 28 31" fill="none")
+                                                        path(d="M4.5 5A1.5 1.5 0 016 3.5h11.125L23.5 9.946V27a1.5 1.5 0 01-1.5 1.5H6A1.5 1.5 0 014.5 27V5z" stroke="#4E8925" stroke-linecap="round" stroke-linejoin="round")
+                                                    .link__text
+                                                        .p Порядок подачи систем менеджмента
+                                                        .p_s.inffile (PDF, 17,4 Mb)
+
+                                            a.lk.lk_g
+                                                svg.ico(width="28" height="31" viewBox="0 0 28 31" fill="none")
+                                                    path(d="M13.727 10.5L8 16.2m0 0l-5.727-5.7M8 16.2V1M1 21h14" stroke="#4E8925" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+                                                .p Скачать все
+                                        .tab
+                                            .container.col-2.mb_40
+                                                a.link.link-doc
+                                                    svg.ico(width="28" height="31" viewBox="0 0 28 31" fill="none")
+                                                        path(d="M4.5 5A1.5 1.5 0 016 3.5h11.125L23.5 9.946V27a1.5 1.5 0 01-1.5 1.5H6A1.5 1.5 0 014.5 27V5z" stroke="#4E8925" stroke-linecap="round" stroke-linejoin="round")
+                                                    .link__text
+                                                        .p Порядок сертификации систем менеджмента
+                                                        .p_s.inffile (PDF, 17,4 Mb)
+
+                                            a.lk.lk_g
+                                                svg.ico(width="16" height="22" fill="none")
+                                                    path(d="M13.727 10.5L8 16.2m0 0l-5.727-5.7M8 16.2V1M1 21h14" stroke="#4E8925" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+                                                .p Скачать все
+
+
+            .h3_2 Особенности проведения
+            .filter-buttons.mt_40
+                a.filter.btn_round(
+                    is="inner-link"
+
+                    data-link-container="replaceable-popup"
+                    data-link-set-store="false"
+                    data-link-set-history="false"
+                    data-link-set-classes="false"
+                    data-link-animation="popup-transition"
+                    href="/popup/popup-tenders.html") Одноэтапный тендер
+                a.filter.btn_round(
+                    is="inner-link"
+
+                    data-link-container="replaceable-popup"
+                    data-link-set-store="false"
+                    data-link-set-history="false"
+                    data-link-set-classes="false"
+                    data-link-animation="popup-transition"
+                    href="/popup/popup-tenders.html") Двухэтапный тендер
+                a.filter.btn_round(
+                    is="inner-link"
+
+                    data-link-container="replaceable-popup"
+                    data-link-set-store="false"
+                    data-link-set-history="false"
+                    data-link-set-classes="false"
+                    data-link-animation="popup-transition"
+                    href="/popup/popup-tenders.html") Мультиэтапный тендер
+                a.filter.btn_round(
+                    is="inner-link"
+
+                    data-link-container="replaceable-popup"
+                    data-link-set-store="false"
+                    data-link-set-history="false"
+                    data-link-set-classes="false"
+                    data-link-animation="popup-transition"
+                    href="/popup/popup-tenders.html") Конкурс
+
+
+    section.subscribe
+        .wrapper.nr
+            .subscribe__preview
+                .subscribe__text
+                    .subscribe__title.h3_2 Проверка службы безопасности
+                    p.p_md Для быстрого допуска к интересующему тендеру, вы можете заранее пройти проверку службой безопасности
+                .subscribe__btn
+                    a.btn.big.darkgreen(is="inner-link" href="security_form_2_level.html")
+                        .btn__text Оставить заявку
+
+    section.filters-section
+        .wrapper.nr
+            .mb_60
+                h2 Список закупок
+            .filters
+                .filter-tabs
+                    a.filter.filter-tab.caps_2(is="filter-link" href="?filter[type]=_") все
+                    a.filter.filter-tab.caps_2(is="filter-link" href="?filter[type]=products") Товары
+                    a.filter.filter-tab.caps_2(is="filter-link" href="?filter[type]=services") Услуги
+                    a.filter.filter-tab.caps_2(is="filter-link" href="?filter[type]=done-project") завершенные
+
+    section.mb_120
+        .wrapper.nr
+            .catalog.replaceable-filter(data-id="replaceable-filter")
+                include ../templates/cards/cardInfo_tender
+                include ../templates/cards/cardInfo_tender
+                include ../templates/cards/cardInfo_tender
+                include ../templates/cards/cardInfo_tender
+
+            .load-more
+                a.load-more__link.p(is="load-more" data-link-container="replaceable-filter" href="/tenders_1_level.html?p=2") Показать еще
+                    svg.ico-arr(width="15" height="8" viewBox="0 0 15 8" fill="none")
+                        <path d="M1 1l6.5 6L14 1" stroke="#4E8925" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

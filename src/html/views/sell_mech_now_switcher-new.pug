@@ -1,0 +1,53 @@
+extends ../base
+
+block vars
+    - var page = 'sell';
+
+block main-content
+    section.artcl
+        .wrapper.nr
+            h1.artcl__title.scroll-block.js-scroll-block(data-text="true") Прочие продажи
+            .artcl__switcher.switcher
+                a.switch.caps_2(is="inner-link" data-link-container="replaceable-sell" href="sell_mech_now_switcher-bu.html") Продажа б/у техники
+                a.switch.caps_2(is="inner-link" data-link-container="replaceable-sell" href="sell_mech_now_switcher-new.html") продажа новой  техники
+                .switch-input
+
+    .replaceable-sell(data-id="sell")
+        section.mb_120
+            .wrapper.nr
+                .desc
+                    .desc__content.content
+                        h2.desc__title Продажа новой техники
+                        p Если вам необходимо купить новую сельскохозяйственную технику мы поможем это осуществить. Являясь крупнейшим поставщиком в Алтайском крае, мы можем продать качественный товар оптом по выгодной рыночной цене.
+                        button.btn.green.btn_def.btn_flex
+                            .button__text Купить
+
+                    .desc__aside.slider-aside
+                        .slider-sticky
+                            slider-component.as.slider(
+                                data-id="slider-cooperation"
+                                data-focusable="true"
+                                data-touch="true"
+                                data-draggable="true"
+                                data-resize="true")
+                                - var n = 1;
+
+                                    while n < 5
+                                        .slide
+                                            picture
+                                                source(srcset="")
+                                                img(src="./static/slider/slide-" + n++ + ".jpg")
+
+                            .slider-controls
+                                .slider-progress
+                                    slider-progress(data-id="slider-cooperation")
+                                        - for (var i = 0; i < 4; i++)
+                                            .item
+
+                                .slider-buttons
+                                    button.slider__control.arr(is="slider-control" data-id="slider-cooperation" data-to="prev")
+                                        svg(width="26" height="20" viewBox="0 0 26 20" fill="none")
+                                            use(xlink:href="#slider-arr")
+                                    button.slider__control.arr(is="slider-control" data-id="slider-cooperation" data-to="next")
+                                        svg(width="26" height="20" viewBox="0 0 26 20" fill="none")
+                                            use(xlink:href="#slider-arr")

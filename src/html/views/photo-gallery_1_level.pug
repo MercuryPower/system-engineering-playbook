@@ -1,0 +1,81 @@
+extends ../base
+
+block vars
+    - var page = 'press-center';
+
+block main-content
+
+    section.artcl
+        .wrapper.nr
+            h1.artcl__title.scroll-block.js-scroll-block(data-text="true") Фотогалерея
+
+    section.photos.mb_120
+        .wrapper.nr
+            .flex.flex_jscb.flex_aifs
+                .photos__dates
+                    -for (var i = 9; i > 0; i--)
+                        a.link.link_date(is="filter-link" href="?filter[date]=201" + i)
+                            .p= '201' + i
+                .photos__imagesWrapper.replaceable-filter(data-id="catalog")
+                    .mb_100
+                        .title.h2 Июнь
+                        .container.col-2.leaders
+                            - for (var i = 0; i < 2; i++)
+                                article.cardNews.trigger.trigger-default(data-trigger-type="scroll")
+                                    a.cardNews__link(is="inner-link" href="photoset_2_level_2.html")
+                                    .cardNews__imageWrapper
+                                        picture
+                                            source(srcset="")
+                                            img(src="./static/career/career-2.png")
+                                    .cardNews__body
+                                        .cardNews__date
+                                            p 12 июня
+                                            .dot
+                                            span 12 фотографий
+                                        .cardNews__text
+                                            p Начали проводить занятия для дошкольников по образованию в сфере сельского хозяйства.
+
+                                article.cardNews.trigger.trigger-default(data-trigger-type="scroll")
+                                    a.cardNews__link(is="inner-link" href="photoset_2_level_2.html")
+                                    .cardNews__imageWrapper
+                                        picture
+                                            source(srcset="")
+                                            img(src="./static/career/career-2.png")
+                                    .cardNews__body
+                                        .cardNews__date
+                                            p 23 мая
+                                            .dot
+                                            span 12 фотографий
+                                        .cardNews__text
+                                            p Начали проводить занятия для дошкольников по образованию в сфере сельского хозяйства.
+                    div
+                        .title.h2 Май
+                        .container.col-2.leaders
+                            article.cardNews.trigger.trigger-default(data-trigger-type="scroll")
+                                a.cardNews__link(is="inner-link" href="photoset_2_level_2.html")
+                                .cardNews__imageWrapper
+                                    picture
+                                        source(srcset="")
+                                        img(src="./static/career/career-2.png")
+                                .cardNews__body
+                                    .cardNews__date
+                                        p 12 июня
+                                        .dot
+                                        span 12 фотографий
+                                    .cardNews__text
+                                        p Начали проводить занятия для дошкольников по образованию в сфере сельского хозяйства.
+
+                            article.cardNews.trigger.trigger-default(data-trigger-type="scroll")
+                                a.cardNews__link(is="inner-link" href="photoset_2_level_2.html")
+                                .cardNews__imageWrapper
+                                    picture
+                                        source(srcset="")
+                                        img(src="./static/career/career-2.png")
+                                .cardNews__body
+                                    .cardNews__date
+                                        p 23 мая
+                                        .dot
+                                        span 12 фотографий
+                                    .cardNews__text
+                                        p Начали проводить занятия для дошкольников по образованию в сфере сельского хозяйства.
+

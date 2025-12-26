@@ -1,0 +1,73 @@
+extends ../base
+
+block vars
+    - var page = 'about';
+
+block main-content
+    section.artcl
+        .wrapper.nr
+            h1.artcl__title.scroll-block.js-scroll-block(data-text="true") География работы
+            .artcl__switcher.switcher
+                a.switch.caps_2(is="filter-link" data-container="replaceable-maps" href="?filter[class]=list") списком
+                //a.switch.caps_2(is="inner-link" data-link-container="replaceable-maps" href="geography_3_1_level.html") списком
+                a.switch.caps_2(is="filter-link" data-container="replaceable-maps" href="?filter[class]=_") На карте
+                //a.switch.caps_2(is="inner-link" data-link-container="replaceable-maps" href="geography_0_1_level.html") На карте
+                .switch-input
+
+    .replaceable-geography(data-id="sell")
+        section.mb_160
+            .wrapper.nr
+                maps-interactive.flex.flex_jscb
+                    include ../templates/maps/geography/tabs
+                    .maps__content.replaceable-maps(data-id="maps")
+                        .maps__imageWrapper.js-scroll-block
+                            maps-geography.maps-geography
+                                svg.maps__svg.contact(width="685" height="435" fill="none" viewBox="0 0 685 435")
+                                    path(d="M2.073 79.267a4 4 0 01-.81-4.616L15.29 45.773a4 4 0 014.053-2.227l28.465 3.258a4 4 0 001.68-.166l22.896-7.37a4 4 0 002.601-2.645l5.306-17.46a4 4 0 012.108-2.448L115.922.767a4 4 0 013.259-.08l30.478 12.72a4 4 0 011.566 1.171l9.972 12.293a4.002 4.002 0 003.433 1.467l41.348-3.381a4.003 4.003 0 012.768.818l33.531 25.834a4.002 4.002 0 002.384.83l125.44 1.796a3.998 3.998 0 012.955 1.367l42.686 48.861a4.005 4.005 0 002.858 1.365l115.057 4.467a3.995 3.995 0 012.799 1.3l27.14 29.731a4.007 4.007 0 002.768 1.299l75.668 3.524a4.003 4.003 0 012.762 1.293l38.088 41.537a4 4 0 01.381 4.92l-4.69 7.047a4 4 0 01-2.544 1.705l-70.735 14.169a4 4 0 01-2.151-.162l-70.628-25.643a4.005 4.005 0 00-3.405.319l-42.864 25.409a4.016 4.016 0 01-1.068.439l-84.556 21.172a3.999 3.999 0 00-3.028 3.88v21.855a4 4 0 001.216 2.872l24.833 24.069a4.002 4.002 0 01.523 5.124l-38.747 56.917a4.01 4.01 0 01-1.799 1.454l-56.345 22.926a3.99 3.99 0 00-1.987 1.759l-24.876 44.674a4 4 0 01-3.262 2.047l-153.576 8.943a3.999 3.999 0 01-3.453-1.622l-52.042-70.674a3.997 3.997 0 00-2.231-1.504L44.743 350.58a4 4 0 01-2.75-5.297l44.048-115.911a4 4 0 00-1.688-4.855l-47.358-28.293a4 4 0 01-1.94-3.699l.574-8.61a4 4 0 012.806-3.555l32.423-10.051a4 4 0 002.72-4.688l-5.906-26.623a4 4 0 00-3.59-3.121l-28.389-2.245a4 4 0 01-3.682-3.845l-.734-20.581a3.998 3.998 0 00-1.21-2.725L2.074 79.267z" fill="#C4DA62")
+                                    g(data-href="/maps/popups/1.html")
+                                        circle(opacity=".3" cx="233" cy="85" r="12" fill="#fff")
+                                        circle(cx="233" cy="85" r="6" fill="#fff")
+                                    g(data-href="/maps/popups/2.html")
+                                        circle(opacity=".3" cx="176" cy="146" r="12" fill="#fff")
+                                        circle(cx="176" cy="146" r="6" fill="#fff")
+                                    g(data-href="/maps/popups/3.html")
+                                        circle(opacity=".3" cx="477" cy="155" r="12" fill="#fff")
+                                        circle(cx="477" cy="155" r="6" fill="#fff")
+                                    g(data-href="/maps/popups/4.html")
+                                        circle(opacity=".3" cx="371" cy="214" r="12" fill="#fff")
+                                        circle(cx="371" cy="214" r="6" fill="#fff")
+
+
+                                .cardMap-popup
+                                    .cardMap.cardMap-popup__wr
+                                        button.button-close.ico-close
+                                        .replaceable-maps-popup(data-id="maps-popup")
+                                            .cardMap__body
+                                                .h3_2.cardMap__title ООО «Новохоперск-Агро-Инвест»
+                                                .cardMap__subtitle
+                                                    p.p_md Работает в Новохоперском и Грибановском районах
+                                                .cardMap__desc
+                                                    .info__links
+                                                        a.link(href="mailto:info@agroinvest.com")
+                                                            svg.ico(width="33" height="33" fill="none")
+                                                                use(xlink:href="#mail")
+                                                            p.link__text.p_md info@agroinvest.com
+
+                                                        a.link(href="tel:+74952326772")
+                                                            svg.ico(width="33" height="31" fill="none")
+                                                                use(xlink:href="#tel")
+                                                            p.link__text.p_md +7 (495) 232-67-72
+                                                        a.link(target="_blank" href="https://yandex.ru/maps/10672/voronezh-oblast/house/ulitsa_karla_marksa_2a/YEgYcg5iSUcDQFtrfX12c31gYQ==/?ll=41.492024%2C51.172135&z=17.2")
+                                                            svg.ico(width="32" height="30" fill="none")
+                                                                use(xlink:href="#address")
+
+                                                            p.link__text.p_md Воронежская обл., Новохопёрский р-н, село Красное, ул. Карла Маркса, 2А
+
+                                            .cardMap__list
+                                                ul
+                                                    li Сахарная свекла
+                                                    li Подсолнечник
+                                                    li Кукуруза
+                                                    li Пшеница
+                                                    li Соя
+                                                    li Ячмень

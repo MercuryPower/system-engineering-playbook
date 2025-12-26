@@ -1,0 +1,69 @@
+extends ../base
+
+block vars
+    - var page = 'sell';
+
+block main-content
+    section.artcl
+        .wrapper.nr
+            h1.artcl__title.scroll-block.js-scroll-block(data-text="true") Прочие продажи
+            .artcl__switcher.switcher
+                a.switch.caps_2(is="inner-link" data-link-container="replaceable-sell" href="sell_mech_now_switcher-bu.html") Продажа б/у техники
+                a.switch.caps_2(is="inner-link" data-link-container="replaceable-sell" href="sell_mech_now_switcher-new.html") продажа новой  техники
+                .switch-input
+
+    .replaceable-sell(data-id="sell")
+        section.mb_120
+            .wrapper.nr
+                .desc
+                    .desc__content.big
+                        h2.desc__title Продажа б/у техники
+                        p Все тендеры, относящиеся к компетенции Закупочной комиссии и Тендерного комитета, проводятся в Автоматизированной системе тендерных процедур.
+                        p С 21.05.2018 доступ в Систему является платным. Информация о стоимости права использования Системы, лицензионный договор, инструкция пользователя и ответы на часто задаваемые вопросы размещены в разделе «Документы для ознакомления» и в Личном кабинете Автоматизированной системы тендерных процедур.
+
+        section.filters-section
+            .wrapper.nr
+                .filters
+                    include ../templates/filters/filters-tab
+
+        section.mb_120
+            .wrapper.nr
+                .replaceable-catalog(data-id="all-catalog")
+                    .filters
+                        include ../templates/filters/filters-button
+                    .replaceable-filter(data-id="catalog")
+                        .gr-catalog.col-2.catalog
+
+                            - var n = 1;
+
+                            while n < 7
+                                article.cardProduct
+                                    a.cardProduct__link(href="")
+                                    .cardProduct__body
+                                        .cardProduct__main
+                                            .h3.cardProduct__title= "Анкерная сеялка John Deere 1870"
+                                            .cardProduct__text
+                                                p.p_md Выполняйте посевные работы эффективно и с высокой точностью, используя анкерную сеялку John Deere 1870
+                                            .h2.cardProduct__cost 140 000 ₽
+                                        .cardProduct__imageWrapper
+                                            picture
+                                                source(srcset="")
+                                                img(src="./static/cooperation/tractors/" + n++ +".png")
+
+
+                        pagination-component.pagination(data-container="replaceable-filter" data-scrollTo="filters-section")
+                            .pagination-counts
+                                a.h3_2.item.active(href="?p=1") 1
+                                a.h3_2.item(href="?p=2") 2
+                                a.h3_2.item(href="?p=3") 3
+                                a.h3_2.item(href="?p=4") 4
+                                a.h3_2.item(href="?p=5") 5
+                                .h3_2.item.dots ...
+                                a.h3_2.item(href="?p=20") 20
+                            .pagination-arrows
+                                a.pagination-arrow.arr.prev(href="?p=")
+                                    svg(width="26" height="20" viewBox="0 0 26 20" fill="none")
+                                        use(xlink:href="#slider-arr")
+                                a.pagination-arrow.arr.next(href="?p=")
+                                    svg(width="26" height="20" viewBox="0 0 26 20" fill="none")
+                                        use(xlink:href="#slider-arr")

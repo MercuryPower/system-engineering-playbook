@@ -1,0 +1,224 @@
+.filters-range {
+}
+
+.filter-range {
+    display: block;
+
+    .caption {
+        color: var(--greyDark);
+        margin-bottom: 5px;
+    }
+
+    .outputs {
+        display: flex;
+        height: 56px;
+        border-radius: 8px;
+        border: 1px solid var(--green);
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 10px;
+
+        &:before {
+            position: absolute;
+            content: '';
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            margin: 0 auto;
+            width: 1px;
+            background: var(--green);
+        }
+
+        .i {
+            padding: 0 12px 0 16px;
+            min-width: 110px;
+            width: 100%;
+            max-width: 130px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            border: none;
+            background-color: transparent;
+
+            @media (max-width: $to-small) {
+                max-width: 100%;
+            }
+        }
+    }
+
+    .input-range {
+        width: 100%;
+        display: flex;
+        position: relative;
+    }
+
+    .ln {
+        background: var(--green11);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        height: 2px;
+    }
+
+    .th {
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        border: 2px solid var(--green11);
+
+
+    }
+}
+
+
+
+.input-range {
+    height: 2px;
+    margin: 0 0 10px 0;
+    background: var(--green11);
+}
+
+.noUi-connect {
+    background: var(--green);
+}
+
+.noUi-target,
+.noUi-target * {
+    //touch-action: none;
+    user-select: none;
+}
+
+.noUi-target {
+    position: relative;
+}
+
+.noUi-base,
+.noUi-connects {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+/* Wrapper for all connect elements.
+ */
+.noUi-connects {
+    overflow: hidden;
+    z-index: 0;
+}
+
+.noUi-connect,
+.noUi-origin {
+    will-change: transform;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    transform-origin: 0 0;
+    transform-style: flat;
+}
+
+.noUi-connect {
+    height: 100%;
+    width: 100%;
+}
+
+.noUi-origin {
+    height: 10%;
+    width: 10%;
+}
+
+.noUi-txt-dir-rtl.noUi-horizontal .noUi-origin {
+    left: 0;
+    right: auto;
+}
+
+
+.noUi-horizontal .noUi-origin {
+    height: 0;
+}
+
+.noUi-touch-area {
+    height: 100%;
+    width: 100%;
+}
+
+.noUi-state-tap .noUi-connect,
+.noUi-state-tap .noUi-origin {
+    transition: transform 0.3s;
+}
+
+.noUi-state-drag * {
+    cursor: inherit !important;
+}
+
+.noUi-handle {
+    right: -6.5px;
+}
+
+.noUi-handle-lower {
+
+}
+
+.noUi-connects {
+    border-radius: 3px;
+}
+
+.noUi-draggable {
+    cursor: ew-resize;
+}
+
+.noUi-handle {
+    padding: 10px;
+    //width: 13px;
+    //height: 13px;
+    //border-radius: 50%;
+    //border: 2px solid var(--green11);
+    //background: var(--background);
+    position: absolute;
+    top: calc(-18px / 2);
+    cursor: pointer;
+
+    &:before {
+        position: absolute;
+        content: '';
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 13px;
+        height: 13px;
+        margin: auto;
+        border-radius: 50%;
+        border: 2px solid var(--green11);
+        background: var(--background);
+
+        transition: border-color .35s var(--ease), background-color .35s var(--ease);
+    }
+
+    &:hover {
+        &:before {
+            border-color: var(--green);
+        }
+    }
+
+    &.noUi-active {
+
+        &:before {
+            background: var(--green);
+            border-color: var(--green);
+        }
+
+    }
+}
+
+
+[disabled].noUi-target,
+[disabled].noUi-handle,
+[disabled] .noUi-handle {
+    cursor: not-allowed;
+}

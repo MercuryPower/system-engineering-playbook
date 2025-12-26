@@ -1,0 +1,136 @@
+.label-file {
+    width: 100%;
+    display: block;
+    margin-bottom: 22px;
+    cursor: pointer;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .input-outher {
+        position: relative;
+        color: var(--green);
+
+        &:first-child {
+            margin-top: 22px;
+        }
+    }
+
+    .input-wr {
+        position: relative;
+        height: 56px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-radius: 8px;
+        border: 1px dashed var(--green11);
+        padding: 0 20px;
+
+        p {
+            font-size: 16px;
+            line-height: 1.375em;
+            margin-bottom: 0;
+            color: var(--green);
+        }
+    }
+
+    .pdo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+
+        p {
+            width: calc(100% - 27px);
+            text-align: center;
+        }
+    }
+
+    .ico {
+        margin-right: 15px;
+    }
+
+    .remove {
+        position: absolute;
+        right: 0;
+        top: 4px;
+    }
+
+    .files-data {
+        width: 100%;
+    }
+
+    .file-data {
+        position: relative;
+
+        .ico {
+            position: absolute;
+            top: 2px;
+            width: 12px;
+            height: 16px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.375em;
+            margin-bottom: 0;
+            margin-left: 30px;
+            width: calc(100% - 70px);
+            overflow: hidden;
+        }
+    }
+
+
+    &.not-empty {
+        .input-wr {
+            border-color: var(--green);
+        }
+    }
+
+    &.not-empty:not(.multiple) {
+        .pdo {
+            opacity: 0;
+            position: absolute;
+        }
+        .pdo-file {
+            position: absolute;
+            left: 20px;
+            right: 20px;
+            top: 0;
+            height: 56px;
+            display: flex;
+            align-items: center;
+        }
+
+        .file-data {
+            margin-top: 0;
+        }
+
+    }
+
+    .file-data {
+        margin-bottom: 8px;
+
+        &:first-child {
+            margin-top: 12px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+}
+
+
+input[type="file"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+}
+
+

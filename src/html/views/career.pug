@@ -1,0 +1,106 @@
+extends ../base
+
+block vars
+    - var page = 'career';
+
+block main-content
+    section.artcl
+        .wrapper.nr
+            h1.artcl__title.scroll-block.js-scroll-block(data-text="true") Карьера
+            .artcl__text
+                .interlinear Работайте с лучшими!
+
+    section.mb_140
+        .wrapper.nr
+            .gr.col-2
+                article.cardPreview.trigger.trigger-default(data-trigger-type="scroll")
+                    a.cardPreview__link(href="jobs_1_level.html" is="inner-link")
+                    .cardPreview__imageWrapper
+                        picture.picture
+                            source(srcset="" type="image/webp")
+                            img(src="./static/career/career-1.png")
+                    .cardPreview__header
+                        h2.cardPreview__name Вакансии
+                        .cardPreview__button.btn.btn_sq
+                            svg.ico(width="8" height="15" fill="none")
+                                use(xlink:href="#arr-s")
+                    .cardPreview__text
+                        p.text_md Сейчас стало актуальным хранение, восстановление и реализация б/у, с/х и дорожно- строительной техники.
+                article.cardPreview.trigger.trigger-default(data-trigger-type="scroll")
+                    a.cardPreview__link(href="" is="inner-link")
+                    .cardPreview__imageWrapper
+                        picture.picture
+                            source(srcset="" type="image/webp")
+                            img(src="./static/career/career-4.png")
+                    .cardPreview__header
+                        h2.cardPreview__name Обучение
+                        .cardPreview__button.btn.btn_sq
+                            svg.ico(width="8" height="15" fill="none")
+                                use(xlink:href="#arr-s")
+                    .cardPreview__text
+                        p.text_md Педагогический процесс организации и стимуляции учебно-познавательной деятельности учащихся.
+
+                div.full.trigger.trigger-default(data-trigger-type="scroll")
+                    h2.title Истории успеха
+                    slider-component.slider(
+                        data-id="slider-career"
+                        data-focusable="true"
+                        data-touch="true"
+                        data-draggable="true"
+                        data-resize="true")
+                        - var values = ['Агроинвест дал мне то, о чем я всегда мечтал!', 'Агроинвест дал мне то, о чем я всегда мечтал!', 'Картофель', 'Кукуруза', 'Соя', 'Лук', 'Ячмень', 'Нут', 'Горчица', 'Рапс'];
+
+                        each val in values
+                            .slide
+                                picture
+                                    source(srcset="")
+                                    img(src="./static/career/slider.png")
+                                .slideInfo
+                                    .slideInfo__title.interlinear= val
+                                    p.slideInfo__text.p_md Это Василий. И он много чего добился. А все, потому что он работал с нами. Будь как Василий — приходи к нам работать!
+                                    button.slideInfo__btn.btn.green.btn_def.btn_flex
+                                        .button__text Подробнее
+
+                    .slider-controls
+                        .slider-progress
+                            slider-progress(data-id="slider-career")
+                                - for (var i = 0; i < 10; i++)
+                                    .item
+
+                        .slider-buttons
+                            button.slider__control.arr(is="slider-control" data-id="slider-career" data-to="prev")
+                                svg(width="26" height="20" viewBox="0 0 26 20" fill="none")
+                                    use(xlink:href="#slider-arr")
+                            button.slider__control.arr(is="slider-control" data-id="slider-career" data-to="next")
+                                svg(width="26" height="20" viewBox="0 0 26 20" fill="none")
+                                    use(xlink:href="#slider-arr")
+
+
+
+                article.cardPreview.trigger.trigger-default(data-trigger-type="scroll")
+                    a.cardPreview__link(href="" is="inner-link")
+                    .cardPreview__imageWrapper
+                        picture.picture
+                            source(srcset="" type="image/webp")
+                            img(src="./static/career/career-2.png")
+                    .cardPreview__header
+                        h2.cardPreview__name Поддержка молодых </br> специалистов
+                        .cardPreview__button.btn.btn_sq
+                            svg.ico(width="8" height="15" fill="none")
+                                use(xlink:href="#arr-s")
+                    .cardPreview__text
+                        p.text_md Целенаправленный педагогический процесс организации и стимулирования активной учебно-познавательной деятельности учащихся по овладению знаниями.
+
+                article.cardPreview.trigger.trigger-default(data-trigger-type="scroll")
+                    a.cardPreview__link(href="" is="inner-link")
+                    .cardPreview__imageWrapper
+                        picture.picture
+                            source(srcset="" type="image/webp")
+                            img(src="./static/career/career-3.png")
+                    .cardPreview__header
+                        h2.cardPreview__name Выпускникам и студентам
+                        .cardPreview__button.btn.btn_sq
+                            svg.ico(width="8" height="15" fill="none")
+                                use(xlink:href="#arr-s")
+                    .cardPreview__text
+                        p.text_md Мы продаем сельхозпродукцию и сырье, зерно, грибы, орехи, мед, фрукты и ягоды, овощи, декоративные культуры, яйцо ,масличные культуры

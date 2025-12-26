@@ -1,0 +1,24 @@
+mixin picture(pictureClass, imgClass, path, name, alt, type, mobile)
+    picture(class=pictureClass)
+        each val in type
+            source(srcset=path + "/" + name + "." + val media="(min-width: 1024px)" type="image/" + val)
+            if !mobile
+                source(srcset=path + "/" + name + "_t." + val type="image/" + val)
+        img.img(src=path + "/" + name + ".jpg" class=imgClass alt=alt loading="lazy")
+
+mixin inputFile(caption, multifiles)
+    label.label-file(is="file-input")
+        if caption
+            p.caption= caption
+        .input-outher
+            .input-wr
+                .pdo
+                    svg.ico(width="12" height="18" fill="none")
+                        use(href="#clip")
+                    p Прикрепить файл
+                if multifiles
+                    input(type="file" multiple)
+                else
+                    input(type="file")
+            .pdo-file
+                .files-data

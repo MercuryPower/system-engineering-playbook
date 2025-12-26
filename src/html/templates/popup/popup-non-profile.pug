@@ -1,0 +1,38 @@
+popup-component.popup(data-id="popup-work")
+    .overflow
+        .popup-content
+            .popup-inner.nr
+                button.button-close.ico-close(is="popup-close")
+                .wrapper
+                    .popup__desc
+                        h2 Заявка
+                    .form-wrapper
+                        form-response.response(data-id="form-work")
+                            .response-inner
+
+                        form.form.form-reg(action="./response.json" data-id="form-work" method="post" is="form-component")
+
+                            .ln
+                                label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                    span.placeholder ФИО
+                                    input.input.lightgreen(name="userName" type="text" required)
+                            .ln
+                                label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                    span.placeholder Электронная почта
+                                    input.input.lightgreen(name="userEmail" type="email" required)
+                            .ln
+                                label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                    span.placeholder Телефон
+                                    input.input.lightgreen(name="userPhone" type="tel" required)
+                            .ln
+                                label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                    span.placeholder Сообщение
+                                    textarea.input.lightgreen(name="userMessage" required)
+
+                            .ln.ln-submit
+                                .agree
+                                    label.input-wrapper.input-wrapper_checkbox(is="input-wrapper")
+                                        input.input(name="userAccept" type="checkbox" required)
+                                        span.placeholder.placeholder_checkbox Я согласен с <a class="link_green">политикой</a> обработки данных
+                                button.btn.btn_def.darkgreen.form__button
+                                    .btn__text Отправить

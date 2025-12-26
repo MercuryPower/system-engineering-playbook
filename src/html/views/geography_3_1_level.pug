@@ -1,0 +1,29 @@
+extends ../base
+
+block vars
+    - var page = 'about';
+
+block main-content
+    section.artcl
+        .wrapper.nr
+            h1.artcl__title.scroll-block.js-scroll-block(data-text="true") География работы
+            .artcl__switcher.switcher
+                a.switch.caps_2(is="filter-link" data-container="replaceable-maps" href="?filter[class]=list") списком
+                //a.switch.caps_2(is="inner-link" data-link-container="replaceable-maps" href="geography_3_1_level.html") списком
+                a.switch.caps_2(is="filter-link" data-container="replaceable-maps" href="?filter[class]=_") На карте
+                //a.switch.caps_2(is="inner-link" data-link-container="replaceable-maps" href="geography_0_1_level.html") На карте
+                .switch-input
+
+    .replaceable-geography(data-id="sell")
+        section.mb_160
+            .wrapper.nr
+                maps-interactive.flex.flex_jscb
+
+                    include ../templates/maps/geography/tabs
+
+
+                    .maps__content.replaceable-maps(data-id="maps")
+                        .maps__list
+                            include ../templates/cards/cardMap_geography
+                            include ../templates/cards/cardMap_geography
+                            include ../templates/cards/cardMap_geography

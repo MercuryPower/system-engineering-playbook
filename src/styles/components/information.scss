@@ -1,0 +1,41 @@
+.information {
+
+
+    &__slider {
+        margin: 0 0 24px 0;
+
+        img {
+            min-height: 240px;
+            max-height: 240px;
+        }
+    }
+
+    &__slide {
+    }
+
+    &__sliderNav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__sliderProgress {
+        position: relative;
+        display: block;
+        width: calc(100% - 92px);
+        height: 2px;
+        background: var(--grey);
+
+        .swiper-pagination-progressbar-fill {
+            transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+    }
+
+    &__sliderButton {
+        display: flex;
+    }
+}
+
+
+

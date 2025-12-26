@@ -1,0 +1,124 @@
+extends ../base
+
+block vars
+    - var page = 'tender';
+
+block main-content
+    section.artcl
+        .wrapper.nr
+            a.artcl-back.link.link-back(is="inner-link" href="cooperation-text.html")
+                svg.ico(width="8" height="15" fill="none")
+                    path(d="M7 1L1 7.5 7 14" stroke="#E3E2DC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+                span.p_min.link-back__text Закупки
+        .wrapper.nr
+            h1.artcl__title.scroll-block.js-scroll-block(data-text="true") Подача заявки в службу безопасности
+            .artcl__text
+                .interlinear Заполните по возможности все поля
+    section.mb_120
+        .wrapper.nr
+            .form-wrapper
+                form-response.response(data-id="form-tender")
+                    .response-inner
+                form.form.form-big(action="./response.json" data-id="form-tender" method="post" is="form-component")
+                    fieldset
+                        .mb_60
+                            .h3_2 Базовые документы
+                            .p_md Обязательны к заполнению
+
+                        .container.col-3
+                            .col
+                                +inputFile("Устав", true)
+                            .col
+                                +inputFile("Приказ о вступлении в должность ГД")
+                            .col
+                                +inputFile("Доверенность на подписанта")
+                            .col
+                                +inputFile("Свидетельство о постановке на налоговый учет")
+                            .col
+                                +inputFile("Лист записи в едином государственном реестре юрлиц")
+                            .col
+                                +inputFile("Протокол  о назначении Генерального директора")
+                            .col
+                                +inputFile("Карточка предприятия (контрагента)")
+                    fieldset
+                        .mb_60
+                            .h3_2 Документы, свидетельствующие о ведении обществом хозяйственной деятельности
+                            .p_md (преимущества заполнения)
+
+                        .container.col-3
+                            .col
+                                +inputFile("Документы, подтверждающие действительность юридического, фактического (в случае несовпадения) либо почтового адреса. Это может быть паспорт, еще что-то и еще что-то")
+                                +inputFile(false)
+                                +inputFile(false)
+                            .col
+                                +inputFile("Документы, подтверждающие наличие офисных, производственных, складских помещений, торговых площадей на праве собственности или на праве аренды (с получением копий договоров аренды)")
+                                +inputFile(false)
+                                +inputFile(false)
+                    fieldset
+                        .mb_60
+                            .h3_2 Документы финансовой и статистической отчетности общества
+                            .p_md (преимущества заполнения)
+
+                        .container.col-3
+                            .col
+                                .tooltip
+                                    .ico
+                                        svg(width="16" height="16" viewBox="0 0 16 16" fill="none")
+                                            use(xlink:href="#tooltip")
+                                    .tooltip__wr
+                                        .tooltip__in
+                                            .p_min форма №1за последний отчетный период
+                                +inputFile("Бухгалтерский баланс")
+                            .col
+                                .tooltip
+                                    .ico
+                                        svg(width="16" height="16" viewBox="0 0 16 16" fill="none")
+                                            use(xlink:href="#tooltip")
+                                    .tooltip__wr
+                                        .tooltip__in
+                                            .p_min форма №2 за последний отчетный период
+                                +inputFile("Отчет о прибылях и убытках")
+
+                            .col
+                                .tooltip
+                                    .ico
+                                        svg(width="16" height="16" viewBox="0 0 16 16" fill="none")
+                                            use(xlink:href="#tooltip")
+                                    .tooltip__wr
+                                        .tooltip__in
+                                            .p_min о возможности применения упрощенной системы налогообложения в случае ее применения
+                                +inputFile("Уведомление МИ ФНС")
+
+                    fieldset
+                        .mb_60
+                            .h3_2 Документы, дающие право на осуществление деятельности
+                            .p_md (преимущества заполнения)
+
+                        .container.col-3
+                            .col
+                                +inputFile("Сертификаты, декларации о соответствии")
+                                +inputFile(false)
+                                +inputFile(false)
+
+                            .col
+                                +inputFile("Свидетельства СРО с приложениями")
+                                +inputFile(false)
+                                +inputFile(false)
+                            .col
+                                .tooltip
+                                    .ico
+                                        svg(width="16" height="16" viewBox="0 0 16 16" fill="none")
+                                            use(xlink:href="#tooltip")
+                                    .tooltip__wr
+                                        .tooltip__in
+                                            .p_min со всеми приложениями, если ваша деятельность подлежит лицензированию
+                                +inputFile("Лицензии")
+                                +inputFile(false)
+                                +inputFile(false)
+                    .ln.submit-line
+                        .agree
+                            label.input-wrapper.input-wrapper_checkbox(is="input-wrapper")
+                                input.input(name="userAccept" type="checkbox" required)
+                                span.placeholder.placeholder_checkbox Я согласен с <a class="link_green">политикой</a> обработки данных
+                        button.btn.btn-submit.btn_def.darkgreen
+                            .btn__text Отправить

@@ -1,0 +1,49 @@
+.page-404 {
+  background-color: var(--darkGreen);
+  color: #F1E678;
+  display: block;
+  padding: 0 0 85px;
+  min-height: calc(100vh);
+
+  &__svgWrapper {
+    --vw: 100%;
+
+    @media (min-width: $from-medium) {
+      --vw: 50vw;
+    }
+
+    @media (min-width: $from-huge) {
+      --vw: 70vw
+    }
+
+    svg {
+      width: calc(var(--vw));
+      height: calc(var(--vw) / 1.97);
+      position: relative;
+
+      .line-horizontal {
+        transform: translateX(-95%);
+      }
+
+      .tractor {
+        overflow: hidden;
+        transform: translateX(-95%);
+      }
+
+    }
+
+    &.is-show {
+      .line-horizontal {
+        transform: translateX(0);
+        transition: transform 3s ease;
+        //stroke-dasharray: 0;
+        //transition: stroke-dasharray 2s ease;
+      }
+      .tractor {
+        transform: translateX(0);
+        transition: transform 3s ease;
+      }
+    }
+  }
+
+}

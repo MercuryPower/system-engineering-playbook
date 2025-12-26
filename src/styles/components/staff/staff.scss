@@ -1,0 +1,12 @@
+.staff{
+  &__heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__switcher{
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}

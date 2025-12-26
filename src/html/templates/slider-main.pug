@@ -1,0 +1,33 @@
+section.main-slider.margin-bottom_100
+    .wrapper
+        slider-component.slider.slider-main(
+            data-id="slider-cooperation"
+            data-focusable="true"
+            data-touch="true"
+            data-draggable="true"
+            data-resize="true")
+            - var values = ['Технологические решения для производства', 'Внимание к качеству реализуемого урожая', 'Зернохранилища общей мощностью более 550 тысяч тонн', 'Современная сельскохозяйственная техника', 'Обеспечение экологической безопасности'];
+            - var k = 1;
+
+            each val in values
+                .slide
+                    picture
+                        source(srcset="")
+                        img(src="./static/slider/slide-"+ k++ + ".jpg")
+                    .slideInfo.slideInfo_main
+                        .h1.slideInfo__title= val
+
+        .slider-controls
+            .slider-progress
+                slider-progress(data-id="slider-cooperation")
+                    - for (var i = 0; i < 5; i++)
+                        .item
+
+
+            .slider-buttons
+                button.slider__control.arr(is="slider-control" data-id="slider-cooperation" data-to="prev")
+                    svg(width="26" height="20" viewBox="0 0 26 20" fill="none")
+                        use(xlink:href="#slider-arr")
+                button.slider__control.arr(is="slider-control" data-id="slider-cooperation" data-to="next")
+                    svg(width="26" height="20" viewBox="0 0 26 20" fill="none")
+                        use(xlink:href="#slider-arr")

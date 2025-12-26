@@ -1,0 +1,98 @@
+extends ../base
+
+block vars
+    - var page = 'activities';
+
+block main-content
+    section.artcl
+        .wrapper.nr
+            a.artcl-back.link.link-back(is="inner-link" href="activities.html")
+                svg.ico(width="8" height="15" fill="none")
+                    path(d="M7 1L1 7.5 7 14" stroke="#E3E2DC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+                span.p_min.link-back__text Деятельность
+        .wrapper.nr
+            h1.artcl__title.scroll-block.js-scroll-block(data-text="true") Выращивание
+            .artcl__text
+                .interlinear Мы специализируемся на выращивании злаков, овощей и животных
+
+    section
+        .wrapper.nr
+            .filter-tabs
+                a.filter.filter-tab.caps_2(is="inner-link" data-link-container="replaceable-catalog" href="growing.html") растениеводство
+                a.filter.filter-tab.caps_2(is="inner-link" data-link-container="replaceable-catalog" href="vegetable-growing.html") овощеводство
+                a.filter.filter-tab.caps_2(is="inner-link" data-link-container="replaceable-catalog" href="gardening.html") садоводство
+                a.filter.filter-tab.caps_2(is="inner-link" data-link-container="replaceable-catalog" href="animal-husbandry.html") животноводство
+
+    .replaceable-catalog(data-id="catalog")
+        section.mb_120.slider-section
+            .wrapper.nr
+                slider-component.slider(
+                    data-id="slider-cooperation"
+                    data-focusable="true"
+                    data-touch="true"
+                    data-draggable="true"
+                    data-resize="true")
+                    - var values = ['Яблоки', 'Малина', 'Голубика', 'Земляника'];
+
+                    each val in values
+                        .slide
+                            picture
+                                source(srcset="")
+                                img(src="./static/cooperation/slider/1.jpg")
+                            .slideInfo
+                                .slideInfo__title.interlinear= val
+                                p.slideInfo__text.p_md Род травянистых, в основном однолетних, растений семейства Злаки, ведущая зерновая культура во многих странах.
+                                a.slideInfo__btn.btn.green.btn_def.btn_flex(is="inner-link" href="cultures-crops_1_level.html")
+                                    .button__text Подробнее
+
+                .slider-controls
+                    .slider-progress
+                        slider-progress(data-id="slider-cooperation")
+                            - for (var i = 0; i < 4; i++)
+                                .item
+
+                    .slider-buttons
+                        button.slider__control.arr(is="slider-control" data-id="slider-cooperation" data-to="prev")
+                            svg(width="26" height="20" viewBox="0 0 26 20" fill="none")
+                                use(xlink:href="#slider-arr")
+                        button.slider__control.arr(is="slider-control" data-id="slider-cooperation" data-to="next")
+                            svg(width="26" height="20" viewBox="0 0 26 20" fill="none")
+                                use(xlink:href="#slider-arr")
+
+        section.mb_120
+            .wrapper.nr
+                .gr.col-5
+                    button.cardProductPreview(is="slider-control" data-id="slider-cooperation" data-to=0)
+                        a.cardProductPreview__link(is="inner-link" href="cultures-crops_1_level.html")
+                        .cardProductPreview__imageWrapper
+                            picture
+                                source()
+                                img(src="https://vignette.wikia.nocookie.net/creepypasta/images/e/ee/Apples.jpg/revision/latest?cb=20131128120644")
+                        .cardProductPreview__desc
+                            .cardProductPreview__name.p_md Яблоки
+
+                    button.cardProductPreview(is="slider-control" data-id="slider-cooperation" data-to=1)
+                        a.cardProductPreview__link(is="inner-link" href="cultures-crops_1_level.html")
+                        .cardProductPreview__imageWrapper
+                            picture
+                                img(src="https://s1.stc.all.kpcdn.net/putevoditel/projectid_379258/images/tild3663-3536-4563-a163-336135393863__960.jpg")
+                        .cardProductPreview__desc
+                            .cardProductPreview__name.p_md Малина
+
+                    button.cardProductPreview(is="slider-control" data-id="slider-cooperation" data-to=2)
+                        a.cardProductPreview__link(is="inner-link" href="cultures-crops_1_level.html")
+                        .cardProductPreview__imageWrapper
+                            picture
+                                source()
+                                img(src="https://abekker.ru/uploads/products/golubika-lateblu2.jpg")
+                        .cardProductPreview__desc
+                            .cardProductPreview__name.p_md Голубика
+
+                    button.cardProductPreview(is="slider-control" data-id="slider-cooperation" data-to=3)
+                        a.cardProductPreview__link(is="inner-link" href="cultures-crops_1_level.html")
+                        .cardProductPreview__imageWrapper
+                            picture
+                                source()
+                                img(src="https://i.pinimg.com/564x/5b/61/8e/5b618eb58f1486b16105b781b7d2ed29.jpg")
+                        .cardProductPreview__desc
+                            .cardProductPreview__name.p_md Земляника

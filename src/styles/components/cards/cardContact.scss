@@ -1,0 +1,47 @@
+.cardContact {
+
+    &__name {
+        margin-bottom: 10px;
+    }
+
+}
+
+.cardContact_full {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 40px 16px;
+
+    @media (max-width: $to-small) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+
+        grid-gap: 24px 0;
+    }
+
+    .cardContact__links {
+        @media (min-width: $from-medium) {
+            flex-direction: row;
+        }
+
+        a {
+            color: var(--darkGreen);
+
+            @media (min-width: $from-medium) {
+                margin-right: 40px;
+            }
+        }
+
+        .item {
+            @media (max-width: $to-medium) {
+                margin-bottom: 24px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .caption {
+            margin-bottom: 10px;
+        }
+    }
+}

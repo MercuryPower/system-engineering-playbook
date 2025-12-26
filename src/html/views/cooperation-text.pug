@@ -1,0 +1,72 @@
+extends ../base
+
+block vars
+    - var page = 'cooperation';
+
+block main-content
+    section.artcl.pb_60
+        .wrapper.nr
+            h1.artcl__title.scroll-block.js-scroll-block(data-text="true") Продажа с/х продукции
+
+    section.mb_120
+        .wrapper.nr
+            .desc
+                .desc__content.reg
+                    p Все тендеры, относящиеся к компетенции Закупочной комиссии и Тендерного комитета, проводятся в Автоматизированной системе тендерных процедур.
+                    p С 21.05.2018 доступ в Систему является платным. Информация о стоимости права использования Системы, лицензионный договор, инструкция пользователя и ответы на часто задаваемые вопросы размещены в разделе «Документы для ознакомления» и в Личном кабинете Автоматизированной системы тендерных процедур.
+                include ../templates/support-service
+
+
+
+    section.mb_80.slider-section
+        .wrapper.nr
+
+            slider-component.slider(
+                data-id="slider-cooperation"
+                data-focusable="true"
+                data-touch="true"
+                data-draggable="true"
+                data-resize="true")
+                - var values = ['Пшеница', 'Подсолнечник', 'Картофель', 'Кукуруза', 'Соя', 'Лук', 'Ячмень', 'Нут', 'Горчица', 'Рапс'];
+
+                each val in values
+                    .slide
+                        picture
+                            source(srcset="")
+                            img(src="./static/cooperation/slider/1.jpg")
+                        .slideInfo
+                            .slideInfo__title.interlinear= val
+                            p.slideInfo__text.p_md Род травянистых, в основном однолетних, растений семейства Злаки, ведущая зерновая культура во многих странах.
+                            a.slideInfo__btn.btn.green.btn_def.btn_flex(is="inner-link" href="sell-buckwheat.html")
+                                .button__text Купить
+
+            .slider-controls
+                .slider-progress
+                    slider-progress(data-id="slider-cooperation")
+                        - for (var i = 0; i < 10; i++)
+                            .item
+
+                .slider-buttons
+                    button.slider__control.arr(is="slider-control" data-id="slider-cooperation" data-to="prev")
+                        svg(width="26" height="20" viewBox="0 0 26 20" fill="none")
+                            use(xlink:href="#slider-arr")
+                    button.slider__control.arr(is="slider-control" data-id="slider-cooperation" data-to="next")
+                        svg(width="26" height="20" viewBox="0 0 26 20" fill="none")
+                            use(xlink:href="#slider-arr")
+
+
+    section.mb_120
+        .wrapper.nr
+            .gr.col-5
+                - var values = ['Пшеница', 'Подсолнечник', 'Картофель', 'Кукуруза', 'Соя', 'Лук', 'Ячмень', 'Нут', 'Горчица', 'Рапс'];
+                - var index = 1
+
+                each val, i in values
+                    button.cardProductPreview(is="slider-control" data-id="slider-cooperation" data-to=i)
+                        a.cardProductPreview__link(is="inner-link" href="sell-buckwheat.html")
+                        .cardProductPreview__imageWrapper
+                            picture
+                                source()
+                                img(src="./static/cooperation/slider-preview/" + index++ + ".png")
+                        .cardProductPreview__desc
+                            .cardProductPreview__name.p_md= val

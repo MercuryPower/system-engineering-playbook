@@ -1,0 +1,36 @@
+.vacancy {
+    margin-bottom: rem(100px);
+
+    @media screen and (max-width: $to-medium) {
+        margin-bottom: rem(80px);
+    }
+
+    @media screen and (max-width: $to-small) {
+        margin-bottom: rem(60px);
+    }
+
+    ul {
+        margin-top: 10px;
+    }
+
+    .location {
+        display: flex;
+        margin: 20px 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .ico {
+            margin-right: 8px;
+        }
+
+        p {
+            width: calc(100% - 40px);
+        }
+    }
+
+    p {
+
+    }
+}

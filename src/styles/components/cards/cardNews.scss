@@ -1,0 +1,82 @@
+.cardNews {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+
+    &:hover {
+        .cardNews__body {
+            border-color: var(--green);
+        }
+
+        .cardNews__imageWrapper img {
+            transform: scale(1.05);
+        }
+    }
+
+    &__imageWrapper {
+        overflow: hidden;
+        pointer-events: none;
+
+        img {
+            transform: scale(1);
+            transition: transform .35s var(--ease-in);
+        }
+
+    }
+
+    &__body {
+        padding: 20px 30px 30px;
+
+        border-bottom: 1px solid var(--grey);
+        border-right: 1px solid var(--grey);
+        border-left: 1px solid var(--grey);
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+        transition: border-color 300ms ease;
+
+        @media (max-width: $to-medium) {
+            padding: 16px 24px 24px;
+        }
+    }
+
+    &__date {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+
+        p {
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+
+        span {
+            color: var(--greyDark);
+        }
+
+        a {
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    &__link {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+}
+
+
+.date {
+    display: flex;
+    align-items: center;
+    p {
+        margin-bottom: 0;
+    }
+
+    span {
+        color: var(--greyDark);
+    }
+}
