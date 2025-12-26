@@ -1,0 +1,115 @@
+extends ../base
+
+block vars
+    - var page = 'jobs';
+
+block main-content
+    section.artcl
+        .wrapper.nr
+            h1.artcl__title.scroll-block.js-scroll-block(data-text="true") Вакансии
+
+    section.mb_100
+        .wrapper.nr
+            .desc
+                .desc__content.big
+                    p Волго-Дон АгроИнвест – один из крупнейших работодателей аграрного сектора. Основными направлениями деятельности является развитие аграрного сектора в регионах Черноземья и Поволжья на основе долгосрочных инвестиций, международного опыта и использования инновационных технологий ведущих сельскохозяйственных производителей мира.
+                    p Это большая слаженная компания единомышленников, представленная высококвалифицированными специалистами в том числе международного уровня. Мы предлагаем достойную оплату труда, профессиональный и карьерный рост, гарантии и стабильность, обучение, социально-ответственную позицию!
+                    a.btn.green.btn_def.btn_flex(
+                        is="inner-link"
+
+                        data-link-container="replaceable-popup"
+                        data-link-set-store="false"
+                        data-link-set-history="false"
+                        data-link-set-classes="false"
+                        data-link-animation="popup-transition"
+                        href="popup/popup-work.html")
+                        .button__text Подать анкету
+
+    section.filters-section.mb_60
+        .wrapper.nr
+            accordion-component.container.col-3
+                .filter
+                    p.caption Сфера деятельности
+                    drop-down.drop-down.filter-select.full
+                        .dd-button
+                            .dd-button__title.p
+                            svg.ico-arr(width="15" height="8" viewBox="0 0 15 8" fill="none")
+                                use(xlink:href="#dd-arr")
+                        .dd-wrapper
+                            .dd-inner
+                                a.p.filter.filter-checkbox(is="filter-link" href="?filter[vacancy]=1") Водитель
+                                a.p.filter.filter-checkbox(is="filter-link" href="?filter[vacancy]=2") Менеджер
+                                a.p.filter.filter-checkbox(is="filter-link" href="?filter[vacancy]=3") Программист
+                                a.p.filter.filter-checkbox(is="filter-link" href="?filter[vacancy]=4") Оператор
+                .filter
+                    p.caption Регион
+                    drop-down.drop-down.filter-select.full
+                        .dd-button
+                            .dd-button__title.p
+                            svg.ico-arr(width="15" height="8" viewBox="0 0 15 8" fill="none")
+                                use(xlink:href="#dd-arr")
+                        .dd-wrapper
+                            .dd-inner
+                                a.p.filter.filter-checkbox(is="filter-link" href="?filter[city]=1") Воронежская область
+                                a.p.filter.filter-checkbox(is="filter-link" href="?filter[city]=2") Волгоградская область
+                                a.p.filter.filter-checkbox(is="filter-link" href="?filter[city]=3") Самарская область
+
+                .filter
+                    form(is="search-form" data-container="replaceable-filter")
+                        label.search()
+                            svg.ico(width="18" height="20" fill="none")
+                                path(d="M15.5 8a7.5 7.5 0 11-15 0 7.5 7.5 0 0115 0z" stroke="#B9CAAD")
+                                path(d="M13 14l4 5" stroke="#B9CAAD" stroke-linecap="round" stroke-linejoin="round")
+                            input.input.lightgreen(type="text" name="query" placeholder="поиск")
+
+                button.filter.filter-reset.link_g(is="filters-reset" data-names=["class", "city"] data-container="replaceable-filter")
+                    .ico-close.s
+                    p Очистить фильтр
+
+    section.mb_120
+        .wrapper.nr
+            .replaceable-filter(data-id="catalog")
+                .gr-catalog.col-2.catalog
+
+                    - var n = 1;
+
+                    while n < 5
+                        article.cardProduct
+                            a.cardProduct__link(
+                                is="inner-link"
+                                data-link-container="replaceable-popup"
+                                data-link-set-store="false"
+                                data-link-set-history="false"
+                                data-link-set-classes="false"
+                                data-link-animation="popup-transition"
+                                href="/popup/popup-job.html?job=1")
+                            .cardProduct__body
+                                .cardProduct__main
+                                    .h3.cardProduct__title= "Специалист по охране труда"
+                                    .cardProduct__text
+                                        svg.ico(width="33" height="32" fill="none")
+                                            path(d="M25.628 12.42c0 3.551-4.598 10.55-7.21 14.24a2.14 2.14 0 01-3.517 0c-2.612-3.69-7.21-10.689-7.21-14.24 0-4.958 4.016-8.979 8.969-8.979 4.953 0 8.968 4.02 8.968 8.98z" stroke="#4E8925")
+                                            circle(cx="16.659" cy="12.409" r="4.198" stroke="#4E8925")
+                                        p.p_md Липецкая область, Усманский район, село Девица
+                                .cardProduct__imageWrapper
+                                    picture
+                                        source(srcset="")
+                                        img(src="./static/cooperation/tractors/" + n++ +".png")
+
+
+                pagination-component.pagination(data-container="replaceable-filter" data-scrollTo="filters-section")
+                    .pagination-counts
+                        a.h3_2.item.active(href="?p=1") 1
+                        a.h3_2.item(href="?p=2") 2
+                        a.h3_2.item(href="?p=3") 3
+                        a.h3_2.item(href="?p=4") 4
+                        a.h3_2.item(href="?p=5") 5
+                        .h3_2.item.dots ...
+                        a.h3_2.item(href="?p=20") 20
+                    .pagination-arrows
+                        a.pagination-arrow.arr.prev(href="?p=")
+                            svg(width="26" height="20" viewBox="0 0 26 20" fill="none")
+                                use(xlink:href="#slider-arr")
+                        a.pagination-arrow.arr.next(href="?p=")
+                            svg(width="26" height="20" viewBox="0 0 26 20" fill="none")
+                                use(xlink:href="#slider-arr")

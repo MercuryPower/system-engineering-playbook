@@ -1,0 +1,106 @@
+.page-wrapper {
+    //position: relative;
+    //display: flex;
+    //flex-direction: column;
+    //width: 100%;
+    //min-height: 100vh;
+    //min-width: 320px;
+
+    &_ov {
+        overflow: hidden;
+    }
+}
+
+.wrapper {
+    position: relative;
+    width: 96.5%;
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 100%;
+
+    @media screen and (min-width: $from-enormous) {
+        max-width: 1700px;
+    }
+
+    @media screen and (max-width: $to-big) {
+        width: 92.5%;
+    }
+
+    @media screen and (max-width: $to-small) {
+        width: calc(100% - 32px);
+    }
+
+    &.nr {
+        max-width: 1160px;
+
+        @media screen and (min-width: $from-enormous) {
+            max-width: 1400px;
+        }
+
+        @media screen and (max-width: $to-big) {
+            width: 87.5%;
+        }
+
+        @media screen and (max-width: $to-medium) {
+            width: calc(100% - 80px);
+        }
+
+        @media screen and (max-width: $to-small) {
+            width: calc(100% - 40px);
+        }
+    }
+}
+
+.grid {
+    display: grid;
+
+    &_form-3 {
+        grid-template-columns: repeat(3, calc(33.33% - 33px));
+        grid-gap: 20px 50px;
+        align-items: flex-end;
+        grid-auto-flow: dense;
+
+        @media (max-width: $to-medium) {
+            grid-template-columns: repeat(2, calc(50% - 25px));
+        }
+
+        @media (max-width: $to-small) {
+            grid-template-columns: calc(100%);
+            grid-gap: 20px 0;
+        }
+
+        .form__line {
+            margin-bottom: 0;
+
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        textarea {
+            height: 100%;
+        }
+    }
+
+    &_4 {
+        grid-template-columns: repeat(4, calc(25% - 30px));
+        grid-gap: 40px;
+
+        @media (max-width: $to-medium) {
+            grid-template-columns: repeat(2, calc(50% - 10px));
+            grid-gap: 20px;
+        }
+
+        @media (max-width: $to-small) {
+            grid-template-columns: calc(100%);
+            grid-gap: 20px 0;
+        }
+    }
+}
+
+.gridItem_row2 {
+    grid-row: span 2;
+    height: 100%;
+}
+

@@ -1,0 +1,100 @@
+popup-component.popup(data-id="popup-bid")
+    .overflow
+        .popup-content
+            .popup-inner.nr.def
+                button.button-close.ico-close(is="popup-close")
+                .wrapper
+                    .popup__desc
+                        h2 Купить продукцию
+                        p.interlinear Заполните по возможности все поля
+                    .form-wrapper
+                        form-response.response(data-id="form-work")
+                            .response-inner
+                        form.form.form-reg(action="./response.json" data-id="form-work" method="post" is="form-component")
+                            .col
+                                .ln
+                                    label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                        span.placeholder Наименование товара
+                                        input.input.lightgreen(name="userName" type="text" required)
+                                .ln
+                                    label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                        span.placeholder ИНН
+                                        input.input.lightgreen(name="userEmail" type="text" required)
+                                .ln
+                                    label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                        span.placeholder Цена без НДС
+                                        input.input.lightgreen(name="userEmail" type="text" required)
+                                .ln
+                                    span.placeholder.placeholder_required Валюта
+                                    select-component.form-select
+                                        .select-button(tabindex="0" role="button")
+                                            .select-value
+                                            svg(class="select__icon" width="15" height="8" viewBox="0 0 15 8" fill="none")
+                                                use(xlink:href="#dd-arr")
+                                        .select-select
+                                            .select-inner
+                                        label(data-validate="blur")
+                                            select(tabindex="-1" name="name[val]" required )
+                                                option(value="$") $
+                                                option(value="£") £
+
+
+                                .ln
+                                    label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                        span.placeholder Объем отгрузки в сутки (т)
+                                        input.input.lightgreen(name="userName" type="text" required)
+                                .ln
+                                    label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                        span.placeholder Сроки отгрузки
+                                        input.input.lightgreen(name="userEmail" type="text" required)
+                                .ln
+                                    label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                        span.placeholder Желаемое количество к приобритению (т)
+                                        input.input.lightgreen(name="userEmail" type="text" required)
+                            .col
+                                .ln
+                                    .tooltip
+                                        .ico
+                                            svg(width="16" height="16" viewBox="0 0 16 16" fill="none")
+                                                use(xlink:href="#tooltip")
+                                        .tooltip__wr
+                                            .tooltip__in
+                                                .p_min при отклонении от заявленного качества
+                                    label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                        span.placeholder Требуемое качество
+                                        input.input.lightgreen(name="userEmail" type="text" required)
+
+
+                                .ln
+                                    span.placeholder.placeholder_required Валюта
+                                    select-component.form-select.wof
+                                        .select-button(tabindex="0" role="button")
+                                            .select-value
+                                            svg(class="select__icon" width="15" height="8" viewBox="0 0 15 8" fill="none")
+                                                use(xlink:href="#dd-arr")
+                                        .select-select
+                                            .select-inner
+                                        label(data-validate="blur")
+                                            select(tabindex="-1" name="name[val]" required )
+                                                option()
+                                                option(value="$") EXW
+                                                option(value="£") EXW
+
+
+                                .ln
+                                    label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                        span.placeholder Сроки и условия оплаты
+                                        textarea.input.lightgreen(name="userMsg" required)
+                                .ln
+                                    label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                        span.placeholder Сообщение
+                                        textarea.input.lightgreen(name="userMsg" required)
+                                .ln.ln-last
+                                    +inputFile(false)
+                            .ln.ln-submit.half
+                                .agree
+                                    label.input-wrapper.input-wrapper_checkbox(is="input-wrapper")
+                                        input.input(name="userAccept" type="checkbox" required)
+                                        span.placeholder.placeholder_checkbox Я согласен с <a class="link_green">политикой</a> обработки данных
+                                button.btn.btn_def.darkgreen.form__button
+                                    .btn__text Отправить

@@ -1,0 +1,53 @@
+popup-component.popup(data-id="popup-contacts")
+    .overflow
+        .replaceable-popup.popup-content(data-id="popup-content")
+            .popup-inner.nr.def
+                button.button-close.ico-close(is="popup-close")
+                .wrapper
+                    h2.mb_60 ООО «Становое-АГРО-Инвест»
+                    .cardMap.cardMap_contact.mb_80
+                        .cardMap__desc
+                            .info__links
+                                a.link(href="mailto:info@agroinvest.com")
+                                    svg.ico(width="33" height="33" fill="none")
+                                        use(xlink:href="#mail")
+                                    p.link__text.p_md info@agroinvest.com
+
+                                a.link(href="tel:+74952326772")
+                                    svg.ico(width="33" height="31" fill="none")
+                                        use(xlink:href="#tel")
+                                    p.link__text.p_md +7 (495) 232-67-72
+                                a.link(target="_blank" href="https://yandex.ru/maps/10672/voronezh-oblast/house/ulitsa_karla_marksa_2a/YEgYcg5iSUcDQFtrfX12c31gYQ==/?ll=41.492024%2C51.172135&z=17.2")
+                                    svg.ico(width="32" height="30" fill="none")
+                                        use(xlink:href="#address")
+                                    p.link__text.p_md 125 047, г. Воронеж, ул.1-я Тверская-Ямская д. 21, БЦ «Четыре Ветра»
+
+                        .cardMap__mapWrapper
+                            map-component
+                                .container
+                                .marker(data-lat="" data-lng="")
+
+                    .cardMap.cardMap_contact
+
+                        - var persons = ['Машков-Пашков Владимир Григорьевич', 'Мирошниченко Светлана Константиновна', 'Коновиченков Константин Владимирович', 'Мирошниченко Светлана Константиновна'];
+
+                        each val in persons
+                            .cardMap__personsContacts
+                                .cardMap__contact
+                                    .cardMap__title.h3_2= val
+                                    p.cardMap__job Cпециалист по закупкам и продажам
+                                .cardMap__desc
+                                    .info__links
+                                        a.link(href="mailto:info@agroinvest.com")
+                                            svg.ico(width="33" height="33" fill="none")
+                                                use(xlink:href="#mail")
+                                            p.link__text.p_md info@agroinvest.com
+
+                                        a.link(href="tel:+74952326772")
+                                            svg.ico(width="33" height="31" fill="none")
+                                                use(xlink:href="#tel")
+                                            p.link__text.p_md +7 (495) 232-67-72
+                                        a.link(target="_blank" href="https://yandex.ru/maps/10672/voronezh-oblast/house/ulitsa_karla_marksa_2a/YEgYcg5iSUcDQFtrfX12c31gYQ==/?ll=41.492024%2C51.172135&z=17.2")
+                                            svg.ico(width="32" height="30" fill="none")
+                                                use(xlink:href="#address")
+                                            p.link__text.p_md 125 047, г. Воронеж, ул.1-я Тверская-Ямская д. 21, БЦ «Четыре Ветра»

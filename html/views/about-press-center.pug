@@ -1,0 +1,57 @@
+extends ../base
+
+block vars
+    - var page = 'news';
+
+block main-content
+
+    section.artcl
+        .wrapper.nr
+            h1.artcl__title.scroll-block.js-scroll-block(data-text="true") Пресса о нас
+
+    section.mb_60
+        .wrapper.nr
+            .filters.flex.aic.mb_40
+                date-component.filter
+                    p.caption За период
+                    input.input.lightgreen(type="text")
+                    svg.ico(width="19" height="20" fill="none")
+                        <rect x="1" y="2.842" width="17" height="16.105" rx="2" stroke="#4E8925" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M5.474 11.44l3.02 3.034 5.032-5.369M9.053 4.632v-3.58M13.526 4.632v-3.58M4.579 4.632v-3.58" stroke="#4E8925" stroke-linecap="round" stroke-linejoin="round"/>
+
+                button.filter.filter-reset.link_g(is="filters-reset" data-names=["auto", "date"] data-container="replaceable-filter")
+                    .ico-close.s
+                    p Очистить фильтр
+
+
+    section.mb_120
+        .wrapper.nr
+            .replaceable-filter.container.col-2.leaders.mb_80(data-id="catalog")
+                - for (var i = 0; i < 6; i++)
+                    article.cardNews.trigger.trigger-default(data-trigger-type="scroll")
+                        a.cardNews__link(is="inner-link" href="piece-of-news_2_level.html")
+                        .cardNews__imageWrapper
+                            picture
+                                source(srcset="")
+                                img(src="./static/career/career-2.png")
+                        .cardNews__body
+                            .cardNews__date
+                                p 12 июня
+                                .dot
+                                a Мероприятия
+                            .cardNews__text
+                                p Начали проводить занятия для дошкольников по образованию в сфере сельского хозяйства.
+
+                    article.cardNews.trigger.trigger-default(data-trigger-type="scroll")
+                        a.cardNews__link(is="inner-link" href="piece-of-news_2_level.html")
+                        .cardNews__imageWrapper
+                            picture
+                                source(srcset="")
+                                img(src="./static/career/career-2.png")
+                        .cardNews__body
+                            .cardNews__date
+                                p 23 мая
+                                .dot
+                                a Актуальное
+                            .cardNews__text
+                                p Начали проводить занятия для дошкольников по образованию в сфере сельского хозяйства.

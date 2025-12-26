@@ -1,0 +1,73 @@
+@import "./wrapper.scss";
+
+@import "./header.scss";
+@import "./navigation.scss";
+@import "./footer.scss";
+
+@import "arr/arr";
+@import "link/link";
+@import "button/button";
+@import "dropdown/dropdown";
+
+//form
+@import "form/entry.scss";
+
+@import "slider/slider";
+@import "slider/slider-component";
+@import "slider/main-slider";
+
+@import "./benefits.scss";
+@import "./information.scss";
+@import "maps/maps";
+@import "maps/map-component";
+@import "./purchase.scss";
+@import "./question.scss";
+@import "popup/popup-new";
+@import "disclaimer";
+
+@import "video/video";
+@import "video/main-video";
+
+@import "artcl/artcl";
+@import "docs/docs";
+@import "tabs/tabs";
+
+@import "cards/cardPreview";
+@import "cards/cardProduct";
+@import "cards/cardPerson";
+@import "cards/cardNews";
+@import "cards/cardMap";
+@import "cards/cardInfo";
+@import "cards/cardContact";
+@import "cards/informationCard";
+
+@import "grid/grid";
+@import "desc/desc";
+@import "features/features";
+@import "faq/faq";
+@import "advantages/advantages";
+
+@import "catalog/catalog";
+
+//filters
+@import "filters/filters";
+@import "filters/filter-range";
+@import "filters/paginations";
+@import "filters/search";
+@import "filters/switcher";
+@import "filters/load-more";
+
+@import "photos/photos";
+
+@import "date/datepicker";
+
+@import "subscribe/subscribe";
+
+@import "icons/icons";
+@import "animation-ico/ico";
+@import "vacancy/vacancy";
+@import "404/page-404";
+
+@import "staff/staff";
+@import "crisis/crisis";
+

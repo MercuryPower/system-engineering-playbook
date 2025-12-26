@@ -1,0 +1,44 @@
+.information__slider.swiper-container.js-slider(data-slider="information-slider" data-per-view="2")
+    .swiper-wrapper
+        - var n = 1;
+
+        while n < 7
+            .swiper-slide
+                article.cardProduct
+                    a.cardProduct__link(is="inner-link" href="crops_3_level.html")
+                    .cardProduct__body
+                        .cardProduct__main
+                            .h3.cardProduct__title= "Гречиха " + n++ + " сорт"
+                            .cardProduct__text
+                                p.p_md Богатое витаминами и минералами, зерно гречихи давно стало одним из самых востребованных товаров на рынке, несмотря на постоянно меняющиеся цены
+                        .cardProduct__imageWrapper
+                            picture
+                                source(srcset="")
+                                img(src="./static/cooperation/sell/1.png")
+                    .cardProduct__desc.features
+                        .item.featur
+                            .caps_2 Регион
+                            p Воронежская область
+
+                        .item.featur
+                            .caps_2 место хранение
+                            p г. Новохоперск
+
+                        .item.featur
+                            .caps_2 ДО
+                            p ООО «Новохоперск-АГРО-Инвест»
+
+                        .item.featur
+                            .caps_2 количество
+                            p 300 т
+.information__sliderNav
+    .information__sliderProgress.swiper-pagination.slider-progress.js-slider-progress(data-slider="information-slider")
+    .information__sliderButton
+        .slider-button.slider-button-prev.js-slider-control-prev(data-slider="information-slider")
+            <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 19L1 10M1 10L10 1M1 10H25" stroke="#4E8925" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        .slider-button.slider-button-next.js-slider-control-next(data-slider="information-slider")
+            <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 19L25 10M25 10L16 1M25 10H1" stroke="#4E8925" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>

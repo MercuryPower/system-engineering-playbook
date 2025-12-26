@@ -1,0 +1,29 @@
+
+.information__slider.swiper-container.js-slider(data-slider="information-slider-1" data-per-view="2")
+    .swiper-wrapper
+        -for (var i = 0; i <= 5; i++)
+            .swiper-slide
+                article.cardNews
+                    a.cardNews__link(is="inner-link" href="piece-of-news_2_level.html")
+                    .cardNews__imageWrapper
+                    picture
+                            source(srcset="")
+                            img(src="./static/career/career-2.png")
+                    .cardNews__body
+                        .cardNews__date
+                            p 12 июня
+                            .dot
+                            a Мероприятия
+                        .cardNews__text
+                            p Начали проводить занятия для дошкольников по образованию в сфере сельского хозяйства.
+.information__sliderNav
+    .information__sliderProgress.swiper-pagination.slider-progress.js-slider-progress(data-slider="information-slider-1")
+    .information__sliderButton
+        .slider-button.slider-button-prev.js-slider-control-prev(data-slider="information-slider-1")
+            <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 19L1 10M1 10L10 1M1 10H25" stroke="#4E8925" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        .slider-button.slider-button-next.js-slider-control-next(data-slider="information-slider-1")
+            <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 19L25 10M25 10L16 1M25 10H1" stroke="#4E8925" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>

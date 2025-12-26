@@ -1,0 +1,88 @@
+.crisis{
+  margin-bottom: 0;
+  h2{
+    margin-bottom: 40px;
+    @media (min-width: $from-medium) {
+      margin-bottom: 60px;
+    }
+  }
+  .dd-button{
+    justify-content: start;
+  }
+  .drop-down{
+    .ico-plus{
+      margin-left: 20px;
+    }
+  }
+  .dd-inner{
+    padding: 0;
+    padding-top: 40px;
+    @media (min-width: $from-medium) {
+      padding-top: 30px;
+    }
+  }
+  .form-wrapper{
+    width: 100%;
+  }
+  &__attention{
+    background-color: #F6F8F3;
+    padding: 20px;
+    @media (min-width: $from-medium){
+      padding: 40px;
+      display: flex;
+      align-items: center;
+    }
+    &-prolog{
+      text-align: center;
+      @media (min-width: $from-medium){
+        text-align: left;
+        padding-right: 30px;
+        max-width: 300px;
+      }
+      p{
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+    &-links{
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @media (min-width: $from-medium){
+        align-items: flex-start;
+        padding-left: 30px;
+        margin-top: 0;
+      }
+      .h3_2 {
+        margin-bottom: 0;
+        & + .h3_2{
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+  &__list{
+    margin-bottom: 60px;
+    li{
+      font-size: 16px;
+      line-height: 22px;
+      &::before{
+        background: #000000;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        top: 10px;
+        left: 15px;
+      }
+    }
+  }
+
+  ul.crisis__list{
+    margin-bottom: 60px;
+    @media (min-width: $from-medium) {
+      margin-bottom: 40px;
+    }
+  }
+}

@@ -1,0 +1,149 @@
+.footer {
+    padding: 60px 0 50px;
+    border-top: 1px solid var(--grey);
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__linksLang {
+        margin: 0 0 10px 0;
+
+        a {
+            color: var(--green11);
+
+            &.active {
+                color: var(--green);
+            }
+        }
+    }
+
+    &__listLink {
+        margin: 0 16px 14px 0;
+    }
+
+
+    &__form {
+        grid-column: span 2;
+
+        @media (max-width: $to-medium) {
+            grid-column: 1;
+        }
+    }
+
+    &__copy {
+        grid-column: span 2;
+        display: flex;
+        flex-flow: column wrap;
+
+
+        @media screen and (max-width: 1200px) {
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: $to-medium) {
+            grid-column: 1;
+            order: 2;
+        }
+    }
+
+    &__desc {
+        margin-bottom: 20px;
+
+        &.sm {
+            max-width: 75%;
+            color: #A8A698;
+            font-size: 12px;
+
+            @media (max-width: $to-small) {
+                max-width: 100%;
+            }
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__rc {
+        align-self: flex-start;
+        font-size: 12px;
+
+       @media (max-width: $to-medium) {
+            order: 1;
+        }
+
+        .icon {
+            display: inline-block;
+            margin: 0 8px 0 0;
+        }
+    }
+
+    &__preFormTitle {
+        line-height: 1.625em;
+        margin: 0 0 20px 0;
+        letter-spacing: -0.02em;
+    }
+
+    &__formFollow {
+        .input-wrapper {
+            flex-basis: calc(60% - 8px);
+            width: calc(60% - 8px);
+            margin: 0 16px 0 0;
+
+            @media screen and (max-width: $to-medium) {
+                width: calc(100%);
+                flex-basis: calc(100%);
+                margin: 0 0 16px 0;
+            }
+        }
+
+        .button__form {
+            width: calc(40% - 8px);
+
+            @media screen and (max-width: $to-medium) {
+                width: calc(100%);
+            }
+        }
+
+    }
+}
+
+.socials {
+    display: flex;
+
+    &_footer {
+        justify-content: flex-end;
+        align-self: flex-start;
+
+        @media (max-width: $to-medium) {
+            justify-content: flex-start;
+        }
+    }
+}
+
+.social {
+
+    &__item {
+        display: block;
+        margin: 0 20px 0 0;
+
+        &:last-child {
+            margin: 0;
+        }
+
+        &:hover {
+            .f-g {
+                fill: var(--darkGreen);
+            }
+        }
+
+        .f-g {
+            fill: var(--green);
+            transition: fill 300ms var(--easeOutQuad);
+        }
+    }
+
+}

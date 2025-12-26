@@ -1,0 +1,259 @@
+.cardInfo {
+    padding: 40px;
+    background: var(--white);
+    border-radius: 16px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 16px;
+
+    transition: transform .35s, box-shadow .35s;
+    transition-timing-function: var(--ease);
+
+    @media (max-width: $to-medium) {
+        padding: 32px;
+    }
+
+    @media (max-width: $to-small) {
+        padding: 20px;
+    }
+
+    &:hover {
+        box-shadow: 0 4px 16px 0 rgba(73, 68, 68, 0.062);
+        transform: translateY(-4px);
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .t {
+        display: flex;
+        justify-content: space-between;
+        width: calc(100%);
+
+        @media (max-width: $to-medium) {
+            flex-wrap: wrap;
+        }
+    }
+
+    .bt {
+        display: flex;
+        justify-content: space-between;
+        width: calc(100%);
+
+        @media (max-width: $to-medium) {
+            flex-wrap: wrap;
+        }
+    }
+
+    .l {
+        width: calc(70% - 24px);
+
+        @media (max-width: $to-medium) {
+            width: calc(100%);
+            margin-bottom: 24px;
+        }
+    }
+
+    .r {
+        width: calc(30% - 24px);
+        min-width: 200px;
+        display: flex;
+
+        @media (min-width: $from-medium) {
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+
+        @media (max-width: $to-medium) {
+            width: calc(100%);
+        }
+
+    }
+
+    &__date {
+        margin-bottom: 5px;
+    }
+
+    &__title {
+        margin-bottom: 10px;
+    }
+
+    &__type {
+        color: var(--green);
+    }
+
+    &__subtitle {
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        margin: 30px 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__caption {
+        color: var(--greyDark);
+        text-align: center;
+    }
+
+    &__arrow {
+
+    }
+
+    &__btn {
+        margin-top: auto;
+
+        @media (max-width: $to-small) {
+            width: calc(100%);
+        }
+    }
+
+    &__dropdown {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .dd-button {
+            color: var(--green);
+
+            & > .ico-arr {
+                //margin-top: 6px;
+                margin-left: 16px;
+            }
+        }
+
+        .dd-wrapper {
+            display: block;
+            width: calc(100%);
+        }
+
+        .dd-inner {
+            width: 100%;
+            padding: 40px 6px 0 0;
+            position: relative;
+        }
+
+        .dd-map {
+            position: relative;
+            margin: 16px 0;
+        }
+
+        picture {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .slider {
+            width: 100%;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.5em;
+
+            @media (max-width: $to-medium) {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__link {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+}
+
+
+.cardInfo-cowork {
+
+}
+
+.cardInfo_tender {
+
+    @media (max-width: $to-medium) {
+        flex-wrap: wrap;
+    }
+
+    .cardInfo__number {
+        color: var(--default);
+    }
+
+    .cardInfo__text {
+        margin: 15px 0;
+
+        @media (max-width: $to-medium) {
+            margin: 12px 0;
+
+            &:last-child {
+                margin: 12px 0 0;
+            }
+        }
+    }
+
+    .cardInfo__caption {
+        text-align: left;
+    }
+
+    .item {
+        width: calc(30% - 24px);
+
+        @media (max-width: $to-medium) {
+            width: calc(100%);
+            margin-bottom: 24px;
+        }
+    }
+
+    .cardInfo__desc {
+        width: calc(60% - 24px);
+
+        @media (max-width: $to-medium) {
+            width: calc(100%);
+        }
+    }
+
+}
+
+
+.cardInfo_crop {
+    align-items: center;
+    margin-bottom: 0;
+    padding: 20px 40px;
+
+    @media (max-width: $to-small) {
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+
+    .cardInfo__title {
+        margin-bottom: 0;
+        width: calc(100% - 114px);
+
+        @media (max-width: $to-small) {
+            width: 100%;
+            margin-bottom: 24px;
+        }
+
+    }
+
+    .btn {
+        z-index: 1;
+        position: relative;
+        stroke: var(--green);
+
+        &:hover {
+            stroke: var(--white);
+        }
+    }
+}

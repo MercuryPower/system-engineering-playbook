@@ -1,0 +1,39 @@
+popup-component.popup(data-id="popup-photos")
+    .overflow
+        .popup-content
+            .popup-inner.wide
+                button.button-close.ico-close(is="popup-close")
+                .wrapper
+                    .slider-photos
+                        .slider.swiper-container.js-slider(data-slider="photos-slider" data-thumbs=".js-slider-thumbs" data-per-view="1")
+                            .swiper-wrapper
+                                -for (var i = 1; i <= 9; i++)
+                                    .swiper-slide
+                                        .photo
+                                            picture
+                                                source(srcset="./static/photos/" + i + ".webp" type="image/webp")
+                                                img(src="./static/photos/" + i + ".png")
+                                        p.photo__caption.p_md Приобрели активы шведской Black Earth Farming, доведя свой земельный банк до 452 тысяч га.
+
+                        .slider.slider-thumbs.swiper-container.js-slider-thumbs(data-slider="photos-slider")
+                            .swiper-wrapper
+                                -for (var i = 1; i <= 9; i++)
+                                    .swiper-slide
+                                        .photo
+                                            picture
+                                                source(srcset="./static/photos/" + i + ".webp" type="image/webp")
+                                                img(src="./static/photos/" + i + ".png")
+
+                        .information__sliderNav
+                            .information__sliderProgress.swiper-pagination.slider-progress.js-slider-progress(data-slider="photos-slider")
+                            .information__sliderButton
+                                .slider-button.slider-button-prev.js-slider-control-prev(data-slider="photos-slider")
+                                    <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 19L1 10M1 10L10 1M1 10H25" stroke="#4E8925" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                .slider-button.slider-button-next.js-slider-control-next(data-slider="photos-slider")
+                                    <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16 19L25 10M25 10L16 1M25 10H1" stroke="#4E8925" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+
+

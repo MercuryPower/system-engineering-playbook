@@ -1,0 +1,27 @@
+.scroll-word {
+    transform: translate3d(0,100%,0);
+}
+
+.scroll-line {
+    overflow: hidden;
+}
+
+.scroll-block {
+    opacity: 0;
+
+    &.is-show {
+        opacity: 1;
+
+        .scroll-word {
+            transform: translateZ(0);
+        }
+    }
+}
+
+.scroll-icon {
+    opacity: 0;
+
+    &.is-show {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,162 @@
+.slider-section {
+    overflow: hidden;
+}
+
+//slider-component,
+.slider {
+    overflow: hidden;
+    display: block;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 16px;
+
+    .slide {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+        user-select: none;
+        overflow: hidden;
+
+        picture {
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+    }
+
+    img {
+        pointer-events: none;
+        min-height: 460px;
+        object-fit: cover;
+        object-position: center;
+
+        @media (max-width: $to-medium) {
+            min-height: 360px;
+            max-height: 400px;
+        }
+
+        @media (max-width: $to-small) {
+            min-height: 280px;
+            max-height: 320px;
+        }
+    }
+
+    &.as {
+        img {
+            min-height: 370px;
+        }
+    }
+
+    &.notActive {
+        margin-bottom: 0;
+
+        & + .slider-controls {
+            display: none;
+        }
+    }
+}
+
+slider-progress {
+    display: flex;
+
+    .item {
+        margin-right: 4px;
+        height: 2px;
+        width: 32px;
+        border-radius: 2px;
+        background: var(--greenLight_2);
+
+        @media (max-width: $to-small) {
+            width: 20px;
+        }
+
+
+        &.active {
+            background: var(--green);
+        }
+    }
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.slideInfo {
+    margin-top: 24px;
+
+    @media (min-width: $from-small) {
+        margin-top: 0;
+        padding: 30px;
+        position: absolute;
+        right: 40px;
+        top: 40px;
+        max-width: 360px;
+        border-radius: 16px;
+        background: var(--white);
+    }
+
+    &_main {
+        max-width: 1000px;
+        left: auto;
+        right: auto;
+        top: auto;
+        bottom: auto;
+        background: transparent;
+        padding: 0;
+
+        @media (min-width: $from-small) {
+            padding: 12px 20px;
+            background: none;
+            bottom: 16px;
+            left: 20px;
+            right: 20px;
+            top: auto;
+
+            &:before {
+                position: absolute;
+                content: '';
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                background: var(--white);
+                opacity: 0.6;
+                border-radius: 8px;
+            }
+        }
+
+        @media (max-width: $to-small) {
+            position: relative;
+        }
+    }
+
+    &__title {
+        color: var(--default);
+        margin-bottom: 20px;
+        position: relative;
+
+        @media (max-width: $to-small) {
+            margin-bottom: rem(14px);
+        }
+    }
+
+    &__text {
+        margin-bottom: 40px;
+
+        @media (max-width: $to-small) {
+            margin-bottom: rem(24px);
+        }
+    }
+
+    &__btn {
+        margin-bottom: 40px;
+
+        @media (max-width: $to-small) {
+            margin-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,124 @@
+.purchase {
+
+    &__link {
+        align-self: flex-end;
+        margin: 0 0 6px 0;
+
+        @media screen and (max-width: $to-large) {
+            margin: initial;
+        }
+
+        @media (max-width: $to-medium) {
+            margin: 0 0 4px;
+        }
+
+        @media screen and (max-width: $to-small) {
+            margin: initial;
+        }
+    }
+
+}
+
+.purchaseCard {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 8px;
+    background: var(--white);
+    padding: 44px 40px;
+    margin: 0 0 16px 0;
+    position: relative;
+    width: 100%;
+
+    @media screen and (max-width: 860px) {
+        padding: 30px 24px;
+    }
+
+    &:last-child {
+        margin: 0;
+    }
+
+    &__info {
+        width: calc(20%);
+
+        @media screen and (max-width: 860px) {
+            width: calc(100%);
+            margin: 0 0 16px 0;
+        }
+    }
+
+    &__title {
+        line-height: 1em;
+        margin: 0 0 14px 0;
+        letter-spacing: -0.02em;
+
+        @media screen and (max-width: 860px) {
+            margin: 0 0 8px 0;
+        }
+    }
+
+    &__type {
+        position: relative;
+        z-index: 1;
+        font-size: 16px;
+    }
+
+    &__desc {
+        width: calc(100% - 25% - 90px);
+        max-width: 660px;
+
+        @media screen and (max-width: 860px) {
+            width: calc(100%);
+            margin: 0 0 16px 0;
+        }
+    }
+
+    &__button {
+        margin: 0 0 0 auto;
+        position: relative;
+        z-index: 1;
+        padding-left: 38px;
+
+        svg {
+            transition: transform 300ms ease;
+            overflow: visible;
+
+            path {
+                transition: opacity 300ms ease;
+            }
+        }
+
+        @media screen and (max-width: 860px) {
+            margin: 0;
+        }
+
+        .button__icon-arrow_stroke {
+            stroke: var(--green);
+        }
+
+        &:hover {
+            .button__icon-arrow_stroke {
+                stroke: var(--white);
+            }
+
+            svg {
+                transform: translateX(5px);
+            }
+        }
+    }
+
+    &__link {
+       position: absolute;
+       left: 0;
+       right: 0;
+       bottom: 0;
+       top: 0;
+    }
+
+    transition: transform .3s,box-shadow .3s;
+    transition-timing-function: ease;
+
+    &:hover {
+        box-shadow: 0 4px 16px 0 rgba(73, 68, 68, 0.062);
+        transform: translateY(-4px);
+    }
+}

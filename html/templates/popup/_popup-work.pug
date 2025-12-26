@@ -1,0 +1,111 @@
+popup-component(data-id="popup-work")
+    .popup__inner
+        .popup__wrapper
+            .popup__overflow
+                button.popup__button.popup__close(is="popup-close")
+                .popup__form
+                    .popup-content
+                        .h2.popup__title Направить резюме
+                        .popup__subtitle Заполните все поля формы и прикрепите Ваше резюме
+                        .form-wrapper.margin-top_60
+                            form-response.response(data-id="form-work")
+                                .response-inner
+                            form.form(action="./response.json" data-id="form-work" method="post" is="form-component")
+                                .form__group.margin-bottom_60
+                                    .form__line_half
+                                        .form__line
+                                            label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                                span.placeholder ФИО
+                                                input.input.input_lightGreen(name="userEmail" type="text" required)
+                                        .form__line
+                                            label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                                span.placeholder Электронная почта
+                                                input.input.input_lightGreen(name="userEmail" type="email" required)
+                                        .form__line
+                                            label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                                span.placeholder Телефон
+                                                input.input.input_lightGreen(name="userEmail" type="tel" required)
+                                        .form__line
+                                            span.placeholder.placeholder_required В каком регионе хотите работать?
+                                            select-component.form-select(data-parent="cover-1")
+                                                .select-button(tabindex="0" role="button")
+                                                    .select-value
+                                                    svg(class="select__icon" width="15" height="8" viewBox="0 0 15 8" fill="none")
+                                                        use(xlink:href="#dd-arr")
+                                                .select-select
+                                                    .select-inner
+                                                label(is="input-wrapper" data-validate="blur")
+                                                    select(tabindex="-1" name="question" required data-withValue="0")
+                                                        option(data-id="msc" selected value="Москва") Москва
+                                                        option(data-id="vlg" value="Волгоградская_область") Волгоградская область
+                                                        option(data-id="sam" value="Самарская_область") Самарская область
+                                                        option(data-id="vrn" value="Воронежская_область") Воронежская область
+                                        .form__line
+                                            span.placeholder.placeholder_required В каком населенном пункте ищите работу?
+                                            select-component.form-select(data-child="cover-1")
+                                                .select-button(tabindex="0" role="button")
+                                                    .select-value
+                                                    svg(class="select__icon" width="15" height="8" viewBox="0 0 15 8" fill="none")
+                                                        use(xlink:href="#dd-arr")
+                                                .select-select
+                                                    .select-inner
+                                                label(is="input-wrapper" data-validate="blur")
+                                                    select(tabindex="-1" name="question" required data-withValue="0")
+                                                        option(data-id="msc" value="Москва") Москва
+                                                        option(data-id="vlg" value="Городище") Городище
+                                                        option(data-id="vlg" value="Елань") Елань
+                                                        option(data-id="vlg" value="Даниловка") Даниловка
+                                                        option(data-id="vlg" value="Рудня") Рудня
+                                                        option(data-id="sam" value="Обшаровка") Обшаровка
+                                                        option(data-id="vrn" value="Новохоперск") Новохоперск
+                                                        option(data-id="vrn" value="Воронеж") Воронеж
+                                                        option(data-id="vrn" value="Лиски") Лиски
+                                                        option(data-id="vrn" value="Нововоронеж") Нововоронеж
+                                                        option(data-id="vrn" value="Новая Усмань") Новая Усмань
+                                    .form__line_half
+                                        .form__line
+                                            span.placeholder.placeholder_required Выберите профессиональную область?
+                                            select-component.form-select
+                                                .select-button(tabindex="0" role="button")
+                                                    .select-value
+                                                    svg(class="select__icon" width="15" height="8" viewBox="0 0 15 8" fill="none")
+                                                        use(xlink:href="#dd-arr")
+                                                .select-select
+                                                    .select-inner
+                                                label(is="input-wrapper" data-validate="blur")
+                                                    select(tabindex="-1" name="question" required data-withValue="0")
+                                                        option(value="Животноводство") Животноводство
+                                                        option(value="кролиководство") Кролиководство
+                                        .form__line.form__line_36
+                                            label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                                span.placeholder Должность
+                                                input.input.input_lightGreen(name="userEmail" type="text" required)
+                                        .form__line
+                                            .form__groupMini
+                                                .form-groupMini__title Откуда узнали о нас?
+                                                .form-group__radio
+                                                    label.input-wrapper.input-wrapper_radio(is="input-wrapper")
+                                                        input.input.input_radio(name="userEmail" type="radio")
+                                                        span.placeholder.placeholder_radio Телевидение
+                                                    label.input-wrapper.input-wrapper_radio(is="input-wrapper")
+                                                        input.input.input_radio(name="userEmail" type="radio")
+                                                        span.placeholder.placeholder_radio E-mail рассылка
+                                                    label.input-wrapper.input-wrapper_radio(is="input-wrapper")
+                                                        input.input.input_radio(name="userEmail" type="radio")
+                                                        span.placeholder.placeholder_radio Реклама в соцсетях
+                                                    label.input-wrapper.input-wrapper_radio(is="input-wrapper")
+                                                        input.input.input_radio(name="userEmail" type="radio")
+                                                        span.placeholder.placeholder_radio Другое
+                                                    label.input-wrapper.input-wrapper_radio(is="input-wrapper")
+                                                        input.input.input_radio(name="userEmail" type="radio")
+                                                        span.placeholder.placeholder_radio Радио
+                                        .form__line.form__line-last
+                                            +inputFile(false)
+                                .form__group
+                                    .form__half.form__half-right
+                                        .agree
+                                            label.input-wrapper.input-wrapper_checkbox(is="input-wrapper")
+                                                input.input(name="userAccept" type="checkbox" required)
+                                                span.placeholder.placeholder_checkbox Я согласен с <a class="link_green">политикой</a> обработки данных
+                                        button.button.button_size_default.button_theme-darkGreen.form__button
+                                            .button__text Отправить

@@ -1,0 +1,65 @@
+popup-component.popup(data-id="popup-ask-a-question")
+    .overflow
+        .popup-content
+            .popup-inner.nr.def
+                button.button-close.ico-close(is="popup-close")
+                .wrapper
+                    .popup__desc
+                        h2 Задать вопрос
+                        p.interlinear Подробно опишите, что Вас интересует
+                    .form-wrapper
+                        form-response.response(data-id="form-call")
+                            .response-inner
+                        form.form.form-reg(action="./response.json" data-id="form-call" method="post" is="form-component")
+                            .col
+                                .ln
+                                    label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                        span.placeholder ФИО
+                                        input.input.lightgreen(name="userName" type="name" required)
+
+                                .ln
+                                    label.input-wrapper(is="input-wrapper")
+                                        span.placeholder Организация
+                                        input.input.lightgreen(name="userOrganization" type="text" required)
+                                .ln
+                                    label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                        span.placeholder Электронная почта
+                                        input.input.lightgreen(name="userEmail" type="email" required)
+                                .ln
+                                    label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                        span.placeholder Телефон
+                                        input.input.lightgreen(name="userTel" type="tel" required)
+                                .ln
+                                    label.input-wrapper(is="input-wrapper")
+                                        span.placeholder Сообщение
+                                        textarea.input.lightgreen(name="userMessage")
+                            .col
+                                .ln
+                                    +inputFile(false)
+                                .ln
+                                    fieldset
+                                        .caps_2 Что вас интересует?
+                                        .checkboxes
+                                            label.input-wrapper.checkbox(is="input-wrapper")
+                                                input.input(name="userEmail" type="checkbox")
+                                                span.p Участие в тендерах и закупках
+                                            label.input-wrapper.checkbox(is="input-wrapper")
+                                                input.input(name="userEmail" type="checkbox")
+                                                span.p Покупка с/х продукции
+                                            label.input-wrapper.checkbox(is="input-wrapper")
+                                                input.input(name="userEmail" checked type="checkbox")
+                                                span.p Покупка непрофильных активов
+                                            label.input-wrapper.checkbox(is="input-wrapper")
+                                                input.input(name="userEmail" checked type="checkbox")
+                                                span.p Покупка техники
+                                            label.input-wrapper.checkbox(is="input-wrapper")
+                                                input.input(name="userEmail" checked type="checkbox")
+                                                span.p Прочие продажи
+
+                                .ln.ln-last.ln-submit
+                                    .agree
+                                        label.input-wrapper.checkbox(is="input-wrapper")
+                                            input.input(name="userAccept" type="checkbox" required)
+                                            span.p Я согласен с <a class="link_green">политикой</a> обработки данных
+                                    button.button.button_size_default.button_theme-darkGreen.form__button
+                                        .button__text Отправить

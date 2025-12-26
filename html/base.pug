@@ -1,0 +1,64 @@
+include ./mixins/mixins
+
+<!doctype html>
+html(lang="ru")
+    head
+        meta(http-equiv="Cache-Control" content="no-cache")
+        meta(charset="UTF-8")
+        meta(name="theme-color" content="#E3FDFD")
+        meta(name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1, minimal-ui")
+
+        title Agroinvest
+        meta(name="description" content="")
+        meta(property="og:locale" content="en_US")
+        meta(property="og:title" content="")
+        meta(property="og:url" content="")
+        meta(property="og:type" content="website")
+        meta(property="og:description" content="")
+        meta(property="og:site_name" content="")
+        meta(property="og:image" content="")
+        meta(property="og:image:alt" content="")
+        meta(property="og:image:width" content="1200")
+        meta(property="og:image:height" content="630")
+        meta(property="og:image:url" content="")
+        meta(property="og:image:secure_url" content="")
+        meta(name="twitter:card" content="summary_large_image")
+        meta(name="twitter:title" content="")
+        meta(name="twitter:description" content="")
+        meta(name="twitter:image" content="")
+        link(rel="image_src" href="")
+
+        link(rel="icon" href="/ico/32.png" type="image/x-icon")
+        link(rel="shortcut icon" href="/ico/32.png" type="image/x-icon")
+        link(rel="apple-touch-icon" href="/ico/1024.png")
+        link(rel="apple-touch-icon" sizes="76x76" href="/ico/76.png")
+        link(rel="apple-touch-icon" sizes="120x120" href="/ico/120.png")
+        link(rel="apple-touch-icon" sizes="152x152" href="/ico/152.png")
+        link(rel="apple-touch-icon" sizes="180x180" href="/ico/180.png")
+
+        link(rel="preload" href="../fonts/TTNorms-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous")
+        link(rel="preload" href="../fonts/TTNorms-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous")
+
+        style.
+            @font-face { font-family: 'TT-Norms'; src: url('../fonts/TTNorms-Regular.woff2') format('woff2'), url('../fonts/TTNorms-Regular.woff') format('woff'), url('../fonts/TTNorms-Regular.eot') format('eot'), url('../fonts/TTNorms-Regular.ttf') format('tff'); font-weight: normal; font-style: normal; } @font-face { font-family: 'TT-Norms'; src: url('../fonts/TTNorms-Medium.woff2') format('woff2'), url('../fonts/TTNorms-Medium.woff') format('woff'), url('../fonts/TTNorms-Medium.eot') format('eot'), url('../fonts/TTNorms-Medium.ttf') format('tff'); font-weight: 500; font-style: normal; }
+            .height-helper {position: fixed;top: 0;left: 0;right: 0;bottom: 0;pointer-events: none;visibility: hidden;}  .popup { position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 50; will-change: opacity; pointer-events: none; opacity: 0;background: var(--white); }  .nav-item .dd {top: 0; left: 0; right: 0; padding: 100px 0 0; white-space: nowrap; opacity: 0; transform: translateY(10px); position: absolute; pointer-events: none;}  @media (min-width: 640px) {  .popup {background: rgba(9, 7, 6, .4);}  }
+        <link href="build/styles.css" rel="stylesheet">
+
+    body
+        include templates/svg
+        page-transition
+        .page-wrapper.fx
+            block vars
+
+            include templates/header
+
+            main.main.replaceable(data-page = page data-id="index")
+                block main-content
+
+            include templates/footer
+            include templates/popups
+            include templates/disclaimer
+        .height-helper
+
+        <script defer>(this.customElements && !(navigator.vendor && navigator.vendor.indexOf('Apple') > -1 && navigator.userAgent && !navigator.userAgent.match('CriOS')) && !(/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream)) || document.write("<script defer src=\"/static/js/document-register-element.js\"><\x2fscript>");</script>
+        <script type="module" src="build/app.js"></script>

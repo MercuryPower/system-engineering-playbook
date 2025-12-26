@@ -1,0 +1,296 @@
+extends ../base
+
+block vars
+    - var page = 'contacts';
+
+block main-content
+    section.artcl
+        .wrapper.nr
+            h1.artcl__title.scroll-block.js-scroll-block(data-text="true").full Контакты
+            h2 Управляющая компания
+    section.mb_120
+        .wrapper.nr
+            .cardMap.cardMap_contact
+                .cardMap__main.h3_2.scroll-block.js-scroll-block(data-text="true") Офис в Москве
+                .cardMap__desc
+                    .info__links
+                        a.link(href="mailto:info@agroinvest.com")
+                            svg.ico(width="33" height="33" fill="none")
+                                use(xlink:href="#mail")
+                            p.link__text.p_md info@agroinvest.com
+
+                        a.link(href="tel:+74952326772")
+                            svg.ico(width="33" height="31" fill="none")
+                                use(href="#tel")
+                            p.link__text.p_md +7 (495) 232-67-72
+                        a.link(target="_blank" href="https://yandex.ru/maps/10672/voronezh-oblast/house/ulitsa_karla_marksa_2a/YEgYcg5iSUcDQFtrfX12c31gYQ==/?ll=41.492024%2C51.172135&z=17.2")
+                            svg.ico(width="32" height="30" fill="none")
+                                use(href="#address")
+                            p.link__text.p_md Липецкая область, Усманский район,село Девица
+                    address.info__links
+                        a.link(target="_blank" href="https://yandex.ru/maps/10672/voronezh-oblast/house/ulitsa_karla_marksa_2a/YEgYcg5iSUcDQFtrfX12c31gYQ==/?ll=41.492024%2C51.172135&z=17.2")
+                            svg.ico(width="33" height="33" fill="none")
+                                use(href="#legal-address")
+
+                            p.link__text.p_md <span>Юридический адрес</span> 399346, Липецкая область, Усманский район, село Завальное, ул. Ленина, 115
+
+                .cardMap__mapWrapper
+                    map-component(data-lat="51.667358" data-lng="39.202362")
+                        .container
+                        .marker(data-lat="51.667358" data-lng="39.202362")
+
+            .cardMap.cardMap_contact
+                .cardMap__main.h3_2.scroll-block.js-scroll-block(data-text="true") Офис в Воронеже
+                .cardMap__desc
+                    .info__links
+                        a.link(href="mailto:info@agroinvest.com")
+                            svg.ico(width="33" height="33" fill="none")
+                                use(xlink:href="#mail")
+                            p.link__text.p_md info@agroinvest.com
+
+                        a.link(href="tel:+74952326772")
+                            svg.ico(width="33" height="31" fill="none")
+                                use(xlink:href="#tel")
+                            p.link__text.p_md +7 (495) 232-67-72
+                        a.link(target="_blank" href="https://yandex.ru/maps/10672/voronezh-oblast/house/ulitsa_karla_marksa_2a/YEgYcg5iSUcDQFtrfX12c31gYQ==/?ll=41.492024%2C51.172135&z=17.2")
+                            svg.ico(width="32" height="30" fill="none")
+                                use(xlink:href="#address")
+                            p.link__text.p_md 125 047, г. Воронеж, ул.1-я Тверская-Ямская д. 21, БЦ «Четыре Ветра»
+                    address.info__links
+                        a.link(target="_blank" href="https://yandex.ru/maps/10672/voronezh-oblast/house/ulitsa_karla_marksa_2a/YEgYcg5iSUcDQFtrfX12c31gYQ==/?ll=41.492024%2C51.172135&z=17.2")
+                            svg.ico(width="33" height="33" fill="none")
+                                use(href="#legal-address")
+
+                            p.link__text.p_md <span>Юридический адрес</span> 125 047, г. Воронеж, ул.1-я Тверская-Ямская д. 21, БЦ «Четыре Ветра»
+
+                .cardMap__mapWrapper
+                    map-component
+                        .container
+
+            .cardMap.cardMap_contact
+                .cardMap__main.h3_2.scroll-block.js-scroll-block(data-text="true") Офис в Воронеже
+                .cardMap__desc
+                    .info__links
+                        a.link(href="mailto:info@agroinvest.com")
+                            svg.ico(width="33" height="33" fill="none")
+                                use(xlink:href="#mail")
+                            p.link__text.p_md info@agroinvest.com
+
+                        a.link(href="tel:+74952326772")
+                            svg.ico(width="33" height="31" fill="none")
+                                use(xlink:href="#tel")
+                            p.link__text.p_md +7 (495) 232-67-72
+                        a.link(target="_blank" href="https://yandex.ru/maps/10672/voronezh-oblast/house/ulitsa_karla_marksa_2a/YEgYcg5iSUcDQFtrfX12c31gYQ==/?ll=41.492024%2C51.172135&z=17.2")
+                            svg.ico(width="32" height="30" fill="none")
+                                use(xlink:href="#address")
+                            p.link__text.p_md 125 047, г. Воронеж, ул.1-я Тверская-Ямская д. 21, БЦ «Четыре Ветра»
+                    address.info__links
+                        a.link(target="_blank" href="https://yandex.ru/maps/10672/voronezh-oblast/house/ulitsa_karla_marksa_2a/YEgYcg5iSUcDQFtrfX12c31gYQ==/?ll=41.492024%2C51.172135&z=17.2")
+                            svg.ico(width="33" height="33" fill="none")
+                                use(href="#legal-address")
+
+                            p.link__text.p_md <span>Юридический адрес</span> 125 047, г. Воронеж, ул.1-я Тверская-Ямская д. 21, БЦ «Четыре Ветра»
+
+                .cardMap__mapWrapper
+                    map-component
+                        .container
+
+    section.mb_120
+        .wrapper.nr
+            .mb_60
+                h2 Контактные лица
+            .container.col-2.contacts
+                -for (var i = 0; i < 2; i++)
+                    .col
+                        .cardPerson
+                            .cardPerson__imageWrapper
+                                picture
+                                    source(srcset="")
+                                    img(src="/static/person/1.png")
+                            .cardPerson__desc
+                                .cardPerson__title
+                                    .h3_2 Машков-Пашков Владимир Григорьевич
+                                .cardPerson__text
+                                    p Cпециалист по закупкам и продажам
+                                .cardPerson__links.info__links
+                                    a.link(href="mailto:info@agroinvest.com")
+                                        svg.ico(width="33" height="33" fill="none")
+                                            use(xlink:href="#mail")
+                                        p.link__text.p_md info@agroinvest.com
+
+                                    a.link(href="tel:+74952326772")
+                                        svg.ico(width="33" height="31" fill="none")
+                                            use(xlink:href="#tel")
+                                        p.link__text.p_md +7 (495) 232-67-72
+                                    a.link(href="tel:+79508723101")
+                                        svg.ico(width="33" height="31" fill="none")
+                                            use(xlink:href="#tel")
+                                        p.link__text.p_md +7 (950) 872-31-01
+                    .col
+                        .cardPerson
+                            .cardPerson__imageWrapper
+                                picture
+                                    source(srcset="")
+                                    img(src="/static/person/2.png")
+                            .cardPerson__desc
+                                .cardPerson__title
+                                    .h3_2 Жуланова Елена
+                                .cardPerson__text
+                                    p Первый заместитель генерального директора
+                                .cardPerson__links.info__links
+                                    a.link(href="mailto:info@agroinvest.com")
+                                        svg.ico(width="33" height="33" fill="none")
+                                            use(xlink:href="#mail")
+                                        p.link__text.p_md info@agroinvest.com
+
+                                    a.link(href="tel:+74952326772")
+                                        svg.ico(width="33" height="31" fill="none")
+                                            use(xlink:href="#tel")
+                                        p.link__text.p_md +7 (495) 232-67-72
+                                    a.link(href="tel:+79508723101")
+                                        svg.ico(width="33" height="31" fill="none")
+                                            use(xlink:href="#tel")
+                                        p.link__text.p_md +7 (950) 872-31-01
+
+    section.bgl.py_60.mb_120
+        .wrapper.nr
+            .h3_2 Горячая линия
+            .cardContact.cardContact_full.aife
+                .cardContact__header
+                    p.cardContact__name.p_md Готовы ответить на любые ваши вопросы
+                .cardContact__links.info__links
+                    .item
+                        p.caption Телефон доверия
+                        a.link(href="tel:+74952326772")
+                            p.link__text.p_md +7 (495) 232-67-72
+                    .item
+                        p.caption E-mail
+                        a.link(href="mailto:info@agroinvest.com")
+                            p.link__text.p_md info@agroinvest.com
+
+    section.mb_120
+        .wrapper.nr
+
+            .mb_60
+                h2 Контактная информация организаций
+
+            .filters.mb_40
+                div.flex
+                    drop-down.drop-down.filter-select
+                        .dd-button
+                            .dd-button__title.p Регион
+                            svg.ico-arr(width="15" height="8" viewBox="0 0 15 8" fill="none")
+                                use(xlink:href="#dd-arr")
+                        .dd-wrapper
+                            .dd-inner
+                                a.p.filter.filter-checkbox(is="filter-link" data-container="replaceable-leadership-group" href="?filter[class]=vrn_first") Новохоперский район
+                                a.p.filter.filter-checkbox(is="filter-link" data-container="replaceable-leadership-group" href="?filter[class]=vrn_second") Грибановский район
+                                a.p.filter.filter-checkbox(is="filter-link" data-container="replaceable-leadership-group" href="?filter[class]=vrn_third") Верхнехавский район
+
+
+
+            .replaceable-leadership-group(data-id="leadership-group")
+                .mb_120
+                    .filters-group.mb_28
+                        .ftitle.caps ваш выбор
+                        a.filter.filter-choose(is="filter-link" data-container="replaceable-leadership-group" href="/structure_1_level.html?filter[class]=vrn_third")
+                            p Липецкая область
+                            .ico
+                                .ico-plus
+                        a.filter.filter-choose(is="filter-link" data-container="replaceable-leadership-group" href="/structure_1_level.html?filter[class]=vrn_third")
+                            p Волгоградская область
+                            .ico
+                                .ico-plus
+                        a.filter.filter-choose(is="filter-link" data-container="replaceable-leadership-group" href="/structure_1_level.html?filter[class]=vrn_third")
+                            p Курская область
+                            .ico
+                                .ico-plus
+                        a.filter.filter-choose(is="filter-link" data-container="replaceable-leadership-group" href="/structure_1_level.html?filter[class]=vrn_third")
+                            p Тамбовская область
+                            .ico
+                                .ico-plus
+
+                        a.filter.filter-choose(is="filter-link" data-container="replaceable-leadership-group" href="/structure_1_level.html?filter[class]=vrn_third")
+                            p Воронежская область
+                            .ico
+                                .ico-plus
+
+                    button.filter.filter-reset.link_g(is="filters-reset" data-names=["class"] data-container="replaceable-leadership-group")
+                        .ico-close.s
+                        p Очистить фильтр
+
+                .container.leaders.col-2.mb_80.replaceable-leadership(data-id="leadership")
+                    -for(var i = 0; i < 3; i++)
+                        .col
+                            .cardPerson.cardPerson_big
+                                a.cardPerson__link(
+                                    is="inner-link"
+
+                                    data-link-container="replaceable-popup"
+                                    data-link-set-store="false"
+                                    data-link-set-history="false"
+                                    data-link-set-classes="false"
+                                    data-link-animation="popup-transition"
+                                    href="popup/popup-contact.html"
+                                )
+                                .cardPerson__desc
+                                    .cardPerson__title
+                                        .h3_2 ООО «Агротерминал»
+                                    .cardPerson__links.info__links
+                                        a.link(href="mailto:info@agroinvest.com")
+                                            svg.ico(width="33" height="33" fill="none")
+                                                use(xlink:href="#mail")
+                                            p.link__text.p_md info@agroinvest.com
+                                        a.link(href="tel:+74952326772")
+                                            svg.ico(width="33" height="31" fill="none")
+                                                use(xlink:href="#tel")
+                                            p.link__text.p_md +7 (495) 232-67-72
+                                        a.link(target="_blank" href="https://yandex.ru/maps/10672/voronezh-oblast/house/ulitsa_karla_marksa_2a/YEgYcg5iSUcDQFtrfX12c31gYQ==/?ll=41.492024%2C51.172135&z=17.2")
+                                            svg.ico(width="32" height="30" fill="none")
+                                                use(href="#address")
+                                            p.link__text.p_md Липецкая область, Усманский район,село Девица
+
+                                .cardPerson__mapWrapper
+                                    map-component
+                                        .container
+                        .col
+                            .cardPerson.cardPerson_big
+                                a.cardPerson__link(
+                                    is="inner-link"
+
+                                    data-link-container="replaceable-popup"
+                                    data-link-set-store="false"
+                                    data-link-set-history="false"
+                                    data-link-set-classes="false"
+                                    data-link-animation="popup-transition"
+                                    href="popup/popup-contact.html"
+                                )
+                                .cardPerson__desc
+                                    .cardPerson__title
+                                        .h3_2 ООО «ЛАПК»
+                                    .cardPerson__links.info__links
+                                        a.link(href="mailto:info@agroinvest.com")
+                                            svg.ico(width="33" height="33" fill="none")
+                                                use(xlink:href="#mail")
+                                            p.link__text.p_md info@agroinvest.com
+                                        a.link(href="tel:+74952326772")
+                                            svg.ico(width="33" height="31" fill="none")
+                                                use(xlink:href="#tel")
+                                            p.link__text.p_md +7 (495) 232-67-72
+                                        a.link(target="_blank" href="https://yandex.ru/maps/10672/voronezh-oblast/house/ulitsa_karla_marksa_2a/YEgYcg5iSUcDQFtrfX12c31gYQ==/?ll=41.492024%2C51.172135&z=17.2")
+                                            svg.ico(width="32" height="30" fill="none")
+                                                use(href="#address")
+                                            p.link__text.p_md Липецкая область, Усманский район,село Девица
+                                .cardPerson__mapWrapper
+                                    map-component
+                                        .container
+
+                .load-more.flex
+                    a.load-more__all.btn.btn_def.green(is="load-more" data-link-container="replaceable-leadership")
+                        p.btn__text Загрузить еще
+                        svg.ico(width="24" height="21" fill="none")
+                            path(d="M21.094 10.5a9 9 0 00-16.5-4.977m-1.5 4.977a9 9 0 0016.484 5" stroke="#4E8925" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+                            path(d="M4.008 1.5l.307 4.335L8.508 6M20.879 18.965l-.307-4.335-4.193-.165" stroke="#4E8925" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+
+
+    include ../templates/question

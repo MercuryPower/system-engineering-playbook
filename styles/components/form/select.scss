@@ -1,0 +1,139 @@
+.form-select {
+    width: 100%;
+    position: relative;
+
+    &.active {
+        z-index: 2;
+
+        .select-button {
+            border-color: var(--green);
+            border-radius: 8px 8px 0px 0px;
+            border-bottom: 1px solid var(--green);
+        }
+
+        .select-select {
+            pointer-events: auto;
+            transform: scaleY(1);
+        }
+
+        .select-inner {
+            opacity: 1;
+        }
+
+        .select__icon {
+            transform: rotate(180deg);
+        }
+    }
+
+    &.wof {
+        .select-item:first-child,
+        option:first-child {
+            display: none;
+        }
+    }
+
+    &.disabled {
+        background: #52504F;
+        cursor: not-allowed ;
+    }
+
+    .select-button {
+        display: flex;
+        align-items: center;
+        height: 56px;
+        cursor: pointer;
+        border: 1px solid #B9CAAD;
+        border-radius: 8px;
+        padding: 0 16px;
+        color: var(--default);
+        justify-content: space-between;
+    }
+
+    .select__icon {
+        //transform: rotate(180deg);
+    }
+
+    .select-select {
+        display: block;
+        pointer-events: none;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        transform-origin: top;
+        transform: scaleY(0);
+        transition: transform 300ms ease;
+    }
+
+    .select-inner {
+        overflow-y: scroll;
+        padding: 8px 0;
+        opacity: 0;
+        transition: opacity 0.2s ease-in;
+        border-bottom: 1px solid var(--green);
+        border-right: 1px solid var(--green);
+        border-left: 1px solid var(--green);
+        border-radius: 0 0 8px 8px;
+        max-height: 220px;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: #fff;
+            z-index: -1;
+            border-radius: 0 0 8px 8px;
+        }
+    }
+
+    .select-item {
+        padding: 7.5px 16px;
+        cursor: pointer;
+
+        &:hover {
+            color: var(--green);
+            background: rgba(78, 137, 37, 0.08);
+        }
+
+        &.active {
+            color: var(--green);
+            background: rgba(78, 137, 37, 0.08);
+        }
+
+        &.disabled {
+            display: none;
+        }
+    }
+
+    select {
+        pointer-events: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+}
+
+select-component {
+    display: block;
+}
+
+.select-button {
+
+}
+
+.select-value {
+
+}
+
+.select-select {
+
+}
+
+.select-inner {
+
+}

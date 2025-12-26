@@ -1,0 +1,21 @@
+.tabs {
+    margin-top: 60px;
+}
+
+tab-switch {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+tab-wrapper {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+
+    .tab {
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}

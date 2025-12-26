@@ -1,0 +1,245 @@
+.artcl {
+    padding: rem(80px) 0 rem(60px);
+
+    @media screen and (max-width: $to-medium) {
+        padding: rem(60px) 0 rem(40px);
+    }
+
+    @media screen and (max-width: $to-small) {
+        padding: rem(50px) 0 rem(30px);
+    }
+
+    &-back {
+        margin-bottom: rem(40px);
+        margin-top: rem(-40px);
+
+        @media screen and (max-width: $to-small) {
+            margin: rem(-25px) 0 rem(25px);
+        }
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__title {
+        max-width: 1000px;
+        margin-bottom: 20px;
+
+        &.full {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        & + h2, .h2 {
+            margin-top: 10px;
+        }
+    }
+
+    &__text {
+        width: 100%;
+
+        & > * {
+            max-width: 800px;
+        }
+
+        .caps_2 {
+            margin-bottom: 5px;
+        }
+
+        .interlinear {
+            font-weight: 400;
+        }
+
+    }
+
+
+    &__switcher {
+
+    }
+}
+
+.nfo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    p {
+        margin-bottom: 0;
+        font-size: 16px;
+    }
+
+    .type {
+        color: var(--green);
+    }
+
+}
+
+.artcl-page {
+    // overflow: hidden;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.375em;
+
+    .text {
+        position: relative;
+        column-count: 2;
+        column-gap: 70px;
+        margin-bottom: rem(80px);
+
+        @media screen and (min-width: 1780px) {
+            column-gap: 135px;
+        }
+
+        @media screen and (max-width: $to-medium) {
+            column-count: 1;
+            margin-bottom: rem(60px);
+        }
+
+        @media screen and (max-width: $to-small) {
+            margin-bottom: rem(50px);
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .text[data-col="1"] {
+        column-count: 1;
+        display: flex;
+        align-items: flex-start;
+
+        @media screen and (max-width: $to-medium) {
+            flex-wrap: wrap;
+        }
+
+        & > * {
+            width: calc(50% - 35px);
+
+            @media screen and (max-width: $to-medium) {
+                width: 100%;
+            }
+        }
+    }
+
+    .text[data-full="true"] {
+        column-count: 1;
+        max-width: 800px;
+    }
+
+    .text-sub + figure {
+        margin-top: 0;
+        position: sticky;
+        top: 110px;
+    }
+
+    figure {
+        figcaption {
+            margin-top: 16px;
+            color: var(--lightBlack);
+        }
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 1.5em;
+        margin-top: 20px;
+        margin-bottom: 30px;
+
+        @media (max-width: $to-medium) {
+            font-size: 16px;
+            margin-bottom: 24px;
+        }
+
+        @media (max-width: $to-small) {
+            margin-bottom: 18px;
+        }
+    }
+
+    h2 {
+        margin-bottom: 40px;
+        margin-top: 40px;
+
+        @media (max-width: $to-medium) {
+            margin: 32px 0;
+        }
+
+        @media (max-width: $to-small) {
+            margin: 26px 0;
+        }
+
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+
+    h3 {
+        font: 500 26px/1.2 "TT-Norms", sans-serif;
+        letter-spacing: -0.02em;
+        margin-bottom: 30px;
+        margin-top: 60px;
+
+
+        @media screen and (max-width: $to-medium) {
+            font-size: 20px;
+            margin-top: 40px;
+            margin-bottom: 24px;
+        }
+
+        @media screen and (max-width: $to-small) {
+            font-size: 16px;
+            margin-top: 36px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .slider-wr {
+        margin: rem(120px) 0 rem(60px);
+
+
+        @media screen and (max-width: $to-medium) {
+            margin: rem(100px) 0 rem(40px);
+        }
+
+        @media screen and (max-width: $to-small) {
+            margin: rem(60px) 0 rem(30px);
+        }
+
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+
+    slider-component {
+        img {
+            max-height: 100%;
+        }
+    }
+
+    a {
+        color: var(--green);
+
+        &:hover {
+            color: var(--darkGreen);
+        }
+    }
+}
+
+.dot {
+    background: var(--default);
+    margin: 0 8px;
+    width: 2px;
+    height: 2px;
+}
+
+.share {
+
+    &__title {
+        margin-bottom: 20px;
+        color: var(--green11);
+    }
+}

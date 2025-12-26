@@ -1,0 +1,88 @@
+popup-component.popup.popup-menu(data-id="popup-menu")
+    .overflow
+        .popup-content
+            button.button-close.ico-close(is="popup-close")
+            .popup-inner
+                .wrapper.nr
+
+                    .popup-menu__back.lk.lk_g(role="button")
+                        svg.ico(width="9" height="15" viewBox="0 0 9 15" fill="none")
+                            path(d="M7.07422 14L1.07422 7.5L7.07422 1" stroke="#4E8925" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+                        .lk__text Меню
+
+                    nav.popup-menu__nav
+                        m-nav-group.nav-group
+                            .nav-group__wr
+                                a.nav-group__link.header__link(href="about.html" is="inner-link") О компании
+                                svg.nav-group__array(width="9" height="15" fill="none")
+                                    use(href="#menu-array")
+                            .nav-group__subs
+                                .nav-group__title.caps_2 О компании
+                                a.header__link_sub.p(is="inner-link" href="") Миссия
+                                a.header__link_sub.p(is="inner-link" href="structure_1_level.html") Структура
+                                a.header__link_sub.p(is="inner-link" href="history.html") История
+                                a.header__link_sub.p(is="inner-link" href="geography_0_1_level.html") География
+                                a.header__link_sub.p(is="inner-link" href="") Технологии
+                                a.header__link_sub.p(is="inner-link" href="") Документы
+
+                        m-nav-group.nav-group
+                            .nav-group__wr
+                                a.nav-group__link.header__link(href="cooperation.html" is="inner-link") Сотрудничество
+                                svg.nav-group__array(width="9" height="15" fill="none")
+                                    use(href="#menu-array")
+                            .nav-group__subs
+                                .nav-group__title.caps_2 Сотрудничество
+                                a.header__link_sub.p(is="inner-link" href="cooperation-text.html") Продажа с/х продукции
+                                a.header__link_sub.p(is="inner-link" href="non-profile.html") Реализация непрофильных активов
+                                a.header__link_sub.p(is="inner-link" href="buy_crops_1_level.html") Закупка с/х продукции
+                                a.header__link_sub.p(is="inner-link" href="sell_mech_now_switcher-bu.html") Прочие продажи
+                                a.header__link_sub.p(is="inner-link" href="tenders_1_level.html") Закупки
+                        m-nav-group.nav-group
+                            .nav-group__wr
+                                a.nav-group__link.header__link(href="activities.html" is="inner-link") Деятельность
+                                svg.nav-group__array(width="9" height="15" fill="none")
+                                    use(href="#menu-array")
+                            .nav-group__subs
+                                .nav-group__title.caps_2 Деятельность
+                                a.header__link_sub.p(is="inner-link" href="") Выращивание
+                                a.header__link_sub.p(is="inner-link" href="") Хранение и подработка
+                                a.header__link_sub.p(is="inner-link" href="") Трейдинг
+                                a.header__link_sub.p(is="inner-link" href="") Инновационные технологии
+                                a.header__link_sub.p(is="inner-link" href="digital-system.html") Цифровизация систем управления
+                        m-nav-group.nav-group
+                            .nav-group__wr
+                                a.nav-group__link.header__link(href="career.html" is="inner-link") Карьера
+                                svg.nav-group__array(width="9" height="15" fill="none")
+                                    use(href="#menu-array")
+                            .nav-group__subs
+                                .nav-group__title.caps_2 Карьера
+                                a.header__link_sub.p(is="inner-link" href="jobs_1_level.html") Вакансии
+                                a.header__link_sub.p(is="inner-link" href="") Обучение
+                                a.header__link_sub.p(is="inner-link" href="") Истории успеха
+                                a.header__link_sub.p(is="inner-link" href="") Поддержка молодых специалистов
+                                a.header__link_sub.p(is="inner-link" href="") Выпускникам и студентам
+                        m-nav-group.nav-group
+                            .nav-group__wr
+                                a.nav-group__link.header__link(href="responsibility.html" is="inner-link") Ответственность
+                                svg.nav-group__array(width="9" height="15" fill="none")
+                                    use(href="#menu-array")
+                            .nav-group__subs
+                                .nav-group__title.caps_2 Ответственность
+                                a.header__link_sub.p(is="inner-link" href="") Социальная ответственность
+                                a.header__link_sub.p(is="inner-link" href="") Безопасность производства
+                                a.header__link_sub.p(is="inner-link" href="") Забота о сотрудниках
+                                a.header__link_sub.p(is="inner-link" href="") Охрана труда
+                        m-nav-group.nav-group
+                            .nav-group__wr
+                                a.nav-group__link.header__link(href="press-center.html" is="inner-link") Пресс-центр
+                                svg.nav-group__array(width="9" height="15" fill="none")
+                                    use(href="#menu-array")
+                            .nav-group__subs
+                                .nav-group__title.caps_2 Пресс-центр
+                                a.header__link_sub.p(is="inner-link" href="news.html") Новости
+                                a.header__link_sub.p(is="inner-link" href="photoset_2_level_2.html") Фотогалерея
+                                a.header__link_sub.p(is="inner-link" href="") Доска достижений
+                                a.header__link_sub.p(is="inner-link" href="about-press-center.html") Пресса о нас
+
+                    button.btn.brdgreen.btn_def(is="popup-toggle" data-id="popup-crisis")
+                        .btn__text Служба доверия

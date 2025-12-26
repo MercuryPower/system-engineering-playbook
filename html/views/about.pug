@@ -1,0 +1,143 @@
+extends ../base
+
+block vars
+    - var page = 'about';
+
+block main-content
+    section.artcl
+        .wrapper.nr
+            h1.artcl__title.scroll-block.js-scroll-block(data-text="true") О компании
+            .artcl__text
+                .interlinear Посмотрите информацию о компании!
+
+    section.mb_120
+        .wrapper.nr
+            .gr.col-2
+                div.full.trigger.trigger-default(data-trigger-type="scroll")
+                    h2.title Миссия
+                    slider-component.slider(
+                        data-id="slider-about-1"
+                        data-focusable="true"
+                        data-touch="true"
+                        data-draggable="true"
+                        data-resize="true")
+                        - var values = ['Это смысл существования компании'];
+
+                        each val in values
+                            .slide
+                                picture
+                                    source(srcset="")
+                                    img(src="./static/career/slider.png")
+                                .slideInfo
+                                    .slideInfo__title.interlinear= val
+                                    p.slideInfo__text.p_md Это реализация конкурентных преимуществ. Общая цель организации — четко выраженная причина её существования.
+                                    button.slideInfo__btn.btn.green.btn_def.btn_flex
+                                        .button__text Подробнее
+
+                    .slider-controls
+                        .slider-progress
+                            slider-progress(data-id="slider-about-1")
+                                - for (var i = 0; i < 1; i++)
+                                    .item
+
+                        .slider-buttons
+                            button.slider__control.arr(is="slider-control" data-id="slider-about-1" data-to="prev")
+                                svg(width="26" height="20" viewBox="0 0 26 20" fill="none")
+                                    use(xlink:href="#slider-arr")
+                            button.slider__control.arr(is="slider-control" data-id="slider-about-1" data-to="next")
+                                svg(width="26" height="20" viewBox="0 0 26 20" fill="none")
+                                    use(xlink:href="#slider-arr")
+                article.cardPreview.trigger.trigger-default(data-trigger-type="scroll")
+                    a.cardPreview__link(href="structure_1_level.html" is="inner-link")
+                    .cardPreview__imageWrapper
+                        picture.picture
+                            source(srcset="" type="image/webp")
+                            img(src="./static/career/career-1.png")
+                    .cardPreview__header
+                        h2.cardPreview__name Структура
+                        .cardPreview__button.btn.btn_sq
+                            svg.ico(width="8" height="15" fill="none")
+                                use(xlink:href="#arr-s")
+                    .cardPreview__text
+                        p.interlinear Благоприятные климатические условия, наличие чернозёмов, способствуют развитию растениеводства.
+                        p.text_md Площадь сельхозугодий занимает свыше 1,8 млн га, из них пашня — более 80 %. 22,3 тыс. га земли отведено под плодовые сады, где выращивают яблони, груши, сливы.
+                article.cardPreview.trigger.trigger-default(data-trigger-type="scroll")
+                    a.cardPreview__link(href="history.html" is="inner-link")
+                    .cardPreview__imageWrapper
+                        picture.picture
+                            source(srcset="" type="image/webp")
+                            img(src="./static/career/career-4.png")
+                    .cardPreview__header
+                        h2.cardPreview__name История
+                        .cardPreview__button.btn.btn_sq
+                            svg.ico(width="8" height="15" fill="none")
+                                use(xlink:href="#arr-s")
+                    .cardPreview__text
+                        p.interlinear Наша история началась темной-темной ночью среди воронежских лесостемей.
+                        p.text_md В ту ночь выли волки, пищали дрофы и сипел ястреб-перепелятник.
+    section.mb_120
+        .wrapper.nr
+            .gr.col-2
+                div.full
+                    h2.title География работы
+                    slider-component.slider.trigger.trigger-default(
+                        data-trigger-type="scroll"
+                        data-id="slider-about-2"
+                        data-focusable="true"
+                        data-touch="true"
+                        data-draggable="true"
+                        data-resize="true")
+                        - var values = ['Работаем по всей россии'];
+
+                        each val in values
+                            .slide
+                                picture
+                                    source(srcset="")
+                                    img(src="./static/career/slider.png")
+                                .slideInfo
+                                    .slideInfo__title.interlinear= val
+                                    p.slideInfo__text.p_md Волгоградская, Воронежская, Курская, Тамбовская, Липецкая, Рязанская, Самарская области и даже в Москве!
+                                    a.slideInfo__btn.btn.green.btn_def.btn_flex(is="inner-link" href="geography_0_1_level.html")
+                                        .button__text Подробнее
+
+                    .slider-controls
+                        .slider-progress
+                            slider-progress(data-id="slider-about-2")
+                                - for (var i = 0; i < 1; i++)
+                                    .item
+
+                        .slider-buttons
+                            button.slider__control.arr(is="slider-control" data-id="slider-about-2" data-to="prev")
+                                svg(width="26" height="20" viewBox="0 0 26 20" fill="none")
+                                    use(xlink:href="#slider-arr")
+                            button.slider__control.arr(is="slider-control" data-id="slider-about-2" data-to="next")
+                                svg(width="26" height="20" viewBox="0 0 26 20" fill="none")
+                                    use(xlink:href="#slider-arr")
+                article.cardPreview.trigger.trigger-default(data-trigger-type="scroll")
+                    a.cardPreview__link(href="" is="inner-link")
+                    .cardPreview__imageWrapper
+                        picture.picture
+                            source(srcset="" type="image/webp")
+                            img(src="./static/career/career-1.png")
+                    .cardPreview__header
+                        h2.cardPreview__name Технологии
+                        .cardPreview__button.btn.btn_sq
+                            svg.ico(width="8" height="15" fill="none")
+                                use(xlink:href="#arr-s")
+                    .cardPreview__text
+                        p.interlinear Совокупность методов и инструментов для достижения желаемого результата
+                        p.text_md В широком смысле — применение научного знания для решения практических задач. Технология включает в себя способы работы, ее режим, последовательность действий.
+                article.cardPreview.trigger.trigger-default(data-trigger-type="scroll")
+                    a.cardPreview__link(href="" is="inner-link")
+                    .cardPreview__imageWrapper
+                        picture.picture
+                            source(srcset="" type="image/webp")
+                            img(src="./static/career/career-4.png")
+                    .cardPreview__header
+                        h2.cardPreview__name Документы
+                        .cardPreview__button.btn.btn_sq
+                            svg.ico(width="8" height="15" fill="none")
+                                use(xlink:href="#arr-s")
+                    .cardPreview__text
+                        p.interlinear Что-то про документы
+                        p.text_md Какие-то документы которые могут быть вам полезны. Посмотреть весь перечень документов вы можете перейдя в раздел.

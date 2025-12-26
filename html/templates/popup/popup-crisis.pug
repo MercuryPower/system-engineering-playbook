@@ -1,0 +1,93 @@
+popup-component.popup(data-id="popup-crisis")
+    .overflow
+        .replaceable-popup.popup-content(data-id="popup-content")
+            .popup-inner.nr.def
+                button.button-close.ico-close(is="popup-close")
+                .wrapper
+                    .popup__desc.crisis
+                        .crisis__wrapper
+                            .crisis__content
+                                h2.h2.mb_60 Служба доверия
+                                .crisis__benefits.benefits.benefits--crisis.mb_60
+                                    .wrapper.nr
+                                        .benefit__list.flex
+                                            .benefit__listItem
+                                                .benefit__itemIcon.js-scroll-block(data-delayd=".15" data-delaym=".2")
+                                                    img(src="./static/crisis-center/1.svg")
+                                                .benefit__itemText Помощь в получении информации
+
+                                            .benefit__listItem
+                                                .benefit__itemIcon.js-scroll-block(data-delayd=".25" data-delaym=".2")
+                                                    img(src="./static/crisis-center/2.svg")
+                                                .benefit__itemText Сообщите нам о проблемах
+                                            .benefit__listItem
+                                                .benefit__itemIcon.js-scroll-block(data-delayd=".35" data-delaym=".2")
+                                                    img(src="./static/crisis-center/3.svg")
+                                                .benefit__itemText Внесите предложения и пожелания
+                                            .benefit__listItem
+                                                .benefit__itemIcon.js-scroll-block(data-delayd=".45" data-delaym=".2")
+                                                    img(src="./static/crisis-center/4.svg")
+                                                .benefit__itemText Получение консультации
+                                .crisis__attention.mb_60
+                                    .crisis__attention-prolog
+                                        p.p В Группе «Волго-Дон АгроИнвест» работает телефон горячей линии, а также адрес электронной почты
+
+                                    .crisis__attention-links
+                                        a.link_green.h3_2(href="tel:+78005504699") 8-800-550-46-99
+                                        a.link_green.h3_2(href="mailto:hotline@agroinvest.com") hotline@agroinvest.com
+
+
+                                h3.h3_2.mb_40 По указанным контактам вы можете получить интересующие вас данные, а также поделиться важной информацией о случаях:
+                                ul.crisis__list.mb_60
+                                    li мошенничества
+                                    li хищения, неправомерное использование, присвоение обманным путем имущества и/или других активов обществ Группы «АГРОИНВЕСТ»
+                                    li получения взяток, коммерческий подкуп
+                                    li наличия конфликта интересов у работников обществ Группы «АГРОИНВЕСТ»
+                                    li наличия признаков аффилированности работников и контрагентов обществ Группы «АГРОИНВЕСТ»
+                                    li дисциплинарных проступков
+                                    li угроз причинения ущерба интересам и активам обществ Группы «АГРОИНВЕСТ», а также его работникам
+
+                            drop-down.drop-down
+                                .dd-button
+                                    h3.dd-button__title.h3_2  Опишите характер обращения
+                                    .ico-plus
+                                .dd-wrapper
+                                    .dd-inner
+                                        .form-wrapper
+                                            form-response.response(data-id="popup-crisis")
+                                                .response-inner
+                                            form.form.form-reg(action="./response.json" data-id="popup-crisis" method="post" is="form-component")
+                                                .col
+                                                    .ln
+                                                        label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                                            span.placeholder ФИО
+                                                            input.input.lightgreen(name="userName" type="name" required)
+
+                                                    .ln
+                                                        label.input-wrapper(is="input-wrapper")
+                                                            span.placeholder Организация
+                                                            input.input.lightgreen(name="userOrganization" type="text" required)
+                                                    .ln
+                                                        label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                                            span.placeholder Электронная почта
+                                                            input.input.lightgreen(name="userEmail" type="email" required)
+                                                    .ln
+                                                        label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                                            span.placeholder Телефон
+                                                            input.input.lightgreen(name="userTel" type="tel" required)
+                                                    .ln
+                                                        label.input-wrapper(is="input-wrapper")
+                                                            span.placeholder Сообщение
+                                                            textarea.input.lightgreen(name="userMessage")
+                                                .col
+                                                    .ln
+                                                        +inputFile(false)
+                                                    .ln.ln-last.ln-submit
+                                                        .agree
+                                                            label.input-wrapper.checkbox(is="input-wrapper")
+                                                                input.input(name="userAccept" type="checkbox" required)
+                                                                span.p Я согласен с <a class="link_green">политикой</a> обработки данных
+                                                        button.button.button_size_default.button_theme-darkGreen.form__button
+                                                            .button__text Отправить
+
+

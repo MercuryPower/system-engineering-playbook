@@ -1,0 +1,10 @@
+section.main-video.margin-bottom_100
+    .wrapper
+        .main-video__container
+            // Если пользователь захочет добавить controls тогда добавьте в props тега
+            video(autoplay="" loop="" muted="" playsinline="")
+                source(src="https://svel.ru/upload/Видео Главная.mp4" type="video/mp4")
+
+            // Если пользователь захочет добавить текст
+            .slideInfo.slideInfo_main
+                .h1.slideInfo__title Технологические решения для производства

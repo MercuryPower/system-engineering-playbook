@@ -1,0 +1,253 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    will-change: opacity;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .4s ease;
+    background: var(--white);
+
+
+    @media (min-width: $from-small) {
+        background: rgba(9, 7, 6, .4);
+    }
+
+    &.active {
+        bottom: 0;
+        pointer-events: auto;
+        opacity: 1;
+        transition: opacity .3s ease;
+
+        .popup-inner {
+            transform: translateY(0);
+            transition: all .6s var(--ease-out);
+        }
+    }
+}
+
+.popup .overflow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.popup-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: $from-small) {
+        padding-top: 85px;
+        padding-bottom: 50px;
+        min-height: calc(100vh - 135px)
+    }
+}
+
+.popup-inner {
+    box-sizing: border-box;
+    background: var(--white);
+    transform: translateY(10px);
+    transition: all .4s var(--ease-in);
+    border-radius: 4px;
+    width: 100%;
+
+    &.nr {
+        padding: 60px 110px 80px;
+        max-width: 560px;
+
+        @media (max-width: $to-medium) {
+            padding: 60px 80px 80px;
+        }
+
+        @media (max-width: $to-small) {
+            padding: 60px 20px 80px;
+        }
+    }
+
+    &.def {
+        max-width: 980px;
+    }
+
+    &.wide {
+        padding: 60px 90px 80px;
+        max-width: 1200px;
+
+        @media (max-width: $to-medium) {
+            padding: 60px 60px 80px;
+        }
+
+        @media (max-width: $to-small) {
+            padding: 60px 20px 80px;
+        }
+    }
+
+    .wrapper {
+        width: 100%;
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 1.5em;
+
+        @media (max-width: $to-medium) {
+            font-size: 16px;
+        }
+    }
+
+    .interlinear {
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.popup__desc {
+    margin-bottom: 60px;
+
+    h2 {
+        margin-bottom: 20px;
+    }
+}
+
+.button-close {
+    position: absolute;
+    right: rem(20px);
+    top: rem(20px);
+}
+
+.popup-menu {
+    background: var(--white);
+
+    .popup-content {
+        align-items: flex-start;
+    }
+
+    .popup-inner {
+        @media (max-width: $to-small) {
+            padding: 75px 0;
+        }
+    }
+
+    .wrapper {
+        width: calc(100% - 80px);
+
+        @media (max-width: $to-small) {
+            width: calc(100% - 40px);
+        }
+
+    }
+}
+
+.popup-dropdown {
+
+    background: #EDF1E8;
+
+    .popup-inner {
+        height: 100%;
+        background: #EDF1E8;
+        color: var(--darkGreen);
+
+        @media (max-width: 800px) {
+            height: auto;
+        }
+    }
+
+    .popup-content {
+        height: 100%;
+    }
+
+    .button-close {
+        @media (min-width: 801px) {
+            top: calc(50% - 20px / 2);
+            bottom: 0;
+            right: 0;
+            z-index: 2;
+
+            &:before,
+            &:after {
+                background: var(--darkGreen);
+            }
+        }
+    }
+
+    .wrapper {
+        width: 96.5%;
+
+        @media (min-width: 801px) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        @media screen and (min-width: $from-enormous) {
+            max-width: 1700px;
+        }
+
+        @media screen and (max-width: $to-big) {
+            width: 92.5%;
+        }
+
+        @media screen and (max-width: $to-small) {
+            width: calc(100% - 32px);
+        }
+
+    }
+
+    &__title {
+        width: calc(50% - 24px);
+        margin-right: 24px;
+        align-self: center;
+
+        @media (max-width: 800px) {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 36px;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        align-items: flex-start;
+        max-height: 550px;
+        overflow: auto;
+        width: calc(50% - 40px);
+
+        @media (max-width: 800px) {
+            width: 100%;
+        }
+
+        button, a {
+            margin-bottom: 62px;
+            text-align: left;
+            color: var(--darkGreen);
+
+            &:hover {
+                color: var(--green);
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            @media (max-width: $to-medium) {
+                margin-bottom: rem(40px);
+                max-height: 100%;
+            }
+
+            @media (max-width: 800px) {
+                margin-bottom: rem(24px);
+            }
+        }
+    }
+}

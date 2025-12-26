@@ -1,0 +1,70 @@
+article.cardInfo
+    .t
+        .l
+            .h3_2.cardInfo__title Земельный участок «Едрово-2»
+            a.cardInfo__type.p_md Земельные участки
+            .cardInfo__text.p_md Земельный участок на трассе М4, 2408 кв.м.
+
+    .bt
+        .l
+            drop-down.cardInfo__dropdown
+                .dd-button
+                    .dd-button__title.p(data-text-change="Скрыть;Показать еще") Показать еще
+                    svg.ico-arr(width="15" height="8" viewBox="0 0 15 8" fill="none")
+                        use(href="#dd-array")
+
+                .dd-wrapper
+                    .dd-inner
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate non reiciendis voluptatem. Assumenda earum eveniet facere libero molestiae perspiciatis quibusdam quisquam? Ab commodi, eveniet excepturi labore molestiae rem tempora vero.
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate non reiciendis voluptatem. Assumenda earum eveniet facere libero molestiae perspiciatis quibusdam quisquam? Ab commodi, eveniet excepturi labore molestiae rem tempora vero.
+                        ul
+                            li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            li <a>Lorem ipsum dolor sit amet</a>, consectetur adipisicing elit.
+                            li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate non reiciendis voluptatem. Assumenda earum eveniet facere libero molestiae perspiciatis quibusdam quisquam? Ab commodi, eveniet excepturi labore molestiae rem tempora vero.
+
+                        slider-component.slider(
+                            data-id="slider-text-2"
+                            data-focusable="true"
+                            data-touch="true"
+                            data-draggable="true"
+                            data-resize="true")
+
+                            - for (var i = 1; i < 6; i++)
+                                .slide
+                                    picture
+                                        source(srcset="")
+                                        img(src="./static/cooperation/slider/1.jpg")
+
+                        .slider-controls
+                            .slider-progress
+                                slider-progress(data-id="slider-text-2")
+                                    - for (var i = 0; i < 5; i++)
+                                        .item
+
+
+                            .slider-buttons
+                                button.slider__control.arr(is="slider-control" data-id="slider-text-2" data-to="prev")
+                                    svg(width="26" height="20" viewBox="0 0 26 20" fill="none")
+                                        use(xlink:href="#slider-arr")
+                                button.slider__control.arr(is="slider-control" data-id="slider-text-2" data-to="next")
+                                    svg(width="26" height="20" viewBox="0 0 26 20" fill="none")
+                                        use(xlink:href="#slider-arr")
+                        //picture
+                            source(srcset="")
+                            img(src="./static/cooperation/slider/1.jpg")
+                        .dd-map
+                            map-component
+                                .container
+        .r
+            a.cardInfo__btn.btn.btn_theme-green.btn_def.btn_flex(
+                is="inner-link"
+
+                data-link-container="replaceable-popup"
+                data-link-set-store="false"
+                data-link-set-history="false"
+                data-link-set-classes="false"
+                data-link-animation="popup-transition"
+                href="popup/popup-non-profile.html")
+                .btn__text Подать заявку

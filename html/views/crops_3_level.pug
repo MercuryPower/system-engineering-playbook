@@ -1,0 +1,130 @@
+extends ../base
+
+block vars
+    - var page = 'crops';
+
+block main-content
+    section.artcl.pb_60
+        .wrapper.nr
+            a.artcl-back.link.link-back(is="inner-link" href="cooperation-text.html")
+                svg.ico(width="8" height="15" fill="none")
+                    path(d="M7 1L1 7.5 7 14" stroke="#E3E2DC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+                span.p_min.link-back__text Продажа с/х продукции
+        .wrapper.nr
+            h1.artcl__title.scroll-block.js-scroll-block(data-text="true") Рапс
+    section.mb_100
+        .wrapper.nr
+            .desc
+                .desc__content.content
+                    p Если вам необходимо купить зерно рапса, то компания «Грейн» поможет это осуществить. Являясь крупнейшим поставщиком зерновых культур в Алтайском крае, мы можем продать качественный товар оптом по выгодной рыночной цене. Культура соответствует всем государственным стандартам (ГОСТ 10583-76).
+
+                    .features
+                        .item.featur
+                            .caps_2 Регион
+                            p Воронежская область
+
+                        .item.featur
+                            .caps_2 место хранение
+                            p г. Новохоперск
+
+                        .item.featur
+                            .caps_2 ДО
+                            p ООО «Новохоперск-АГРО-Инвест»
+
+                        .item.featur
+                            .caps_2 количество
+                            p 300 т
+                    a.btn.green.btn_def.btn_flex(
+                        is="inner-link"
+
+                        data-link-container="replaceable-popup"
+                        data-link-set-store="false"
+                        data-link-set-history="false"
+                        data-link-set-classes="false"
+                        data-link-animation="popup-transition"
+                        href="/popup/popup-buy-products.html")
+                        .button__text Купить
+
+                    h3.h3_2 Продать рапс на элеватор
+                    p Наш элеватор отвечает всем требованиям хранения. Перед обработкой семян, проводится дезинфекция как самого помещения, так и оборудования, а оптимизация температурного режима гарантирует надежность хранения. Современное швейцарское оборудование компании "BUHLER" дает возможность на расстоянии поддерживать оптимальный микроклимат, поэтому масличный, яровой или озимый рапс не портятся даже при длительном нахождении в хранилище. А конкурентная цена 1 тонны привлекает новых клиентов и делает нас лидером не только в Барнауле, но и в Алтайском крае.
+                .desc__aside.slider-aside
+                    .slider-sticky
+                        slider-component.as.slider(
+                            data-id="slider-cooperation"
+                            data-focusable="true"
+                            data-touch="true"
+                            data-draggable="true"
+                            data-resize="true")
+                            - var n = 1;
+
+                            while n < 5
+                                .slide
+                                    picture
+                                        source(srcset="")
+                                        img(src="./static/slider/slide-" + n++ + ".jpg")
+
+                        .slider-controls
+                            .slider-progress
+                                slider-progress(data-id="slider-cooperation")
+                                    - for (var i = 0; i < 4; i++)
+                                        .item
+
+                            .slider-buttons
+                                button.slider__control.arr(is="slider-control" data-id="slider-cooperation" data-to="prev")
+                                    svg(width="26" height="20" viewBox="0 0 26 20" fill="none")
+                                        use(xlink:href="#slider-arr")
+                                button.slider__control.arr(is="slider-control" data-id="slider-cooperation" data-to="next")
+                                    svg(width="26" height="20" viewBox="0 0 26 20" fill="none")
+                                        use(xlink:href="#slider-arr")
+
+    section.mb_120
+        .wrapper.nr
+            .accordion-component.accordion-component_crops
+                drop-down.drop-down.faq
+                    button.dd-button
+                        .dd-button__title.h3_2 Информация
+                        .ico-plus
+                    .dd-wrapper
+                        .dd-inner
+                            .advantages
+                                - var values = ['Возможная дата начала отгрузки (после подачи заявки)', 'Отгрузка по жд', 'Суточная норма отгрузки по ж/д сообщению', ' Суточная норма отгрузки на автомобиле', 'Стоимость отгрузки в автотранспорт', 'Стоимость отгрузки в железнодорожный транспорт', 'Стоимость хранения', 'Удаленность от элеватора' ];
+
+                                each val in values
+
+                                    .advantage
+                                        .advantage__name.p_md= val
+                                        .advantage-line
+                                        .advantage__info.p_md спустя 3 дня
+
+                drop-down.drop-down.faq.faq_full
+                    button.dd-button
+                        .dd-button__title.h3_2 Параметры зерна
+                        .ico-plus
+                    .dd-wrapper
+                        .dd-inner.flex.flex_jscb
+                            .advantages
+                                - var values = [{name:"Цвет", text: "ярко-желтый"}, {name:"Запах", text: "приятный"}, {name:"Зараженность вредителями", text: "возможна"}, {name:"Влажность", text: "0,5 %"}, {name:"Масличность", text: "15 %"}, {name:"Эруковая кислота", text: "0,002 %"}, {name:"Микотоксины", text: "5 мкг/кг"}];
+
+
+                                each val in values
+
+                                    .advantage
+                                        .advantage__name.p_md= val.name
+                                        .advantage-line
+                                        .advantage__info.p_md= val.text
+
+                            .advantages
+                                - var values = [{name:"Цвет", text: "ярко-желтый"}, {name:"Запах", text: "приятный"}, {name:"Зараженность вредителями", text: "возможна"}, {name:"Влажность", text: "0,5 %"}, {name:"Масличность", text: "15 %"}, {name:"Эруковая кислота", text: "0,002 %"}, {name:"Микотоксины", text: "5 мкг/кг"}];
+
+
+                                each val in values
+
+                                    .advantage
+                                        .advantage__name.p_md= val.name
+                                        .advantage-line
+                                        .advantage__info.p_md= val.text
+    section.mb_120
+        .wrapper.nr
+            .flex
+                h2.title Похожие товары
+                include ../templates/sliders/similar-products

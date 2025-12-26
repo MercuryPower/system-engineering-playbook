@@ -1,0 +1,136 @@
+// breakpoints
+$from-tiny: 500px !default;
+$to-tiny: $from-tiny - 1 !default;
+$from-small: 640px !default;
+$to-small: $from-small - 1 !default;
+$from-medium: 1025px !default;
+$to-medium: $from-medium - 1 !default;
+$from-large: 1200px !default;
+$to-large: $from-large - 1 !default;
+$from-big: 1400px !default;
+$to-big: $from-big - 1 !default;
+$from-huge: 1600px !default;
+$to-huge: $from-huge - 1 !default;
+$from-enormous: 1800px !default;
+$to-enormous: $from-enormous - 1 !default;
+$from-gigantic: 1920px !default;
+$to-gigantic: $from-gigantic - 1 !default;
+$from-colossal: 2400px !default;
+$to-colossal: $from-colossal - 1 !default;
+
+:root {
+    //colors
+    --white: #ffffff;
+
+    --default: #090706;
+    --lightBlack: #52504F;
+
+    --green: #4E8925;
+    --greenLight_2: #C7D8B9;
+
+    --lightGreen: rgba(78, 137, 37, .08);
+    --darkGreen: #213F0B;
+    --green11: #B9CAAD;
+
+    --error: #C61414;
+
+    --grey: #E3E2DC;
+    --greyDark: #A8A698;
+
+    --background: #FBFAF9;
+
+    --easeOutQuad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --easeOutQuart: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+
+    --ease-in: cubic-bezier(0.55,0.055,0.675,0.19);
+    --ease-out: cubic-bezier(0.215,0.610,0.355,1);
+    --ease: cubic-bezier(0.53,0,0.23,1);
+    --sine: cubic-bezier(0.445,0.05,0.55,0.95);
+    --bounce: cubic-bezier(0.655,0.66,0.185,1.265);
+}
+
+// font-size
+$font-size: 16px;
+
+body, html {
+    border: 0;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+body {
+    font-family: "TT-Norms", sans-serif;
+    background: var(--background);
+    color: var(--default);
+    font-weight: normal;
+    letter-spacing: .00000001px;
+}
+
+body.prevent-scroll {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+}
+
+.main {
+    position: relative;
+    z-index: 1;
+    flex-grow: 1;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+
+    &_jscb {
+        justify-content: space-between;
+    }
+
+    &_fdc {
+        flex-direction: column;
+    }
+
+    &_aifs {
+        align-items: flex-start;
+    }
+
+    &_aic {
+        align-items: center;
+    }
+}
+
+.aic {
+    align-items: center;
+}
+
+.aife {
+    align-items: flex-end;
+}
+
+@function rem($size, $context: $font-size) {
+    @return #{$size / $context}rem;
+}
+
+section {
+    position: relative;
+}
+
+.bb {
+    border-bottom: 2px solid var(--lightGreen);
+}
+
+.bb_g {
+    border-color: var(--grey);
+}
+
+
+.bgl {
+    background: var(--lightGreen);
+    color: var(--darkGreen);
+}

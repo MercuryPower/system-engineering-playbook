@@ -1,0 +1,137 @@
+.faq {
+    width: calc(48% - 30px);
+
+    @media (max-width: $to-medium) {
+        width: calc(100%);
+    }
+
+    &_full {
+        width: 100%;
+
+        .advantages {
+            width: calc(48% - 30px);
+        }
+    }
+
+    &.reg {
+        width: 62.5%;
+        max-width: 880px;
+    }
+}
+
+
+.accordion-component {
+    margin-top: 80px;
+
+    @media screen and (max-width: $to-medium) {
+        margin-top: rem(60px);
+    }
+
+    @media screen and (max-width: $to-small) {
+        margin-top: rem(50px);
+    }
+}
+
+.faq {
+    margin-bottom: 60px;
+
+    @media screen and (max-width: $to-medium) {
+        margin-bottom: rem(40px);
+    }
+
+    @media screen and (max-width: $to-small) {
+        margin-bottom: rem(30px);
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &:first-child {
+        margin-bottom: 60px;
+
+        @media screen and (max-width: $to-medium) {
+            margin-bottom: rem(40px);
+        }
+
+        @media screen and (max-width: $to-small) {
+            margin-bottom: rem(30px);
+        }
+    }
+}
+
+accordion-component {
+    display: block;
+}
+
+drop-down {
+    display: block;
+
+    .dd-wrapper {
+        height: 0;
+        overflow: hidden;
+    }
+
+    .dd-inner {
+        padding: 40px 0 50px;
+
+        @media (max-width: $to-medium) {
+            padding: rem(25px) 0 rem(30px);
+        }
+    }
+
+    .dd-button {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+
+        &.active {
+            .ico-plus {
+                &:before {
+                    transform: rotate(90deg);
+                }
+            }
+
+            .ico-arr {
+                transform: rotate(180deg);
+            }
+        }
+
+        &__title {
+            margin-bottom: 0;
+        }
+
+        & > .ico-arr {
+
+        }
+    }
+}
+
+
+.dd_history {
+    margin-bottom: 30px;
+
+    .dd-button {
+        justify-content: flex-start;
+        color: var(--green);
+
+        &__title {
+            margin-right: 16px;
+        }
+    }
+
+    .dd-inner {
+        padding: 0 0 40px;
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 1.5em;
+
+        @media (max-width: $to-medium) {
+            font-size: 16px;
+        }
+    }
+}
+

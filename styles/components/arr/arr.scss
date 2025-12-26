@@ -1,0 +1,31 @@
+.arr {
+    svg {
+        transition: transform 250ms ease;
+    }
+}
+
+.arr.next,
+.arr[data-to="next"] {
+    &:hover {
+        svg {
+            transform: translateX(5px);
+        }
+    }
+}
+
+
+.arr.prev,
+.arr[data-to="prev"] {
+    margin-right: 16px;
+
+    svg {
+        transform: rotate(180deg);
+    }
+
+    &:hover {
+        svg {
+            transform: rotate(180deg) translateX(5px);
+        }
+    }
+}
+

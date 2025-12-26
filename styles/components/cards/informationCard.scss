@@ -1,0 +1,86 @@
+.informationCard {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+
+    &:not(.informationCard_border) {
+        border: 1px solid transparent;
+        transition: border-color 300ms ease;
+    }
+
+    &:hover {
+        border-color: var(--green);
+
+        .informationCard__image {
+            transform: scale(1.05);
+            transition: transform 350ms ease-out;
+        }
+    }
+
+    &_withBg {
+        background: var(--white);
+    }
+
+    &_border {
+        border: 1px solid #E1E0DC;
+        transition: border-color 300ms ease;
+    }
+
+    &__imageWrapper {
+        overflow: hidden;
+        width: 100%;
+        pointer-events: none;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: transform 350ms ease;
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+    }
+
+    &__body {
+        width: 100%;
+        padding: 16px 24px 24px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__info {
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        margin: 0 0 12px 0;
+    }
+
+    &__date {
+        font-size: 16px;
+        margin: 0 8px 0 0;
+    }
+
+    &__dot {
+        width: 2px;
+        height: 2px;
+        border-radius: 50%;
+        margin: 0 12px 0 0;
+        background-color: var(--default);
+    }
+
+    &__type {
+
+    }
+
+    &__link {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+}

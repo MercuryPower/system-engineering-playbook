@@ -1,0 +1,50 @@
+popup-component.popup-make(data-id="popup-other_asset")
+    .popup__inner
+        .popup__wrapper.popup__wrapper_small
+            .popup__overflow
+                button.popup__button.popup__close(is="popup-close")
+                .popup__form
+                    .popup-content
+                        .h2.popup__title Заявка на приобретение непрофильного актива
+                        .popup__subtitle Заполните по возможности все поля
+                        .form-wrapper.margin-top_60
+                            form-response.response(data-id="form-make")
+                                .response-inner
+                            form.form(action="./response.json" data-id="form-make" method="post" is="form-component")
+                                .form__group.form__group_fd
+                                    .form__line
+                                        span.placeholder.placeholder_required Название актива
+                                        select-component.form-select
+                                            .select-button(tabindex="0" role="button")
+                                                .select-value
+                                                svg(class="select__icon" width="15" height="8" viewBox="0 0 15 8" fill="none")
+                                                    use(xlink:href="#dd-arr")
+                                            .select-select
+                                                .select-inner
+                                            label(is="input-wrapper" data-validate="blur")
+                                                select(tabindex="-1" name="userQuestion" required data-withValue="0")
+                                                    option(value="Ачинск") Ачинск
+                                                    option(value="Астрахань") Астрахань
+                                    .form__line
+                                        label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                            span.placeholder Ваше имя
+                                            input.input.input_lightGreen(name="userName" type="text" required)
+                                    .form__line
+                                        label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                            span.placeholder Электронная почта
+                                            input.input.input_lightGreen(name="userEmail" type="email" required)
+                                    .form__line
+                                        label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                            span.placeholder Телефон
+                                            input.input.input_lightGreen(name="userTel" type="tel" required)
+                                    .form__line
+                                        label.input-wrapper(is="input-wrapper")
+                                            span.placeholder Сообщение
+                                            textarea.input.input_lightGreen(name="userMessage")
+                                    .form__line
+                                        .agree
+                                            label.input-wrapper.input-wrapper_checkbox(is="input-wrapper")
+                                                input.input(name="userAccept" type="checkbox" required)
+                                                span.placeholder.placeholder_checkbox Я согласен с <a class="link_green">политикой</a> обработки данных
+                                        button.button.button_size_default.button_theme-darkGreen.form__button
+                                            .button__text Отправить

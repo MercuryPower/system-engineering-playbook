@@ -1,0 +1,43 @@
+popup-component.popup-make(data-id="popup-make")
+    .popup__inner
+        .popup__wrapper.popup__wrapper_small
+            .popup__overflow
+                button.popup__button.popup__close(is="popup-close")
+                .popup__form
+                    .popup-content
+                        .h2.popup__title Связаться <br> с пресс-центром
+                        .popup__subtitle Задайте интересующий вопрос, заполнив поля формы
+                        .form-wrapper.margin-top_60
+                            form-response.response(data-id="form-make")
+                                .response-inner
+                            form.form(action="./response.json" data-id="form-make" method="post" is="form-component")
+                                .form__group.form__group_fd
+                                    .form__line
+                                        label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                            span.placeholder Ваше имя
+                                            input.input.input_lightGreen(name="userName" type="text" required)
+                                    .form__line
+                                        label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                            span.placeholder Организация
+                                            input.input.input_lightGreen(name="userName" type="text" required)
+                                    .form__line
+                                        label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                            span.placeholder Электронная почта
+                                            input.input.input_lightGreen(name="userEmail" type="email" required)
+                                    .form__line
+                                        label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                            span.placeholder Телефон
+                                            input.input.input_lightGreen(name="userTel" type="tel" required)
+                                    .form__line.formRowMargin_50
+                                        label.input-wrapper(is="input-wrapper" data-validate="blur")
+                                            span.placeholder Сообщение
+                                            textarea.input.input_lightGreen(name="userMessage" required)
+                                    .form__line.formRowMargin_50
+                                        +inputFile(false)
+                                    .form__line
+                                        .agree
+                                            label.input-wrapper.input-wrapper_checkbox(is="input-wrapper")
+                                                input.input(name="userAccept" type="checkbox" required)
+                                                span.placeholder.placeholder_checkbox Я согласен с <a class="link_green">политикой</a> обработки данных
+                                        button.button.button_size_default.button_theme-darkGreen.form__button
+                                            .button__text Отправить

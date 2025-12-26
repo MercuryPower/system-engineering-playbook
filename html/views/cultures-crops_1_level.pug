@@ -1,0 +1,60 @@
+extends ../base
+
+block vars
+    - var page = 'crops';
+
+block main-content
+    section.artcl.pb_60
+        .wrapper.nr
+            a.artcl-back.link.link-back(is="inner-link" href="cooperation-text.html")
+                svg.ico(width="8" height="15" fill="none")
+                    path(d="M7 1L1 7.5 7 14" stroke="#E3E2DC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+                span.p_min.link-back__text Деятельность
+        .wrapper.nr
+            h1.artcl__title.scroll-block.js-scroll-block(data-text="true") Подсолнечник
+    section.mb_120
+        .wrapper.nr
+            .desc
+                .desc__content.content
+                    p Родина подсолнечника однолетнего — Северная Америка. Археологические раскопки подтверждают, что индейцы культивировали это растение более 2000 лет назад. Имеются археологические свидетельства выращивания подсолнечника на территории нынешних штатов Аризона и Нью-Мексико.
+                    p Некоторые археологи утверждают, что подсолнечник начали возделывать даже раньше пшеницы. Во многих индейских культурах подсолнечник использовался в качестве символа божества Солнца, особенно у ацтеков и отоми в Мексике и у инков в Перу.
+                    button.btn.green.btn_def.btn_flex
+                        .button__text Купить
+
+                .desc__aside.slider-aside
+                    .slider-sticky
+                        slider-component.as.slider(
+                            data-id="slider-cooperation"
+                            data-focusable="true"
+                            data-touch="true"
+                            data-draggable="true"
+                            data-resize="true")
+                            - var n = 1;
+
+                                while n < 5
+                                    .slide
+                                        picture
+                                            source(srcset="")
+                                            img(src="./static/slider/slide-" + n++ + ".jpg")
+
+                        .slider-controls
+                            .slider-progress
+                                slider-progress(data-id="slider-cooperation")
+                                    - for (var i = 0; i < 4; i++)
+                                        .item
+
+                            .slider-buttons
+                                button.slider__control.arr(is="slider-control" data-id="slider-cooperation" data-to="prev")
+                                    svg(width="26" height="20" viewBox="0 0 26 20" fill="none")
+                                        use(xlink:href="#slider-arr")
+                                button.slider__control.arr(is="slider-control" data-id="slider-cooperation" data-to="next")
+                                    svg(width="26" height="20" viewBox="0 0 26 20" fill="none")
+                                        use(xlink:href="#slider-arr")
+
+    section.mb_120
+        .wrapper.nr
+            .mb_92
+                .h3_2 Выращивание подсолнечника осуществляется <br> в следующих предприятиях Группы
+            .container.col-2.crops
+                - for (var i = 0; i < 10; i++)
+                    include ../templates/cards/cardInfo_crop

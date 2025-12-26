@@ -1,0 +1,108 @@
+.cardPreview {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__imageWrapper {
+        margin-bottom: 40px;
+        width: 100%;
+        border-radius: 16px;
+        overflow: hidden;
+        pointer-events: none;
+
+        min-height: 280px;
+        transition: transform .4s var(--easeOutQuad);
+
+        @media (max-width: $to-medium) {
+            min-height: 240px;
+        }
+
+
+        @media (max-width: $to-small) {
+            margin-bottom: 24px;
+        }
+
+        picture {
+            transition: transform .45s var(--easeOutQuad);
+            height: 100%;
+        }
+    }
+
+    &__header {
+        width: 100%;
+        display: flex;
+        margin-bottom: 20px;
+
+        @media (max-width: $to-small) {
+            margin-bottom: 14px;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    &__name {
+        display: flex;
+        color: var(--default);
+        max-width: calc(100% - 63px);
+        transition: color 300ms ease;
+    }
+
+    &__button {
+        margin-left: 28px;
+        margin-top: 10px;
+
+        @media screen and (max-width: $to-large) {
+            margin-top: 4px;
+        }
+
+        @media screen and (max-width: $to-small) {
+            margin-top: -3px;
+        }
+    }
+
+    &__text {
+
+        p {
+            margin-bottom: 20px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+        }
+    }
+
+    &__link {
+        display: flex;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+
+        &:hover {
+
+            & ~ .cardPreview__imageWrapper {
+                transform: scale(.985);
+
+                picture {
+                    transform: scale(1.075);
+                }
+            }
+
+            & ~ .cardPreview__header .cardPreview__name {
+                color: var(--green);;
+            }
+
+            & ~ .cardPreview__header .cardPreview__button {
+                background: var(--green);
+
+                svg {
+                    transform: translateX(3px);
+                    stroke: var(--white);
+                }
+            }
+        }
+    }
+}
