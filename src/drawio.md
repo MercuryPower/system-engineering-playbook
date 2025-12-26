@@ -53,12 +53,12 @@ DFD:
 
 IDEF0:
 
-@drawio{https://github.com/MercuryPower/system-engineering-playbook/blob/main/src/diagrams/simulation_practice_idef0.drawio}
+@drawio{https://github.com/MercuryPower/system-engineering-playbook/blob/main/src/diagrams/simulation_practice_idef0%20.drawio}
 
 IDEF3:
 
-@drawio{https://github.com/MercuryPower/system-engineering-playbook/blob/main/src/diagrams/simulation_practice_idef3.drawio}
+@drawio{https://github.com/MercuryPower/system-engineering-playbook/blob/main/src/diagrams/simulation_practice_idef3%20.drawio}
 
 DFD:
 
-@drawio{https://github.com/MercuryPower/system-engineering-playbook/blob/main/src/diagrams/simulation_practice_dfd.drawio}
+@drawio{https://github.com/MercuryPower/system-engineering-playbook/blob/main/src/diagrams/simulation_practice_dfd%20.drawio}
